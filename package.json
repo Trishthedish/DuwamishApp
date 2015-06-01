@@ -1,0 +1,15 @@
+{
+  "name": "DuwamishApp",
+  "version": "1.0.0",
+  "description": "Dynamic website aimed at bringing awareness, activism, and support for Duwamish tribe.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
