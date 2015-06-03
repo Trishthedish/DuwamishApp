@@ -1,9 +1,17 @@
-header{
+#imgSlider{
   height: 300px;
-  background-image: url(../photos/duwamishcanoe.jpg);
+  overflow: hidden;
+  position: relative;
   margin-top: 25px;
+}
+
+#imgSlider img{
+  width: 100%;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: 100%;
+  z-index: -5;
+  position: absolute;
 }
 
 #topHeader{
@@ -11,19 +19,78 @@ header{
   height: 100%;
   width: 100%;
   text-align: center;
+  z-index: 0;
+  position: absolute;
 }
 
 #topHeader h1{
   padding-top: 10%;
   color: #F6C02B;
+  z-index: 5;
+  text-align: center;
+}
+
+#topHeader article{
+  height: 100%;
 }
 
 #nav a{
   color: #ffffff;
   text-decoration: none;
   font-size: 1.25em;
+  z-index: 5;
 }
 
-<img src="photos/chief-sealth-statue.jpg"/>
+#hidden-pol {
+  display:none;
+}
 
-<img src="photos/chesh-canoe-03.jpg"/>
+#hidden-letter {
+  display: none;
+}
+
+form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.user-button, .fillin-button {
+  border: 0;
+  box-shadow: 0 5px 4px #A6A6A6;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+
+.user-button:active, .fillin-button:active {
+  box-shadow: 0 3px 0 #A6A6A6;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+button {
+  box-shadow: 0 5px 4px #A6A6A6;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  transition: all .1s linear;
+}
+
+button:active {
+  box-shadow: 0 3px 0 #A6A6A6;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+.polbutton {
+  border-radius: 100px;
+}
+
+ .polbutton:hover {
+  cursor:pointer;
+}

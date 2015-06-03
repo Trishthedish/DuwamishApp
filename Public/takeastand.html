@@ -3,61 +3,65 @@
   <head>
     <meta charset='utf-8'>
     <meta description="Tell all of you about the current recognition struggle of the Duwamish">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <title>Stand With The Duwamish</title>
     <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
-    <link rel="stylesheet" type="text/css" href="CSS/grid.css">
-    <link rel="stylesheet" type="text/css" href="CSS/App.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
   <body class="container">
-    <header class="twelve.columns">
-      <div id="topHeader">
-        <article>
-          <h1>STAND WITH THE DUWAMISH</h1>
-          <section id="nav">
-            <a href="learn.html" class="offset-by-two  two columns">Learn</a>
-            <a href="takeastand.html" class="two columns">Take A Stand</a>
-            <a href="donate.html" class="two columns">Donate</a>
-            <a href=" " class="two columns">TBD</a>
-          </section>
-        </article>
-      </div>
+    <header id="imgSlider" class="twelve.columns">
+      <img src="photos/duwamishcanoe.jpg">
+      <article id="topHeader">
+        <h1>STAND WITH THE DUWAMISH</h1>
+        <section id="nav">
+          <a href="learn.html" class="offset-by-two  two columns">Learn</a>
+          <a href="takeastand.html" class="two columns">Take A Stand</a>
+          <a href="donate.html" class="two columns">Donate</a>
+          <a href=" " class="two columns">TBD</a>
+        </section>
+      </article>
     </header>
     <section class="stand-button">
       <form>
         <p>I am <input class="name" type="text"></input> from <input class="place" type="text"></input> and I stand with the Duwamish because <input class="cause" type="text"></input>.</p>
-        <input class = "user-button" type="submit" value="Stand with Me"/>
+        <input class = "user-button" type="submit" value="I am Taking a Stand"/>
       </form>
-    <article class="twelve.columns" id="letter-writing">
-      <h2>Tell the politicians to #StandWithDuwamish</h2>
-      <section>
-        <h3>1. Pick a politician to contact:</h3>
-        <section id="cantwell">
-          <img src="photos/Maria_Cantwell.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maria_Cantwell,_official_portrait,_110th_Congress.jpg/220px-Maria_Cantwell,_official_portrait,_110th_Congress.jpg" title="Senator Cantwell" class="polbutton" id="maria_cantwell@cantwell.senate.gov">
-          <p>Senator Maria Cantwell</p>
-        </section>
-        <section id="murray">
-          <img src="photos/Patty_Murray.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/4/4f/Patty_Murray,_official_portrait,_113th_Congress.jpg" title="Senator Murray" class="polbutton" id="Senator@murray.senate.gov">
-          <p>Senator Patty Murray</p>
-        <section id="mcdermott">
-          <img src="photos/Jim_McDermott.jpg" alt="https://www.congress.gov/img/member/112_mcdermott_wa07.jpg" title="Congressman McDermott" class="polbutton" id="ima_wa07iq@mail.house.gov">
-          <p>Congressman Jim McDermott</p>
-        </section>
-        <section id="inslee">
-          <img src="photos/Jay_Inslee.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg/220px-Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg" title="Govenor Inslee" class="polbutton" id="Jay.Inslee@gov.wa.gov">
-          <p>Govenor Jay Inslee</p>
-        </section>
-        <section id="jewell">
-          <img src="photos/Sally_Jewell.jpg" alt="http://www.dpnm.net/wp-content/uploads/2014/01/jewell.jpg" title="Sec. Jewell" class="polbutton" id="feedback@ios.doi.gov">
-          <p>Sally Jewell, Secretary of the Interior</p>
-        </section>
+    <article class="letter-writing">
+      <section class= "polpick" id="hidden-pol">
+        <h3>Choose a politcian to contact:</h3>
+          <div class="row">
+            <section class="four columns" id="cantwell">
+              <img src="photos/Maria_Cantwell.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maria_Cantwell,_official_portrait,_110th_Congress.jpg/220px-Maria_Cantwell,_official_portrait,_110th_Congress.jpg" title="Senator Cantwell" class="polbutton" id="maria_cantwell@cantwell.senate.gov">
+              <p>Senator Maria Cantwell</p>
+            </section>
+            <section class="four columns" id="murray">
+              <img src="photos/Patty_Murray.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/4/4f/Patty_Murray,_official_portrait,_113th_Congress.jpg" title="Senator Murray" class="polbutton" id="Senator@murray.senate.gov">
+              <p>Senator Patty Murray</p>
+            </section>
+            <section class="four columns" id="mcdermott">
+              <img src="photos/Jim_McDermott.jpg" alt="https://www.congress.gov/img/member/112_mcdermott_wa07.jpg" title="Congressman McDermott" class="polbutton" id="ima_wa07iq@mail.house.gov">
+              <p>Congressman Jim McDermott</p>
+            </section>
+        </div>
+        <div class="row">
+          <section class="offset-by-two four columns" id="inslee">
+            <img src="photos/Jay_Inslee.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg/220px-Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg" title="Govenor Inslee" class="polbutton" id="Jay.Inslee@gov.wa.gov">
+            <p>Govenor Jay Inslee</p>
+          </section>
+          <section class="six columns" id="jewell">
+            <img src="photos/Sally_Jewell.jpg" alt="http://www.dpnm.net/wp-content/uploads/2014/01/jewell.jpg" title="Sec. Jewell" class="polbutton" id="feedback@ios.doi.gov">
+            <p>Sally Jewell, Secretary of the Interior</p>
+          </section>
+        </div>
+        <div class="row">
+          <input class = "three columns offset-by-four fillin-button" type="submit" value="Write My Letter"/>
+        </div>
       </section>
-      <section class="choose-letter">
-        <h3>2. Choose your letter</h3>
+      <section class="choose-letter" id="hidden-letter">
         <section class="fillin-letter">
-          <input class = "fillin-button" type="submit" value="Write My Letter"/>
           <p class="sirORmadam"></p>
           <p class="inputCause"></p>
           <p>Chief Sealth was the first signer of the Point Elliot Treaty of 1855 for the Duwamish tribe. We named the largest, most economically powerful city in Washington after their Chief, who honored his treaty and only to not receive the same from the United States government. At this point, his people are no longer recognized by the federal government despite a long history in the Puget Sound region.</p>
@@ -73,14 +77,12 @@
         </section>
         <section class="addname-letter">
         </section>
-      </section>
-      <section class="letter-send">
-        <h3>3. Send the letter and take a stand</h3>
-        <button type="submit">Take a stand!</button>
+        <button type="submit">Send my letter!</button>
       </section>
     </article>
     <aside class="twitter-feed">
     </aside>
-    <script type="text/javascript" src="JS/tas.js"></script>
   </body>
+  <script type="text/javascript" src="js/tas.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </html>
