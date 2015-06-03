@@ -1,0 +1,29 @@
+header{
+  height: 300px;
+  background-image: url(../photos/duwamishcanoe.jpg);
+  margin-top: 25px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#topHeader{
+  background-color:rgba(0, 6, 8, 0.5);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#topHeader h1{
+  padding-top: 10%;
+  color: #F6C02B;
+}
+
+#nav a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+<img src="photos/chief-sealth-statue.jpg"/>
+
+<img src="photos/chesh-canoe-03.jpg"/>
