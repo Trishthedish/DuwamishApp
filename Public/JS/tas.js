@@ -19,8 +19,8 @@ $('.user-button').on('click', function(e) {
   var userCause= $('.cause').val();
   duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
   duwamish.newUser.showMe();
+  $('.polpick').removeAttr('id');
 });
-
 
 $('.polbutton').on('click', function(e){
   e.preventDefault();
@@ -29,6 +29,10 @@ $('.polbutton').on('click', function(e){
   $('.sirORmadam').append("Dear " + polName + ",");
   console.log(duwamish.newUser);
   duwamish.appUsers.set(duwamish.newUser);
+});
+
+$('.fillin-button').on('click', function(e) {
+  $('.choose-letter').removeAttr('id');
 });
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
