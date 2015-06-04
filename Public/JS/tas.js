@@ -46,7 +46,7 @@ $('.fillin-button').on('click', function(e) {
 });
 
 $('#emailLink').on('click', function(){
-  $( ".fillin-letter br" ).replaceWith( "%0D%0A%0D%0A" );
+  $( ".fillin-letter br" ).replaceWith( "%0D%0A" );
   $('#emailLink').attr('href', "mailto:" + duwamish.newPolitician.email + "?subject=Stand%20With%20The%20Duwamish&body="+$('.fillin-letter').text());
 });
 

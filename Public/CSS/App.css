@@ -11,6 +11,7 @@
   background-size: 550px;
   z-index: -5;
   position: absolute;
+  min-height: 550px
 }
 
 #topHeader{
@@ -57,6 +58,17 @@ h2{
   text-decoration: none;
   font-size: 175%;
   z-index: 5;
+  border-bottom: 20px;
+}
+
+#topHeader img{
+position: absolute;
+ margin-top: 20px;
+ width: 274px;
+ height: 274px;
+ min-height: 274px;
+ margin-left: -137px;
+ opacity: .6;
 }
 
 hr {
