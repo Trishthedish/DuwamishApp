@@ -28,13 +28,11 @@ $("#trigger").on("click", function(){
   }
 });
 
+
 myDataRef.push({text: text});
 myDataRef.set('User ' + name + ' says ' + text);
 
 myDataRef.on('child_added', function(snapshot) {
   //We'll fill this in later.
 });
-
-
-
 

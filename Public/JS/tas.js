@@ -38,7 +38,6 @@ $('.polbutton').on('click', function(e){
   duwamish.newPolitician = new duwamish.Politician(polName, polEmail);
   duwamish.contacts.push(duwamish.newPolitician);
   $('.sirORmadam').append("Dear " + polName + ", ");
-  console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
   $('.choose-letter').removeAttr('id');
   $('.polpick').attr('id', 'hidden-pol');
@@ -51,7 +50,6 @@ $('#emailLink').on('click', function(){
   $('#emailLink').attr('href', "mailto:" + duwamish.newPolitician.email + "?subject=Stand%20With%20The%20Duwamish&body="+$('.fillin-letter').text());
     $("body *").replaceText("%0D%0A%0D%0A", "");
 });
-
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
 duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
