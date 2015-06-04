@@ -51,7 +51,5 @@ $('#emailLink').on('click', function(){
     $("body *").replaceText("%0D%0A%0D%0A", "");
 });
 
-
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
 duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
-
