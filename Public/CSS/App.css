@@ -9,7 +9,10 @@
   background-repeat: no-repeat;
   background-size: 550px;
   z-index: -5;
-  position: absolute; }
+  position: absolute;
+  min-height: 550px;
+}
+
 
 #topHeader{
   background-color:rgba(0, 6, 8, 0.5);
@@ -48,7 +51,20 @@ h2{
   font-family: 'Oswald', sans-serif;
   text-decoration: none;
   font-size: 175%;
-  z-index: 5; }
+  z-index: 5;
+  border-bottom: 20px;
+}
+
+#logo{
+  margin-left: 50%;
+}
+
+#logo img{
+ width: 274px;
+ height: 274px;
+ margin-left: -137px;
+}
+
 
 hr {
   margin-left: auto;
@@ -75,7 +91,7 @@ font-weight: 700; }
   padding-bottom: 3%; }
 
 #intro {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   font-family: 'Roboto', sans-serif;
