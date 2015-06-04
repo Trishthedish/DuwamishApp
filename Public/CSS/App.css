@@ -71,6 +71,7 @@ hr {
 
 footer {
   text-align: center;
+  padding-top: 2%;
 }
 
 p {
@@ -125,7 +126,7 @@ font-weight: 700;
 
 form {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   text-align: center;
 }
 
@@ -169,6 +170,26 @@ button:active {
   cursor:pointer;
 }
 
-#donate-info {
+.donate {
   padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+  width: 65%;
 }
+
+.donate p {
+  padding-bottom: 18px;
+}
+
+.donate a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.donate button{
+  background-color: #F6B316;
+  color: black;
+  height: 4%;
+}
+
