@@ -12,9 +12,3 @@ $("#trigger").on("click", function(){
     $this.text('truth');  //
   }
 });
-
-
-
-
-
-
