@@ -58,7 +58,11 @@ h2{
   text-decoration: none;
   font-size: 175%;
   z-index: 5;
-  border-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.current {
+  border: 1px solid;
 }
 
 #logo{
