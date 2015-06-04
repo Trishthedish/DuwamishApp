@@ -169,6 +169,18 @@ button:active {
   cursor:pointer;
 }
 
-#donate-info {
+.donate {
   padding: 5%;
+  text-align: center;
+}
+
+.donate a {
+  padding: 4px;
+  background-color: #F6B316;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  font-size: 125%;
+  border-style: outset;
 }
