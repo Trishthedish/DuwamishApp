@@ -1,18 +1,17 @@
-var trggr = document.getElementById("trggr");
-console.dir(trggr);
-
-trggr.addEventListener("click", function(e) {
-  e.preventDefault();
-  if (trggr.innerHTML === "close") {
-    trggr.innerHTML = "take a peek!";
-  } else {
-    trggr.innerHTML ="close";
-  }
-    $('#slider').slideReveal({
-    trigger: $("#trggr")
-  });
+$('#slider').slideReveal({
+  trigger: $("#trigger")
 });
 
+$("#trigger").on("click", function(){
+  var $this = $(this);
+  $this.toggleClass('truth');
+  if($this.hasClass('truth')){   //what will be shown prior to click
+    $this.text('close');
+  }
+  else {
+    $this.text('truth');  //
+  }
+});
 
 
 
