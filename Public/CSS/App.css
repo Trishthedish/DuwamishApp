@@ -61,14 +61,14 @@ h2{
   border-bottom: 20px;
 }
 
-#topHeader img{
-position: absolute;
- margin-top: 20px;
+#logo{
+  margin-left: 50%;
+}
+
+#logo img{
  width: 274px;
  height: 274px;
- min-height: 274px;
  margin-left: -137px;
- opacity: .6;
 }
 
 hr {
@@ -100,7 +100,7 @@ font-weight: 700;
 }
 
 #intro {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   font-family: 'Roboto', sans-serif;
