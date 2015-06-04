@@ -39,9 +39,6 @@ $('.polbutton').on('click', function(e){
   $('.sirORmadam').append("Dear " + polName + ", ");
   console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
-});
-
-$('.fillin-button').on('click', function(e) {
   $('.choose-letter').removeAttr('id');
 });
 
