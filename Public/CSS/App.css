@@ -11,6 +11,7 @@
   background-size: 550px;
   z-index: -5;
   position: absolute;
+  min-height: 550px
 }
 
 #topHeader{
@@ -57,6 +58,17 @@ h2{
   text-decoration: none;
   font-size: 175%;
   z-index: 5;
+  border-bottom: 20px;
+}
+
+#logo{
+  margin-left: 50%;
+}
+
+#logo img{
+ width: 274px;
+ height: 274px;
+ margin-left: -137px;
 }
 
 hr {
@@ -88,7 +100,7 @@ font-weight: 700;
 }
 
 #intro {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   font-family: 'Roboto', sans-serif;
