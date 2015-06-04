@@ -38,7 +38,6 @@ $('.polbutton').on('click', function(e){
   duwamish.newPolitician = new duwamish.Politician(polName, polEmail);
   duwamish.contacts.push(duwamish.newPolitician);
   $('.sirORmadam').append("Dear " + polName + ", ");
-  console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
   $('.choose-letter').removeAttr('id');
   $('.polpick').attr('id', 'hidden-pol');
@@ -51,3 +50,4 @@ $('#emailLink').on('click', function(){
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
 duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
