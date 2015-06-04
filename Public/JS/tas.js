@@ -28,6 +28,7 @@ $('.user-button').on('click', function(e) {
   duwamish.appUsers.push(duwamish.newUser);
   duwamish.newUser.showMe();
   $('.polpick').removeAttr('id');
+  $('form').attr('id', 'hidden-pol');
 });
 
 $('.polbutton').on('click', function(e){
@@ -40,6 +41,7 @@ $('.polbutton').on('click', function(e){
   console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
   $('.choose-letter').removeAttr('id');
+  $('.polpick').attr('id', 'hidden-pol');
 });
 
 $('#emailLink').on('click', function(){
