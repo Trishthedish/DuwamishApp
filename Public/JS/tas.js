@@ -28,6 +28,7 @@ $('.user-button').on('click', function(e) {
   duwamish.appUsers.push(duwamish.newUser);
   duwamish.newUser.showMe();
   $('.polpick').removeAttr('id');
+  $('form').attr('id', 'hidden-pol');
 });
 
 $('.polbutton').on('click', function(e){
@@ -39,16 +40,18 @@ $('.polbutton').on('click', function(e){
   $('.sirORmadam').append("Dear " + polName + ", ");
   console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
+  $('.choose-letter').removeAttr('id');
+  $('.polpick').attr('id', 'hidden-pol');
 });
 
-$('.fillin-button').on('click', function(e) {
-  $('.choose-letter').removeAttr('id');
-});
+(function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
 
 $('#emailLink').on('click', function(){
-  $( ".fillin-letter br" ).replaceWith( "%0D%0A%0D%0A" );
+  $(".fillin-letter p" ).prepend(document.createTextNode("%0D%0A%0D%0A"));
   $('#emailLink').attr('href', "mailto:" + duwamish.newPolitician.email + "?subject=Stand%20With%20The%20Duwamish&body="+$('.fillin-letter').text());
+    $("body *").replaceText("%0D%0A%0D%0A", "");
 });
+
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
 duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
