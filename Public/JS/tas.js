@@ -28,6 +28,7 @@ $('.user-button').on('click', function(e) {
   duwamish.appUsers.push(duwamish.newUser);
   duwamish.newUser.showMe();
   $('.polpick').removeAttr('id');
+  $('form').attr('id', 'hidden-pol');
 });
 
 $('.polbutton').on('click', function(e){
@@ -39,10 +40,8 @@ $('.polbutton').on('click', function(e){
   $('.sirORmadam').append("Dear " + polName + ", ");
   console.log(duwamish.newUser);
   duwamish.appContacts.push(duwamish.newPolitician)
-});
-
-$('.fillin-button').on('click', function(e) {
   $('.choose-letter').removeAttr('id');
+  $('.polpick').attr('id', 'hidden-pol');
 });
 
 (function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
