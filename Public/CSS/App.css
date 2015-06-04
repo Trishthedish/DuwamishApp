@@ -1,15 +1,14 @@
 #imgSlider{
-  height: 300px;
+  height: 550px;
   overflow: hidden;
   position: relative;
-  margin-top: 25px;
 }
 
 #imgSlider img{
   width: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 550px;
   z-index: -5;
   position: absolute;
 }
@@ -25,8 +24,26 @@
 
 #topHeader h1{
   padding-top: 10%;
-  color: #F6C02B;
+  font-family: 'Oswald', sans-serif;
+  font-size: 450%;
+  color: white;
   z-index: 5;
+  text-align: center;
+}
+
+#topHeader a{
+  text-decoration: none;
+}
+
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-size: 450%;
+  color: white;
+}
+
+h2{
+  padding: 5%;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
 }
 
@@ -35,10 +52,67 @@
 }
 
 #nav a{
-  color: #ffffff;
+  color: #F6B316;
+  font-family: 'Oswald', sans-serif;
   text-decoration: none;
-  font-size: 1.25em;
+  font-size: 175%;
   z-index: 5;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  color: #F6B316;
+  display: block;
+  height: 3px;
+  padding: 0;
+}
+
+footer {
+  text-align: center;
+}
+
+p {
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+}
+
+.statement {
+  font-family: 'Oswald', sans-serif;
+  font-size: 200%;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+#intro {
+  padding: 5%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  width: 50%;
+  font-weight: 700;
+}
+
+#intro-wrap {
+  background-color: white;
+  width: 100%;
+}
+
+#trggr-wrap {
+  width: 100%;
+  background-color: #F6B316;
+}
+
+.noDuwamish {
+  font-weight: 700;
+  font-size: 110%;
+}
+
+.slider {
+  background-color: #C7C7C7;
 }
 
 #hidden-pol {
@@ -93,4 +167,8 @@ button:active {
 
  .polbutton:hover {
   cursor:pointer;
+}
+
+#donate-info {
+  padding: 5%;
 }

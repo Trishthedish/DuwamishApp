@@ -9,13 +9,15 @@
     <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
-  <body class="container">
+  <body>
     <header id="imgSlider" class="twelve.columns">
       <img src="photos/duwamishcanoe.jpg">
       <article id="topHeader">
-        <h1>STAND WITH THE DUWAMISH</h1>
+        <a href="index.html"><h1>STAND WITH THE DUWAMISH</h1></a>
+        <hr />
         <section id="nav">
           <a href="learn.html" class="offset-by-two  two columns">Learn</a>
           <a href="takeastand.html" class="two columns">Take A Stand</a>
@@ -24,6 +26,7 @@
         </section>
       </article>
     </header>
+  <div class="container">
     <section class="stand-button">
       <form>
         <p>I am <input class="name" type="text"></input> from <input class="place" type="text"></input> and I stand with the Duwamish because <input class="cause" type="text"></input>.</p>
@@ -31,7 +34,7 @@
       </form>
     <article class="letter-writing">
       <section class= "polpick" id="hidden-pol">
-        <h3>Choose a politcian to contact:</h3>
+        <p>Choose a politcian to contact:</p>
           <div class="row">
             <section class="four columns" id="cantwell">
               <img src="photos/Maria_Cantwell.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maria_Cantwell,_official_portrait,_110th_Congress.jpg/220px-Maria_Cantwell,_official_portrait,_110th_Congress.jpg" title="Senator Cantwell" class="polbutton" id="maria_cantwell@cantwell.senate.gov">
@@ -82,6 +85,10 @@
     </article>
     <aside class="twitter-feed">
     </aside>
+  </div>
+    <footer>
+      <p>#StandWithDuwamish</p>
+    </footer>
   </body>
   <script type="text/javascript" src="js/tas.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
