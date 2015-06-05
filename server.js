@@ -1,11 +1,11 @@
 var express = require ('express');
 var app = express();
 
-app.use(express.static('Public'));
+app.use(express.static('public'));
 
 app.use('/', function (req, res, next) {
   var options = {
-    root: __dirname + '/Public/',
+    root: __dirname + '/public/',
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
