@@ -13,7 +13,6 @@
   min-height: 550px;
 }
 
-
 #topHeader{
   background-color:rgba(0, 6, 8, 0.5);
   height: 100%;
@@ -52,7 +51,11 @@ h2{
   text-decoration: none;
   font-size: 175%;
   z-index: 5;
-  border-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.current {
+  border: 1px solid;
 }
 
 #logo{
@@ -138,7 +141,7 @@ font-weight: 700; }
 .signature {
   font-weight: 400; }
 
-.takeAstand, .selectPol, .letterPrompt {
+.takeAstand, .selectPol, .letterPrompt, .selectPoltwo {
   text-align: center;
   font-size: 150%;
 }
@@ -193,7 +196,7 @@ button:active {
   transform: translateY(20px); }
 
 .donate {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   width: 65%; }
@@ -256,3 +259,26 @@ footer a{
  padding:0;
 }
 
+.goodbye {
+  opacity: .4;
+  border-radius: 100px;
+  transition: all .1s linear;
+  border: 2px outset buttonface; }
+
+#enter {
+  margin-left: 40px;
+  background-color: white; }
+
+#slider {
+  font-family: 'Oswald', sans-serif;
+  background-color: #C7C7C7;
+  border: 2px black; }
+
+#secret-message {
+  display: none; }
+
+.donate-email a {
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #F6B316;
+}
