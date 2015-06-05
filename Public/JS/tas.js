@@ -15,7 +15,7 @@ duwamish.contacts=[duwamish.appContacts];
 duwamish.User.prototype.showMe = function(){
   $('.inputName').append(duwamish.newUser.name);
   $('.inputLocation').append(duwamish.newUser.location);
-  $('.inputCause').append("I stand with the Duwamish because " + duwamish.newUser.cause + ".");
+  $('.inputCause').append('I stand with the Duwamish because ' + duwamish.newUser.cause + '.');
 }
 
 $('.user-button').on('click', function(e) {
@@ -24,6 +24,10 @@ $('.user-button').on('click', function(e) {
   var userLocation= $('.place').val();
   var userCause= $('.cause').val();
   duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
+  if (localStorage.getItem('currentUser') === null) {
+    localStorage.setItem('currentUser', JSON.stringify(duwamish.newUser))
+  };
+  var userData = JSON.parse(localStorage.getItem('currentUser'));
   duwamish.sessions.push(duwamish.newUser);
   duwamish.appUsers.push(duwamish.newUser);
   duwamish.newUser.showMe();
@@ -42,7 +46,7 @@ $('.polbutton').on('click', function(e){
   $('.choose-letter').removeAttr('id');
   $('.polpick').attr('id', 'hidden-pol');
 });
-
+//replaceText function
 (function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
 
 $('#emailLink').on('click', function(){
