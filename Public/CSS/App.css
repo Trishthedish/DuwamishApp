@@ -233,3 +233,9 @@ button:active {
 #enter {
   margin-left: 40px;
   background-color: white; }
+
+#slider {
+  font-family: 'Oswald', sans-serif;
+  background-color: #C7C7C7;
+  border: 2px black;
+}
