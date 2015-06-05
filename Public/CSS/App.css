@@ -224,3 +224,8 @@ button:active {
 .learnText h3{
   font-family: 'Oswald', sans-serif;
   font-size: 175%; }
+
+#enter {
+  margin-left: 40px;
+  background-color: white;
+}
