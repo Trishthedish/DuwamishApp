@@ -196,7 +196,7 @@ button:active {
   transform: translateY(20px); }
 
 .donate {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   width: 65%; }
@@ -241,3 +241,9 @@ button:active {
 
 #secret-message {
   display: none; }
+
+.donate-email a {
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #F6B316;
+}
