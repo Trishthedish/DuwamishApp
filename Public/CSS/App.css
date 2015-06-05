@@ -224,6 +224,41 @@ button:active {
   font-family: 'Oswald', sans-serif;
   font-size: 175%; }
 
+.credit{
+  text-align: center;
+}
+
+.credit h2{
+  text-align: center;
+  padding:0;
+  margin-top: 10px;
+}
+
+
+.credit div{
+vertical-align: top;
+display: inline-block;
+text-align: center;
+margin:20px;
+}
+
+.credit img{
+  height: 250px;
+  width: 250px;
+  border-radius: 125px;
+}
+
+.caption {
+  display: block;
+}
+
+footer a{
+  text-decoration: none;
+}
+#hashtag{
+ padding:0;
+}
+
 .goodbye {
   opacity: .4;
   border-radius: 100px;
