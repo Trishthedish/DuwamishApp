@@ -13,7 +13,6 @@
   min-height: 550px;
 }
 
-
 #topHeader{
   background-color:rgba(0, 6, 8, 0.5);
   height: 100%;
@@ -229,5 +228,8 @@ button:active {
   opacity: .4;
   border-radius: 100px;
   transition: all .1s linear;
-  border: 2px outset buttonface;
-}
+  border: 2px outset buttonface; }
+
+#enter {
+  margin-left: 40px;
+  background-color: white; }
