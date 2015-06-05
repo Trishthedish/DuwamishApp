@@ -67,7 +67,15 @@ $('#emailLink').on('click', function(){
   $('.polpick').removeAttr('id');
 
   duwamish.newPolitician.reload();
+  duwamish.allDone();
 });
+
+duwamish.allDone = function(){
+  if ($('.goodbye').length === 5) {
+    $('.polpick').attr('id', 'hidden-pol');
+    $('.thanx-message').removeAttr('id');
+  }
+}
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
 duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
