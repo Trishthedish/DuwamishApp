@@ -10,8 +10,7 @@
   background-size: 550px;
   z-index: -5;
   position: absolute;
-  min-height: 550px;
-}
+  min-height: 550px; }
 
 #topHeader{
   background-color:rgba(0, 6, 8, 0.5);
@@ -51,22 +50,18 @@ h2{
   text-decoration: none;
   font-size: 175%;
   z-index: 5;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .current {
-  border: 1px solid;
-}
+  border: 1px solid; }
 
 #logo{
-  margin-left: 50%;
-}
+  margin-left: 50%; }
 
 #logo img{
  width: 274px;
  height: 274px;
- margin-left: -137px;
-}
+ margin-left: -137px; }
 
 
 hr {
@@ -117,8 +112,7 @@ font-weight: 700; }
   background-color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  color: black;
-}
+  color: black; }
 
 .noDuwamish {
   font-weight: 700;
@@ -143,8 +137,7 @@ font-weight: 700; }
 
 .takeAstand, .selectPol, .letterPrompt, .selectPoltwo {
   text-align: center;
-  font-size: 150%;
-}
+  font-size: 150%; }
 
 form {
   padding-top: 40px;
@@ -179,7 +172,7 @@ button:active {
   -moz-transform: translateY(5px);
   transform: translateY(5px); }
 
-.polpick {
+.polpick{
   text-align: center; }
 
 .polbutton {
@@ -195,8 +188,17 @@ button:active {
   -moz-transform: translateY(20px);
   transform: translateY(20px); }
 
+.fillin-letter p {
+  margin-bottom: 0;}
+
+.choose-letter button {
+  background-color: #F6B316;
+  color:black;
+  margin-right: auto;
+  margin-left: auto;}
+
 .donate {
-  padding: 5%;
+  padding: 2%;
   margin: 0 auto;
   text-align: center;
   width: 65%; }
@@ -224,6 +226,35 @@ button:active {
   font-family: 'Oswald', sans-serif;
   font-size: 175%; }
 
+.credit{
+  text-align: center; }
+
+.credit h2{
+  text-align: center;
+  padding:0;
+  margin-top: 10px; }
+
+
+.credit div{
+vertical-align: top;
+display: inline-block;
+text-align: center;
+margin:20px; }
+
+.credit img{
+  height: 250px;
+  width: 250px;
+  border-radius: 125px; }
+
+.caption {
+  display: block; }
+
+footer a{
+  text-decoration: none; }
+
+#hashtag{
+ padding:0;}
+
 .goodbye {
   opacity: .4;
   border-radius: 100px;
@@ -237,5 +268,17 @@ button:active {
 #slider {
   font-family: 'Oswald', sans-serif;
   background-color: #C7C7C7;
-  border: 2px black;
-}
+  border: 2px black; }
+
+#secret-message {
+  display: none; }
+
+.donate-email a {
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #F6B316; }
+
+.teenytiny {
+  text-decoration: none;
+  color: black;
+  font-size: 75%; }

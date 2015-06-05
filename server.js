@@ -1,11 +1,11 @@
 var express = require ('express');
 var app = express();
 
-app.use(express.static('Public'));
+app.use(express.static('public'));
 
 app.use('/', function (req, res, next) {
   var options = {
-    root: __dirname + '/Public/',
+    root: __dirname + '/public/',
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
@@ -14,11 +14,9 @@ app.use('/', function (req, res, next) {
   };
 });
 
-var server = app.listen(5000,function() {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Server working!');
-});
+var server = app.listen(process.env.PORT || 5000, function() {
+  console.log('Node app is running on port', app.get('port'));
+})
 
 
 
