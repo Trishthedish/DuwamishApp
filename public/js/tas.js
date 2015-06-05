@@ -1,11 +1,13 @@
 var duwamish={};
 
+duwamish.polArray = [];
+
 duwamish.User=function(name, location, cause) {
   this.name=name;
   this.location=location;
   this.cause=cause; }
 
-duwamish.Politician=function(name,email) {
+duwamish.Politician=function(name, email) {
   this.name=name;
   this.email=email; }
 
@@ -24,6 +26,18 @@ duwamish.Politician.prototype.reload = function(){
   duwamish.newPolitician.email = " ";
 }
 
+$(window).load(function(){
+  duwamish.polArray = JSON.parse(window.sessionStorage.getItem('polString')) || [];
+  if(window.sessionStorage.getItem('currentUser')){
+      document.getElementById('standForm').style.display = 'none';
+      $('.polpick').removeAttr('id');
+      var userSession = JSON.parse(window.sessionStorage.getItem('currentUser'));
+      console.dir(userSession);
+      duwamish.newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
+      duwamish.newUser.showMe();
+  }
+});
+
 $('.user-button').on('click', function(e) {
   e.preventDefault();
   var userName= $('.name').val();
@@ -31,10 +45,12 @@ $('.user-button').on('click', function(e) {
   var userCause= $('.cause').val();
 
   duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
-  if (localStorage.getItem('currentUser') === null) {
-    localStorage.setItem('currentUser', JSON.stringify(duwamish.newUser))
-  };
+
+  if (!(sessionStorage.getItem('currentUser'))){
+    sessionStorage.setItem('currentUser', JSON.stringify(duwamish.newUser))
+  }
   var userData = JSON.parse(localStorage.getItem('currentUser'));
+
   duwamish.sessions.push(duwamish.newUser);
   duwamish.appUsers.push(duwamish.newUser);
   duwamish.newUser.showMe();
@@ -50,7 +66,9 @@ $('.polbutton').on('click', function(e){
 
   duwamish.newPolitician = new duwamish.Politician(polName, polEmail);
   duwamish.contacts.push(duwamish.newPolitician);
-  duwamish.appContacts.push(duwamish.newPolitician)
+  duwamish.appContacts.push(duwamish.newPolitician);
+  duwamish.polArray.push(duwamish.newPolitician);
+  sessionStorage.setItem('polString', JSON.stringify(duwamish.polArray));
 
   $('.sirORmadam').append("Dear " + polName + ", ");
 
