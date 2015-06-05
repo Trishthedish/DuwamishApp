@@ -142,7 +142,7 @@ font-weight: 700; }
 .signature {
   font-weight: 400; }
 
-.takeAstand, .selectPol, .letterPrompt {
+.takeAstand, .selectPol, .letterPrompt, .selectPoltwo {
   text-align: center;
   font-size: 150%;
 }
@@ -224,3 +224,10 @@ button:active {
 .learnText h3{
   font-family: 'Oswald', sans-serif;
   font-size: 175%; }
+
+.goodbye {
+  opacity: .4;
+  border-radius: 100px;
+  transition: all .1s linear;
+  border: 2px outset buttonface;
+}
