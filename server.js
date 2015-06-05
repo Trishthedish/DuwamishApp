@@ -14,11 +14,9 @@ app.use('/', function (req, res, next) {
   };
 });
 
-var server = app.listen(5000,function() {
-  var host = server.address().address;
-  var port = server.address().port;
-  console.log('Server working!');
-});
+var server = app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+})
 
 
 
