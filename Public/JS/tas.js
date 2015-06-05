@@ -67,11 +67,11 @@ $('#emailLink').on('click', function(){
   $('.polpick').removeAttr('id');
 
   duwamish.newPolitician.reload();
-
+  duwamish.allDone();
 });
 
-duwamish.allDone=function(){
-  if($('.goodbye').length === 5) {
+duwamish.allDone = function(){
+  if ($('.goodbye').length === 5) {
     $('.polpick').attr('id', 'hidden-pol');
     $('.thanx-message').removeAttr('id');
   }

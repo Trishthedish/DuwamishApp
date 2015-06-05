@@ -237,5 +237,7 @@ button:active {
 #slider {
   font-family: 'Oswald', sans-serif;
   background-color: #C7C7C7;
-  border: 2px black;
-}
+  border: 2px black; }
+
+#secret-message {
+  display: none; }
