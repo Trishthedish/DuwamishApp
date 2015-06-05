@@ -282,3 +282,9 @@ footer a{
   font-size: 1.25em;
   color: #F6B316;
 }
+
+.teenytiny {
+  text-decoration: none;
+  color: black;
+  font-size: 75%;
+}
