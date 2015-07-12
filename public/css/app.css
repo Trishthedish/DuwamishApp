@@ -281,4 +281,17 @@ footer a{
 .teenytiny {
   text-decoration: none;
   color: black;
-  font-size: 75%; }
+  font-size: 75%;
+  }
+
+.teenytiny a {
+  color:black;
+  padding: 5px 20px;
+  display:inline-block;
+  background-color: #F6B316;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #000;
+  margin-top: 20px;
+
+}
+
