@@ -281,4 +281,40 @@ footer a{
 .teenytiny {
   text-decoration: none;
   color: black;
-  font-size: 75%; }
+  font-size: 75%;
+  }
+
+.teenytiny a {
+  color:black;
+  padding: 5px 20px;
+  display:inline-block;
+  background-color: #F6B316;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #000;
+  margin-top: 20px;
+}
+
+/* Tweet Rep */
+.tweetrep img {
+  width: 90px;
+  height:auto;
+}
+
+.tweetrep {
+  position:absolute;
+  top: 150px;
+  display:none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/*above was suggestion from Eitan*/
+
+.goodbye + .tweetrep {
+  display:inline-block;
+}
+
+
