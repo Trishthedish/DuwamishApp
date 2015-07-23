@@ -94,9 +94,9 @@ $('#emailLink').on('click', function(){
 
 duwamish.allDone = function(){
   if ($('.goodbye').length === 5) {
-    $('.polpick').attr('id', 'hidden-pol');
-    $('.thanx-message').removeAttr('id');
-  }
+    // $('.polpick').attr('id', 'hidden-pol');  //I removed this so more people
+    // $('.thanx-message').removeAttr('id');     could use the tweet@ feature
+  }                                             //TODO:display msg after all criteria has been met.
 }
 
 duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
