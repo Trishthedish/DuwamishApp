@@ -13,7 +13,7 @@ $("#enter").on("click",function() {
   if (truthInput.response) {
     myDataRef.push(truthInput.response);
     $('#slider').slideReveal("show");
-     $("#trigger").text("Close");
+    $("#trigger").text("Close");
   }
 });
 
@@ -23,14 +23,13 @@ $("#trigger").on("click", function(){
   if($this.hasClass('truth')){   //what will be shown prior to click
     $this.text('View Responses');
   } else {
-    $this.text('View Responses');  //
+    $this.text('View Responses');
   }
 });
 
 myDataRef.on('child_added', function(snapshot) {
    var response = snapshot.val();
-      $("#slider").append("</br>" + response);
-      $('#missing').val("");
-
+    $("#slider").append("</br>" + response);
+    $('#missing').val("");
 });
 

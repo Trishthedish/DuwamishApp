@@ -2,14 +2,15 @@ var duwamish={};
 
 duwamish.polArray = [];
 
-duwamish.User=function(name, location, cause) {
+duwamish.User = function(name, location, cause) {
   this.name=name;
   this.location=location;
   this.cause=cause; }
 
-duwamish.Politician=function(name, email) {
+duwamish.Politician = function(name, email) {
   this.name=name;
-  this.email=email; }
+  this.email=email;
+}
 
 duwamish.sessions=[duwamish.appUsers];
 duwamish.contacts=[duwamish.appContacts];
@@ -29,12 +30,12 @@ duwamish.Politician.prototype.reload = function(){
 $(window).load(function(){
   duwamish.polArray = JSON.parse(window.sessionStorage.getItem('polString')) || [];
   if(window.sessionStorage.getItem('currentUser')){
-      document.getElementById('standForm').style.display = 'none';
-      $('.polpick').removeAttr('id');
-      var userSession = JSON.parse(window.sessionStorage.getItem('currentUser'));
-      console.dir(userSession);
-      duwamish.newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
-      duwamish.newUser.showMe();
+    document.getElementById('standForm').style.display = 'none';
+    $('.polpick').removeAttr('id');
+    var userSession = JSON.parse(window.sessionStorage.getItem('currentUser'));
+    console.dir(userSession);
+    duwamish.newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
+    duwamish.newUser.showMe();
   }
 });
 
