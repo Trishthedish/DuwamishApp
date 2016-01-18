@@ -1,7 +1,5 @@
 var truthInput ={};
 
-truthInput.response;
-
 var myDataRef = new Firebase('https://standwithduwamish.firebaseio.com/reasons');
 // accessing your realtime firebase database
 $('#slider').slideReveal({
@@ -9,7 +7,7 @@ $('#slider').slideReveal({
 });
 
 $("#enter").on("click",function() {
- truthInput.response = $("#missing").val();
+  truthInput.response = $("#missing").val();
   if (truthInput.response) {
     myDataRef.push(truthInput.response);
     $('#slider').slideReveal("show");
@@ -28,7 +26,7 @@ $("#trigger").on("click", function(){
 });
 
 myDataRef.on('child_added', function(snapshot) {
-   var response = snapshot.val();
+  var response = snapshot.val();
     $("#slider").append("</br>" + response);
     $('#missing').val("");
 });
