@@ -5,7 +5,7 @@ app.use(express.static('public'));
 
 app.use('/', function (req, res, next) {
   var options = {
-    root: __dirname + '/public/',
+    root: __dirname + '/dist/',
     dotfiles: 'deny',
     headers: {
       'x-timestamp': Date.now(),
