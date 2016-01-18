@@ -26,7 +26,7 @@ duwamish.User.prototype.showMe = function(){
 }
 
 duwamish.Politician.prototype.reload = function(){
-  $('p.selectPol').replaceWith('<p class="selectPoltwo">Who else should hear our message?</p>');
+  $('p.selectPol').text("Who else should hear our message?");
   $('.sirORmadam').empty();
   duwamish.newPolitician.email = " ";
 }
