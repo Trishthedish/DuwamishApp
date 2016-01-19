@@ -1,5 +1,6 @@
 var grunt = require('grunt');
-//require('load-grunt-tasks')(grunt); // autoloads grunt extentions, so you don't have "require" them individually
+
+// load plugins just in time to speed up grunt
 require('jit-grunt')(grunt, {
  express: 'grunt-express-server'
 });
