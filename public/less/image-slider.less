@@ -1,0 +1,51 @@
+
+#imgSlider{
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+  > img {
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 550px;
+    z-index: -5;
+    position: absolute;
+    min-height: 550px;
+  }
+}
+
+#topHeader{
+  background-color:rgba(0, 6, 8, 0.5);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 0;
+  position: absolute;
+  a {
+    .headline-font;
+    text-decoration: none;
+  }
+  h1 {
+    padding-top: 10%;
+    font-size: 450%;
+    color: white;
+    z-index: 5;
+    text-align: center;
+  }
+}
+#nav {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  .nav-link, a { // remove the a once we start using partials
+    margin: 0 2rem;
+    color: @orange;
+    text-decoration: none;
+    font-size: 175%;
+    z-index: 5;
+  }
+}
+
+.current {
+  border: 1px solid;
+}
