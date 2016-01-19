@@ -39,7 +39,7 @@ grunt.initConfig({
   less: { // interprets less imports, compiles less > css, concats css into one big file
     all: {
       files: {
-        'dist/css/style.css':'public/less/**/*.less'
+        'dist/css/style.css':'public/less/style.less'
       }
     },
     options: {
