@@ -45,6 +45,7 @@ grunt.initConfig({
     all: {
       files: {
         'dist/js/app.js': ['public/js/*.js'],
+        'dist/js/tas.js': ['public/js/takeAStand/*.js'],
         'dist/js/vendor.js':['public/js/vendor/*.js']
       },
     },
