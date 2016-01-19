@@ -1,109 +1,42 @@
-var duwamish = {};
+$(document).ready(function(){
+    // read and dynamically insert total signatures from Firebase, currently reading total
+    //   number of users, which will likely change to 'backers' or something similar
+    //   when the petition actually begins.
+    var userCount = new Firebase('https://standwithduwamish.firebaseio.com/userCount');
+    userCount.on("value", function(snapshot){
+      var numSigs = snapshot.val();
+      $('#signatures').html(numSigs); // set initial value of users/signatures
+      localStorage.userCount = numSigs;
+      $('#sigs-needed').html(100000 - numSigs);
 
-duwamish.polArray = [];
+    })
 
-duwamish.appUsers = new Firebase('https://standwithduwamish.firebaseio.com/users');
-duwamish.appContacts = new Firebase('https://standwithduwamish.firebaseio.com/contacts');
+    // will count users in database and update userCount....to be done after every user
+    // submits to signing petition
+    function setUserCount(userCount){
+      var sig = new Firebase('https://standwithduwamish.firebaseio.com/users');
+      sig.on("value", function(snapshot) {
+        var numSigs = snapshot.numChildren();
+        userCount.set(numSigs);
+        localStorage.userCount = numSigs; //
+      });
+      showProgress(localStorage.userCount);
+    };
 
-duwamish.User = function(name, location, cause) {
-  this.name=name;
-  this.location=location;
-  this.cause=cause;
-};
+    // progress bar, will register 10% for visual sake until the signature total is higher
+    function showProgress(signatures){
+      $(".meter > span").each(function() {
+        var percent = (signatures * 100)/100000;
+        var adjPercent = percent > 10 ? percent : 10; // 10% minimum showing
+        $(this)
+          .data("origWidth",  adjPercent + "%")
+          .width(0)
+          .animate({
+            width: $(this).data('origWidth') // or + "%" if fluid
+          }, 1200);
+      });
+    };
 
-duwamish.Politician = function(name, email) {
-  this.name=name;
-  this.email=email;
-};
+  setUserCount(userCount);
+})
 
-duwamish.sessions=[duwamish.appUsers];
-duwamish.contacts=[duwamish.appContacts];
-
-duwamish.User.prototype.showMe = function(){
-  $('.inputName').append(duwamish.newUser.name);
-  $('.inputLocation').append(duwamish.newUser.location);
-  $('.inputCause').append('I stand with the Duwamish because ' + duwamish.newUser.cause + '.');
-};
-
-duwamish.Politician.prototype.reload = function(){
-  $('p.selectPol').text("Who else should hear our message?");
-  $('.sirORmadam').empty();
-  duwamish.newPolitician.email = " ";
-};
-
-$(window).load(function(){
-  duwamish.polArray = JSON.parse(window.sessionStorage.getItem('polString')) || [];
-  if(window.sessionStorage.getItem('currentUser')){
-    $('#standForm').hide();
-    $('.polpick').removeAttr('id');
-    var userSession = JSON.parse(window.sessionStorage.getItem('currentUser'));
-
-    duwamish.newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
-    duwamish.newUser.showMe();
-  }
-});
-
-$('.user-button').on('click', function(e) {
-  e.preventDefault();
-  var userName= $('.name').val();
-  var userLocation= $('.place').val();
-  var userCause= $('.cause').val();
-
-  duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
-
-  if (!(sessionStorage.getItem('currentUser'))){
-    sessionStorage.setItem('currentUser', JSON.stringify(duwamish.newUser));
-  }
-  var userData = JSON.parse(localStorage.getItem('currentUser'));
-
-  duwamish.sessions.push(duwamish.newUser);
-  duwamish.appUsers.push(duwamish.newUser);
-  duwamish.newUser.showMe();
-
-  $('.polpick').removeAttr('id');
-  $('form').attr('id', 'hidden-pol');
-});
-
-$('.polbutton').on('click', function(e){
-  e.preventDefault();
-  var polName= $(this).attr('title');
-  var polEmail= $(this).attr('id');
-
-  duwamish.newPolitician = new duwamish.Politician(polName, polEmail);
-  duwamish.contacts.push(duwamish.newPolitician);
-  duwamish.appContacts.push(duwamish.newPolitician);
-  duwamish.polArray.push(duwamish.newPolitician);
-  sessionStorage.setItem('polString', JSON.stringify(duwamish.polArray));
-
-  $('.sirORmadam').append('Dear ' + polName + ', ');
-
-  $(this).addClass('goodbye').removeClass('polbutton');
-  $('.choose-letter').removeAttr('id');
-  $('.polpick').attr('id', 'hidden-pol');
-});
-
-//replaceText function
-// jshint ignore:start
-(function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
-// jshint ignore:end
-
-$('#emailLink').on('click', function(){
-  $(".fillin-letter p" ).prepend(document.createTextNode("%0D%0A%0D%0A"));
-
-  var emailAddress = duwamish.newPolitician.email;
-  var emailSubject = encodeURIComponent('Stand With The Duwamish');
-
-  $('#emailLink').attr('href',
-    'mailto:' + emailAddress +
-    '?subject=' + emailSubject +
-    '&body=' + $('.fillin-letter').text()
-    );
-
-  $("body *").replaceText("%0D%0A%0D%0A", "");
-
-  $('.choose-letter').attr('id', 'hidden-letter');
-  $('.polpick').removeAttr('id');
-
-  duwamish.newPolitician.reload();
-  duwamish.allDone();
-});
