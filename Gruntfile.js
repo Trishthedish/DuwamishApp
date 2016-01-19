@@ -1,8 +1,14 @@
 var grunt = require('grunt');
-require('load-grunt-tasks')(grunt); // autoloads grunt extentions, so you don't have "require" them individually
+//require('load-grunt-tasks')(grunt); // autoloads grunt extentions, so you don't have "require" them individually
+require('jit-grunt')(grunt, {
+ express: 'grunt-express-server'
+});
+
+// report on time taken for each task
+require('time-grunt')(grunt);
 
 grunt.initConfig({
-  pkg: grunt.file.readJSON('package.json'), // I forgot what this does
+  pkg: grunt.file.readJSON('package.json'), // read and parse package.json into pkg variable
 
   jshint: { // runs jshint on all js files
     files: ['Gruntfile.js','public/js/*.js'],
@@ -96,3 +102,4 @@ grunt.initConfig({
 grunt.registerTask('default', ['jshint', 'build']);
 // runs the following tasks when you type "grunt build", also referenced in above task
 grunt.registerTask('build', ['clean','copy','less', 'uglify', 'express:dev','watch']);
+grunt.registerTask('build:only', ['clean', 'copy', 'less', 'uglify']);
