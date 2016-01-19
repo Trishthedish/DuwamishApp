@@ -9,12 +9,12 @@ duwamish.User = function(name, location, cause) {
   this.name=name;
   this.location=location;
   this.cause=cause;
-}
+};
 
 duwamish.Politician = function(name, email) {
   this.name=name;
   this.email=email;
-}
+};
 
 duwamish.sessions=[duwamish.appUsers];
 duwamish.contacts=[duwamish.appContacts];
@@ -23,13 +23,13 @@ duwamish.User.prototype.showMe = function(){
   $('.inputName').append(duwamish.newUser.name);
   $('.inputLocation').append(duwamish.newUser.location);
   $('.inputCause').append('I stand with the Duwamish because ' + duwamish.newUser.cause + '.');
-}
+};
 
 duwamish.Politician.prototype.reload = function(){
   $('p.selectPol').text("Who else should hear our message?");
   $('.sirORmadam').empty();
   duwamish.newPolitician.email = " ";
-}
+};
 
 $(window).load(function(){
   duwamish.polArray = JSON.parse(window.sessionStorage.getItem('polString')) || [];
@@ -52,7 +52,7 @@ $('.user-button').on('click', function(e) {
   duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
 
   if (!(sessionStorage.getItem('currentUser'))){
-    sessionStorage.setItem('currentUser', JSON.stringify(duwamish.newUser))
+    sessionStorage.setItem('currentUser', JSON.stringify(duwamish.newUser));
   }
   var userData = JSON.parse(localStorage.getItem('currentUser'));
 
@@ -66,7 +66,7 @@ $('.user-button').on('click', function(e) {
 
 $('.polbutton').on('click', function(e){
   e.preventDefault();
-  var polName= $(this).attr('title')
+  var polName= $(this).attr('title');
   var polEmail= $(this).attr('id');
 
   duwamish.newPolitician = new duwamish.Politician(polName, polEmail);
@@ -83,7 +83,9 @@ $('.polbutton').on('click', function(e){
 });
 
 //replaceText function
+// jshint ignore:start
 (function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
+// jshint ignore:end
 
 $('#emailLink').on('click', function(){
   $(".fillin-letter p" ).prepend(document.createTextNode("%0D%0A%0D%0A"));
@@ -105,10 +107,3 @@ $('#emailLink').on('click', function(){
   duwamish.newPolitician.reload();
   duwamish.allDone();
 });
-
-duwamish.allDone = function(){
-  if ($('.goodbye').length === 5) {
-    // $('.polpick').attr('id', 'hidden-pol');  //I removed this so more people
-    // $('.thanx-message').removeAttr('id');     could use the tweet@ feature
-  }                                             //TODO:display msg after all criteria has been met.
-}
