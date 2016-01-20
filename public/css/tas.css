@@ -17,7 +17,7 @@
   border-bottom-right-radius: 8px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #F6B316subl;
+  background-color: #F6B316;
   background-image: linear-gradient(
     center bottom,
     rgb(43,194,83) 37%,
@@ -29,4 +29,9 @@
   position: relative;
   overflow: hidden;
 }
+
+.thanx-message {
+  display: none;
+}
+
 
