@@ -1,6 +1,8 @@
 [![Stories in Ready](https://badge.waffle.io/trishthedish/duwamishapp.png?label=ready&title=Ready)](https://waffle.io/trishthedish/duwamishapp)
 #Stand With the Duwamish
 
+[http://www.standwithduwamish.com](http://www.standwithduwamish.com)
+
 This is an app and website designed to motivate change. Visitors will learn the story of the Duwamish, current and historical, and then are asked to take a stand.
 
 ##Take a Stand
