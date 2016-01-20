@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
   // read and dynamically insert total signatures from Firebase, currently reading total
   //   number of backers
   var backerCount = new Firebase('https://standwithduwamish.firebaseio.com/backerCount');
@@ -19,7 +19,7 @@ $(document).ready(function(){
       localStorage.backerCount = backerTotal;
     });
     showProgress(localStorage.backerCount);
-  };
+  }
 
   // progress bar, will register 10% for visual sake until the signature total is higher
   function showProgress(signatures){
@@ -33,13 +33,13 @@ $(document).ready(function(){
           width: $(this).data('origWidth') // or + "%" if fluid
         }, 1200);
     });
-  };
+  }
 
   // taken from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-  };
+  }
 
   //listen for submit to update backer in firebase
   // should also make api call to change.org *************(NOT YET)************
@@ -52,6 +52,8 @@ $(document).ready(function(){
     if (zip.length == 5 && validateEmail(email)){
       $('.action-call').hide(); // hide call-to-action form
       $('.thanx-message').show(); // show hidden html
+      $('.polpick').show();
+      console.log('should show something here');
       $('#insert-name').html(firstName);
       var backer = new Firebase('https://standwithduwamish.firebaseio.com/backers/');
       backer.push({
@@ -63,9 +65,9 @@ $(document).ready(function(){
       updateBackers(backerCount);
     } else {
       $('#error').html("Check your email address and/or your zipcode");
-    };
+    }
   });
 
   updateBackers(backerCount);
-})
+});
 
