@@ -1,79 +1,80 @@
-#standForm {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  text-align: center;
-}
 
-.takeAstand, .selectPol, .letterPrompt, .selectPoltwo {
-  text-align: center;
-  font-size: 150%;
-}
-.user-button, .fillin-button {
-  border: 0;
-  box-shadow: 0 5px 5px @light-gray;
-  cursor: pointer;
-  margin: 0;
-  outline: 0;
-  padding: 12px 20px;
-  transition: all .1s linear;
+// #standForm {
+//   padding-top: 40px;
+//   padding-bottom: 60px;
+//   text-align: center;
+// }
 
-  &:active {
-    box-shadow: 0 3px 0 @light-gray;
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    transform: translateY(10px);
-  }
-}
+// .takeAstand, .selectPol, .letterPrompt, .selectPoltwo {
+//   text-align: center;
+//   font-size: 150%;
+// }
+// .user-button, .fillin-button {
+//   border: 0;
+//   box-shadow: 0 5px 5px @light-gray;
+//   cursor: pointer;
+//   margin: 0;
+//   outline: 0;
+//   padding: 12px 20px;
+//   transition: all .1s linear;
 
-.hansen-quote {
-  text-align: center;
-  padding-top: 3%;
-  font-weight: 400;
-}
+//   &:active {
+//     box-shadow: 0 3px 0 @light-gray;
+//     -webkit-transform: translateY(10px);
+//     -moz-transform: translateY(10px);
+//     transform: translateY(10px);
+//   }
+// }
 
-.signature {
-  font-weight: 400;
-}
+// .hansen-quote {
+//   text-align: center;
+//   padding-top: 3%;
+//   font-weight: 400;
+// }
 
-#hidden-pol {
-  display:none;
-}
+// .signature {
+//   font-weight: 400;
+// }
 
-#hidden-letter {
-  display: none;
-}
+// #hidden-pol {
+//   display:none;
+// }
 
-.polpick{
-  display: none;
-  text-align: center;
-}
+// #hidden-letter {
+//   display: none;
+// }
 
-.polbutton {
-  border-radius: 100px;
-  transition: all .1s linear;
-  border: 2px outset buttonface;
+// .polpick{
+//   // display: none;
+//   text-align: center;
+// }
 
-  &:hover {
-    cursor:pointer;
-  }
+// .polbutton {
+//   border-radius: 100px;
+//   transition: all .1s linear;
+//   border: 2px outset buttonface;
 
-  &:active {
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-}
+//   &:hover {
+//     cursor:pointer;
+//   }
 
-.fillin-letter p {
-  margin-bottom: 0;
-}
+//   &:active {
+//     -webkit-transform: translateY(20px);
+//     -moz-transform: translateY(20px);
+//     transform: translateY(20px);
+//   }
+// }
 
-.choose-letter button {
-  background-color: @orange;
-  color:black;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .fillin-letter p {
+//   margin-bottom: 0;
+// }
+
+// .choose-letter button {
+//   background-color: @orange;
+//   color:black;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
 /* Tweet Rep */
 .tweetrep {
@@ -92,56 +93,141 @@
   }
 
 }
-/*above was suggestion from Eitan*/
 
-#secret-message {
+
+
+// new TAS using these selectors
+
+div.standings {
+  margin: auto;
+  .meter {
+    margin: auto;
+    width: 50%;
+    height: 1em;  /* Can be anything */
+    position: relative;
+    background: #555;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    span {
+      display: block;
+      height: 100%;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: #F6B316;
+      background-image: linear-gradient(
+        center bottom,
+        rgb(43,194,83) 37%,
+        rgb(84,240,84) 69%
+      );
+      box-shadow:
+        inset 0 2px 9px  rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+  }
+  text-align: center;
+}
+
+/* FORM - Hides upon submition */
+div.action-call {
+  display: none ;
+  margin: auto;
+  text-align: center;
+  form.signature-form {
+    margin: auto;
+    text-align: right;
+    width: 250px;
+    input {
+      background-color: #999;
+      color: #FFF;
+    }
+    button {
+      background-color: #F6B316;
+    }
+  }
+}
+
+#error {
   display: none;
-}
-
-
-.goodbye {
-  opacity: .4;
-  border-radius: 100px;
-  transition: all .1s linear;
-  border: 2px outset buttonface;
-}
-
-.goodbye + .tweetrep {
-  display: inline-block;
-}
-
-.meter {
-  width: 400px;
-  height: 20px;  /* Can be anything */
-  position: relative;
-  background: #555;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  padding: 10px;
-  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-}
-
-.meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: #F6B316;
-  background-image: linear-gradient(
-    center bottom,
-    rgb(43,194,83) 37%,
-    rgb(84,240,84) 69%
-  );
-  box-shadow:
-    inset 0 2px 9px  rgba(255,255,255,0.3),
-    inset 0 -2px 6px rgba(0,0,0,0.4);
-  position: relative;
-  overflow: hidden;
+  border: 2px solid #FB7373;
+  background-color: #EB7373;
+  text-align: center;
 }
 
 .thanx-message {
-  display: none;
+  // display: none;
+  width:100%;
+  div.step1 {
+    display: inline-block;
+    margin: auto;
+    border: 10px solid green;
+    @media only screen and (min-width: 400px ) {
+      width: 95%;
+      margin: auto;
+    }
+    @media only screen and (min-width: 800px) {
+      max-width: 40%;
+      border: 3px dotted red;
+    }
+  }
+  div.step2.pics-container {
+    border: 3px orange dotted;
+    margin: auto;
+    @media only screen and (min-width: 400px ) {
+      max-width: 95%;
+      margin: auto;
+    }
+    @media only screen and (min-width: 800px) {
+      max-width: 40%;
+      margin-left: 60%;
+    }
+    section.pol-pics {
+      display: inline-block;
+      text-align: center;
+      border: 2px red solid;
+      margin: auto;
+      &:hover {
+        cursor:pointer;
+      }
+
+      &:active {
+        -webkit-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        transform: translateY(20px);
+      }
+      p {
+        margin: auto;
+        @media only screen and (max-width: 400px ) {
+          font-size: 1em;
+        }
+        @media only screen and (min-width: 800px){
+          font-size: .7em;
+        }
+      }
+      img {
+        border-radius: 100px;
+        transition: all .1s linear;
+        border: 2px outset buttonface;
+        @media only screen and (min-width: 400px ) {
+          max-width: 60%;
+          font-size: 1.5em;
+        }
+        @media only screen and (min-width: 800px) {
+          border: 2px orange green;
+          max-width: 10%;
+          max-height: 20%;
+          margin: auto;
+        }
+      }
+    }
+  }
 }
+
+
+

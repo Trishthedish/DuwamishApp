@@ -52,8 +52,6 @@ $(function(){
     if (zip.length == 5 && validateEmail(email)){
       $('.action-call').hide(); // hide call-to-action form
       $('.thanx-message').show(); // show hidden html
-      $('.polpick').show();
-      console.log('should show something here');
       $('#insert-name').html(firstName);
       var backer = new Firebase('https://standwithduwamish.firebaseio.com/backers/');
       backer.push({
@@ -64,7 +62,7 @@ $(function(){
       });
       updateBackers(backerCount);
     } else {
-      $('#error').html("Check your email address and/or your zipcode");
+      $('#error').show().html("Check your email address and/or your zipcode for errors");
     }
   });
 
