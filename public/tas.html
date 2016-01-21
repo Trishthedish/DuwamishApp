@@ -37,7 +37,15 @@
           <br>
           <hr>
         </div>
-        <div class="action-call">
+        <div class="thanx-message">
+          <div class="box">
+            <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
+            <h4>Check out some of the other ways you can help:</h4>
+          </div>
+        </div>
+      </section>
+      <section class="row-container">
+          <div class="action step1">
             <h3>1.  Take a Stand with us:</h3>
             <div id="error"></div>
             <form class="signature-form">
@@ -51,47 +59,52 @@
               <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5"type="text" /></label><br>
               <button type="submit" id="pledge">Submit!</button>
             </form>
-        </div>
-      </section>
-          <section class="thanx-message">
-            <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
-            <h4>Here are some other ways you can help:</h4>
-            <div class="step1">
-              <h3>1. Tweet for Unity! </h3>js
+          </div>
+          <div class="action step2">
+            <div class="text-left">
+              <h3>2. Tweet for Unity! </h3>
                 Your Tweet does wonders for us, your voice is so very influential to our success!  Its just so easy to click, go ahead, try!
                 <br>
+              <textarea width="300px">This is where we put our template tweet</textarea>
               <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
             </div>
-            <div class= "step2">
-              <h3>2.  Send our letter to these Representatives</h3>
-              <div class="pics-container">
-                <section class="pol-pics" id="obama">
-                  <img src="photos/obama.jpg" alt="http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwNzg5ODI4MTEw.jpg" title="Barack Obama" class="pol-button" id="president@whitehouse.gov">
-                  <p>President Barack Obama</p>
-                </section>
-                <section class="pol-pics" id="inslee">
-                  <img src="photos/Jay_Inslee.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg/220px-Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg" title="Governor Inslee" class="pol-button" id="Jay.Inslee@gov.wa.gov">
-                  <p>Govenor Jay Inslee</p>
-                </section>
-                <section class="pol-pics" id="cantwell">
-                  <img src="photos/Maria_Cantwell.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maria_Cantwell,_official_portrait,_110th_Congress.jpg/220px-Maria_Cantwell,_official_portrait,_110th_Congress.jpg" title="Senator Cantwell" class="pol-button" id="maria_cantwell@cantwell.senate.gov">
-                  <p>Senator Maria Cantwell</p>
-                </section>
-                <section class="pol-pics" id="murray">
-                  <img src="photos/Patty_Murray.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/4/4f/Patty_Murray,_official_portrait,_113th_Congress.jpg" title="Senator Murray" class="pol-button" id="Senator@murray.senate.gov">
-                  <p>Senator Patty Murray</p>
-                </section>
-                <section class="pol-pics" id="mcdermott">
-                  <img src="photos/Jim_McDermott.jpg" alt="https://www.congress.gov/img/member/112_mcdermott_wa07.jpg" title="Congressman McDermott" class="pol-button" id="ima_wa07iq@mail.house.gov">
-                  <p>Congressman Jim McDermott</p>
-                </section>
-                <section class="pol-pics" id="jewell">
-                  <img src="photos/Sally_Jewell.jpg" alt="http://www.dpnm.net/wp-content/uploads/2014/01/jewell.jpg" title="Sec. Jewell" class="pol-button" id="feedback@ios.doi.gov">
-                  <p>Sally Jewell, Secretary of the Interior</p>
-                </section>
-              </div>
+          </div>
+        </section>
+        <section class="row-container">
+          <div class= "action step3">
+            <h3>3.  Contact these Representatives</h3>
+            <div class="pics-container">
+              <section class="pol-pics" id="obama">
+                <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="http://a5.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwNzg5ODI4MTEw.jpg" title="Barack Obama" class="pol-button" id="president@whitehouse.gov">
+                <p>President Barack Obama</p></a>
+              </section>
+              <section class="pol-pics" id="inslee">
+                <a href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg/220px-Jay_Inslee,_Official_Portrait,_c112th_Congress.jpg" title="Governor Inslee" class="pol-button" id="Jay.Inslee@gov.wa.gov">
+                <p>Govenor Jay Inslee</p></a>
+              </section>
+              <section class="pol-pics" id="cantwell">
+                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maria_Cantwell,_official_portrait,_110th_Congress.jpg/220px-Maria_Cantwell,_official_portrait,_110th_Congress.jpg" title="Senator Cantwell" class="pol-button" id="maria_cantwell@cantwell.senate.gov">
+                <p>Senator Maria Cantwell</p></a>
+              </section>
+              <section class="pol-pics" id="murray">
+                <a href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="http://upload.wikimedia.org/wikipedia/commons/4/4f/Patty_Murray,_official_portrait,_113th_Congress.jpg" title="Senator Murray" class="pol-button" id="Senator@murray.senate.gov">
+                <p>Senator Patty Murray</p></a>
+              </section>
+              <section class="pol-pics" id="mcdermott">
+                <a href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="https://www.congress.gov/img/member/112_mcdermott_wa07.jpg" title="Congressman McDermott" class="pol-button" id="ima_wa07iq@mail.house.gov">
+                <p>Congressman Jim McDermott</p></a>
+              </section>
+              <section class="pol-pics" id="jewell">
+                <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="http://www.dpnm.net/wp-content/uploads/2014/01/jewell.jpg" title="Sec. Jewell" class="pol-button" id="feedback@ios.doi.gov"></a>
+                <p>Sally Jewell, Secretary of the Interior</p>
+              </section>
             </div>
-          </section>
+          </div>
+        </section>
+          <div class="row-container">
+            <div class="action step4">
+            </div>
+          </div>
       <script type="text/javascript" src="js/app.js"></script>
     </body>
   </html>

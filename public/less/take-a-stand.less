@@ -137,43 +137,16 @@ div.standings {
   text-align: center;
 }
 
-/* FORM - Hides upon submition */
-div.action-call {
-  // display: none ;
-  margin: auto;
-  text-align: center;
 
-  form.signature-form {
-    margin: auto;
-    text-align: right;
-    width: 250px;
 
-    input {
-      background-color: #999;
-      color: #FFF;
-    }
+// .thanx-message {
+//   display: none;
+//   width:100%;
 
-    button {
-      background-color: #F6B316;
-    }
-  }
-}
-
-#error {
-  display: none;
-  border: 2px solid #FB7373;
-  background-color: #EB7373;
-  text-align: center;
-}
-
-.thanx-message {
-  display: none;
-  width:100%;
-
-  div.step1 {
-    display: inline-block;
-    margin: auto;
-    border: 10px solid green;
+//   div.step2 {
+//     display: inline-block;
+//     margin: auto;
+//     border: 10px solid green;
     // @media only screen and (min-width: 400px ) {
     //   width: 95%;
     //   margin: auto;
@@ -182,64 +155,254 @@ div.action-call {
     //   max-width: 40%;
     //   border: 3px dotted red;
     // }
+ // }
+
+//   div.step3.pics-container {
+//     border: 3px orange dotted;
+//     margin: auto;
+//     // @media only screen and (min-width: 400px ) {
+//     //   max-width: 95%;
+//     //   margin: auto;
+//     // }
+//     // @media only screen and (min-width: 800px) {
+//     //   max-width: 40%;
+//     //   margin-left: 60%;
+//     // }
+
+//     .pol-pics {
+//       display: inline-block;
+//       text-align: center;
+//       border: 2px red solid;
+//       margin: auto;
+
+//       &:hover {
+//         cursor:pointer;
+//       }
+
+//       &:active {
+//         -webkit-transform: translateY(20px);
+//         -moz-transform: translateY(20px);
+//         transform: translateY(20px);
+//       }
+
+//       p {
+//         margin: auto;
+//         // @media only screen and (max-width: 400px ) {
+
+//         // @media only screen and (min-width: 800px){
+//         //   font-size: .7em;
+//         // }
+//       }
+//     }
+//   }
+// }
+
+//*****************THANX MESSAGE ********************************
+
+.thanx-message {
+  // display: none;
+  width:100%;
+  display: inline-block;
+}
+
+// .thanx-message h2 {
+//   text-align: center;
+//   padding: none;
+//   margin-bottom: 200px;
+//   border: 2px solid black;
+// }
+
+.thanx-message h4 {
+  margin-top: 2px;
+  text-align: center;
+}
+
+.box {
+  background-color: #F6B316;
+  padding: 0 0 1em 0;
+}
+
+.box h2 {
+  margin: 1em;
+  padding: 1em;
+}
+
+.row-container {
+  // text-align: center;
+  vertical-align: top;
+  display: inline-block;
+  // border: 3px red dotted;
+  margin: auto;
+}
+
+.row-container div.text-left {
+  text-align: left;
+  border: 3px red dotted;
+  margin: auto;
+  width: 90%;
+}
+
+/* FORM - Hides upon submition */
+div.step1 {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  width: 40%;
+  // border: 10px solid green;
+}
+
+form.signature-form {
+  text-align: right;
+  margin-right: 25%;
+  max-width: 100%;
+  min-width: 17em;
+  border: 2px solid green;
+
+  input {
+    background-color: #999;
+    color: #FFF;
   }
 
-  div.step2.pics-container {
-    border: 3px orange dotted;
-    margin: auto;
-    // @media only screen and (min-width: 400px ) {
-    //   max-width: 95%;
-    //   margin: auto;
-    // }
-    // @media only screen and (min-width: 800px) {
-    //   max-width: 40%;
-    //   margin-left: 60%;
-    // }
-
-    .pol-pics {
-      display: inline-block;
-      text-align: center;
-      border: 2px red solid;
-      margin: auto;
-
-      &:hover {
-        cursor:pointer;
-      }
-
-      &:active {
-        -webkit-transform: translateY(20px);
-        -moz-transform: translateY(20px);
-        transform: translateY(20px);
-      }
-
-      p {
-        margin: auto;
-        // @media only screen and (max-width: 400px ) {
-        //   font-size: 1em;
-        // }
-        // @media only screen and (min-width: 800px){
-        //   font-size: .7em;
-        // }
-      }
-    }
+  button {
+    background-color: #F6B316;
   }
 }
 
+
+#error {
+  display: none;
+  border: 2px solid #FB7373;
+  background-color: #EB7373;
+  text-align: center;
+}
+
+// ************************* STEP 2 *************************
+
+div.step2 {
+  vertical-align: top;
+  // position: relative;
+  text-align: center;
+  width: 45%;
+  display: inline-block;
+  margin: auto;
+  // border: 10px solid green;
+
+}
+
+div.step2 textarea {
+  width: 90%;
+  height: 6em;
+  margin: auto;
+}
+
+// ************************* STEP 3 *************************
+
+.step3 {
+  display: inline-block;
+  // border: 3px green solid;
+}
+
+.step3.pics-container {
+  margin: auto;
+}
+
+.pol-pics {
+  display: inline-block;
+  text-align: center;
+  border: 2px red solid;
+  margin: auto;
+}
+
+.pol-pics &:hover {
+  cursor: pointer;
+}
+
+.pol-pics &:active {
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  transform: translateY(20px);
+}
 
 .pol-pics img {
   border-radius: 100%;
   transition: all .1s linear;
   border: 2px outset buttonface;
-  @media only screen and (min-width: 400px ) {
-    max-width: 60%;
+}
+
+/// ******************* MOBILE *******************
+
+@media (max-width: 725px ) {
+  .pol-pics{
+    position: relative;
+    margin: auto;
+    width: 100%;
+  }
+  .pol-pics p {
     font-size: 1.5em;
   }
-  @media only screen and (min-width: 800px) {
-    border: 2px orange green;
-    max-width: 10%;
-    max-height: 20%;
+
+  .pol-pics img {
+    max-width: 100%;
+  }
+
+  .action {
+    clear: all;
+    border: 2px lime solid;
+    width: 95%;
     margin: auto;
+  }
+
+}
+
+/// ******************* TABLET *******************
+
+@media screen (min-width: 750px){
+  .step1 {
+    background-color: #F56;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .step2 {
+    display: inline-block;
+    clear: left;
+    width: 95%;
   }
 }
 
+/// ******************* DESKTOP *******************
 
+@media (min-width: 800px) {
+  div.step1 {
+    margin-left: 5%;
+    max-width: 40%;
+    display: inline-block;
+  }
+
+  div.step2 {
+    margin-left: 5%;
+    max-width: 40%;
+    display: inline-block;
+  }
+
+  div.step3 {
+    margin-left:50%;
+    width: 40%;
+    display: inline-block;
+  }
+  .pol-pics{
+    vertical-align: top;
+    position: relative;
+    border: 2px orange solid;
+    width: 25%;
+    margin: auto;
+  }
+
+  .pol-pics p {
+    font-size: .7em;
+  }
+
+  .pol-pics img {
+    max-width: 70%;
+  }
+}
