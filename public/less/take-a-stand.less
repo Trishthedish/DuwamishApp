@@ -101,7 +101,7 @@
 // new TAS using these selectors
 
 .banner {
-  background-color: #F6B316;
+  background-color: @orange;
   text-align: center;
 
   div.standings{
@@ -230,7 +230,7 @@ form.signature-form {
   }
 
   button {
-    background-color: #F6B316;
+    background-color: @orange;
   }
 }
 
@@ -331,7 +331,7 @@ div.step2 textarea {
 
 
 /// ******************* MOBILE *******************
-@media (min-width: 200px ) and (max-width: 450px) {
+@media (max-width: 450px) {
   .banner div.standings{
     width:95%;
   }
@@ -339,7 +339,7 @@ div.step2 textarea {
 
 /// ******************* TABLET *******************
 
-@media (min-width: 450px) and (max-width: 750px){
+@media (min-width: 451px) and (max-width: 750px){
   .pol-pics{
     position: relative;
     margin: auto;
@@ -396,7 +396,7 @@ div.step2 textarea {
   .pol-pics{
     vertical-align: top;
     position: relative;
-    border: 2px orange solid;
+    border: 2px @orange solid;
     width: 25%;
     margin: auto;
   }
