@@ -5,6 +5,8 @@
 // define variables
 @orange: #F6B316;
 @light-gray: #A6A6A6;
+@blue: #1b95e0;
+@call-out-color: #f90000;
 
 // define mixins
 .text-font() {
@@ -42,6 +44,9 @@ hr {
   height: 3px;
   padding: 0;
 }
+textarea {
+  resize: vertical; // you'd be surprised how many websites forget this
+}
 
 // define global classes
 .button {
@@ -52,6 +57,7 @@ hr {
   line-height: inherit;
   border-radius: .5rem;
   border-width: 0;
+  color: black;
 
   .text-font;wq   box-shadow: 0 5px 5px @light-gray;
   cursor: pointer;
@@ -68,10 +74,18 @@ hr {
 
   &.button-active {
     background-color: @orange;
-    color: black;
+  }
+
+  &.button-passive {
+    background-color: @blue;
   }
 }
 
+@media (max-width: 600px) {
+  .hidden-below-600 {
+    display: none;
+  }
+}
 
 // importing the other les files
 @import "learn.less";
