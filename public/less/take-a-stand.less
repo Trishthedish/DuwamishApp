@@ -1,41 +1,20 @@
 
-.tweetrep {
-  position:absolute;
-  top: 150px;
-  display:none;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-
-  img {
-    width: 90px;
-    height:auto;
-
-  }
-}
-
-
-
-// new TAS using these selectors
-
 .banner {
   background-color: @orange;
   text-align: center;
 
-  div.standings{
+  .standings{
     width: 50%;
     margin: auto;
     text-align: center;
 
-    div span {
+    .count-number {
       color: #f90000;
       font-size: 2em;
+      font-weight: bold;
     }
 
-    div.signatures {
+    .signatures {
       display: inline-block;
       position: relative;
       text-align: center;
@@ -43,7 +22,7 @@
       width: 7em;
     }
 
-    div.needed-signatures {
+    .needed-signatures {
       display: inline-block;
       position: relative;
       text-align: center;
@@ -51,8 +30,9 @@
       // border: 2px dotted black;
     }
 
-    div.meter {
+    .meter {
       margin: auto;
+      margin-bottom: 2em;
       width: 90%;
       height: 1em;  /* Can be anything */
       position: relative;
@@ -63,7 +43,7 @@
       padding: 10px;
       box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
 
-      span {
+      #meter-bar {
         display: block;
         height: 100%;
         border-top-right-radius: 8px;
@@ -85,7 +65,7 @@
     }
   }
 }
-d
+
 
 //*****************THANX MESSAGE ********************************
 
@@ -93,30 +73,32 @@ d
   display: none;
   width: 100%;
   display: inline-block;
-}
 
-// .thanx-message h2 {
+  h4 {
+    margin-top: 2px;
+    text-align: center;
+  }
+
+  div {
+    display: none;
+    background-color: #F6B316;
+    padding: 0 0 1em 0;
+  }
+
+  h2 {
+    margin: 1em;
+    padding: 1em;
+  }
+  // h2 {
 //   text-align: center;
 //   padding: none;
 //   margin-bottom: 200px;
 //   border: 2px solid black;
 // }
-
-.thanx-message h4 {
-  margin-top: 2px;
-  text-align: center;
 }
 
-.thanx-message div {
-  display: none;
-  background-color: #F6B316;
-  padding: 0 0 1em 0;
-}
 
-.thanx-message h2 {
-  margin: 1em;
-  padding: 1em;
-}
+
 
 .goodbye {
   opacity: .4;
@@ -170,12 +152,11 @@ form.signature-form {
   margin: auto;
   // border: 10px solid green;
 
-}
-
-.step2 textarea {
-  width: 90%;
-  height: 6em;
-  margin: auto;
+  textarea {
+    width: 90%;
+    height: 6em;
+    margin: auto;
+  }
 }
 
 // ************************* STEP 3 *************************
@@ -186,33 +167,32 @@ form.signature-form {
   #sample-letter {
 
   }
+  .pics-container {
+    margin: auto;
+  }
 }
 
-.step3.pics-container {
-  margin: auto;
-}
 
 .pol-pics {
   display: inline-block;
   text-align: center;
   border: 2px red solid;
   margin: auto;
-}
 
-.pol-pics &:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
+  }
 
-.pol-pics &:active {
-  -webkit-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  transform: translateY(20px);
-}
-
-.pol-pics img {
-  border-radius: 100%;
-  transition: all .1s linear;
-  border: 2px outset buttonface;
+  &:active {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  img {
+    border-radius: 100%;
+    transition: all .1s linear;
+    border: 2px outset buttonface;
+  }
 }
 
 
@@ -259,15 +239,16 @@ form.signature-form {
     position: relative;
     margin: auto;
     width: 100%;
+    div {
+      font-size: 1.5em;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 
-  .pol-pics div {
-    font-size: 1.5em;
-  }
 
-  .pol-pics img {
-    max-width: 100%;
-  }
 
   .action {
     // clear: all;

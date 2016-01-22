@@ -24,90 +24,99 @@
             </section>
         </article>
       </header>
-      <section class="banner">
-        <h2><em>5 ways you can get involved</em></h2>
-        <div id="goal-desc">
-          <h5>We need 100,000 signatures so President Obama will see our cause.</h2>
-        </div>
-        <div class="standings">
-           <div class="signatures">We have <br><strong><span id="sigs-count"></span></strong><br> signatures!</div>
-           <div class="needed-signatures">We need <br><strong><span id="sigs-needed"></span></strong><br> more.</div>
-          <div class="meter">
-            <span></span>
+      <article id="tas-wrapper">
+        <section class="banner">
+          <h2><em>5 ways you can get involved</em></h2>
+          <div id="goal-desc">
+            <h5>We need 100,000 signatures so President Obama will see our cause.</h5>
           </div>
-          <br>
+          <div class="standings">
+             <div class="signatures">
+              <div>We have</div>
+              <div class="count-number" id="sigs-count"></div>
+              <div>signatures!</div>
+            </div>
+            <div class="needed-signatures">
+              <div>We need </div>
+              <div class="count-number" id="sigs-needed"></div>
+              <div>more.</div>
+            </div>
+            <div class="meter">
+              <span id="meter-bar"></span>
+            </div>
+          </div>
           <hr>
-        </div>
-        <div class="thanx-message">
-          <div>
-            <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
-            <h4>Check out some of the other ways you can help:</h4>
-          </div>
-        </div>
-      </section>
-      <section class="container">
-          <div class="action step1">
-            <h3>1.  Take a Stand with us:</h3>
-            <div id="error"></div>
-            <form class="signature-form">
-              <label>First Name:
-              <input autocomplete="given-name" type="text" id="firstName"/></label><br>
-              <label>Last Name:
-              <input autocomplete="family-name" type="text" id="lastName"/></label><br>
-              <label>Email:
-              <input autocomplete="email" type="email" id="email"/></label><br>
-              <label>Zipcode:
-              <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5"type="text" /></label><br>
-              <button type="submit" id="pledge" class="button button-active">Submit!</button>
-            </form>
-          </div>
-          <div class="action step2">
-            <div class="text-left">
-              <h3>2. Tweet for Unity! </h3>
-                Your Tweet does wonders for us, your voice is so very influential to our success!  Its just so easy to click, go ahead, try!
-                <br>
-              <textarea cols="50">This is where we put our template tweet</textarea>
-              <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
+          <div class="thanx-message">
+            <div>
+              <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
+              <h4>Check out some of the other ways you can help:</h4>
             </div>
-          </div>
-          <hr class="hidden-below-600">
-          <div class= "action step3">
-            <h3>3.  Contact these Representatives</h3>
-            <div class="pics-container">
-              <section class="pol-pics" id="obama">
-                <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="picture of Barrack Obama">
-                <p>President Barack Obama</p></a>
-              </section>
-              <section class="pol-pics" id="inslee">
-                <a href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="picture of ">
-                <p>Govenor Jay Inslee</p></a>
-              </section>
-              <section class="pol-pics" id="cantwell">
-                <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="picture of Maria Cantwell">
-                <p>Senator Maria Cantwell</p></a>
-              </section>
-              <section class="pol-pics" id="murray">
-                <a href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="picture of Patty Murray">
-                <p>Senator Patty Murray</p></a>
-              </section>
-              <section class="pol-pics" id="mcdermott">
-                <a href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="picture of ">
-                <p>Congressman Jim McDermott</p></a>
-              </section>
-              <section class="pol-pics" id="jewell">
-                <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel"></a>
-                <p>Sally Jewell, Secretary of the Interior</p>
-              </section>
-            </div>
-            <textarea id="sample-letter" cols="50">Sample letter text to send</textarea>
-            <button class="button button-passive" id="copy-button">copy</button>
-          </div>
-          <div class="action step4">
-            <h3>4. Change your profile pic</h3>
-            <img id="twibomb-pic" src="photos/trish.jpg" alt="picture of "/>
-            <button type="button">Make A Change</button>
           </div>
         </section>
+        <section class="container">
+            <div class="action step1">
+              <h3>1.  Take a Stand with us:</h3>
+              <div id="error"></div>
+              <form class="signature-form">
+                <label>First Name:
+                <input autocomplete="given-name" type="text" id="firstName"/></label><br>
+                <label>Last Name:
+                <input autocomplete="family-name" type="text" id="lastName"/></label><br>
+                <label>Email:
+                <input autocomplete="email" type="email" id="email"/></label><br>
+                <label>Zipcode:
+                <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5"type="text" /></label><br>
+                <button type="submit" id="pledge" class="button button-active">Submit!</button>
+              </form>
+            </div>
+            <div class="action step2">
+              <div class="text-left">
+                <h3>2. Tweet for Unity! </h3>
+                  Your Tweet does wonders for us, your voice is so very influential to our success!  Its just so easy to click, go ahead, try!
+                  <br>
+                <textarea cols="50">This is where we put our template tweet</textarea>
+                <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
+              </div>
+            </div>
+            <hr class="hidden-below-600">
+            <div class= "action step3">
+              <h3>3.  Contact these Representatives</h3>
+              <div class="pics-container">
+                <section class="pol-pics" id="obama">
+                  <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="picture of Barrack Obama">
+                  <p>President Barack Obama</p></a>
+                </section>
+                <section class="pol-pics" id="inslee">
+                  <a href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="picture of ">
+                  <p>Govenor Jay Inslee</p></a>
+                </section>
+                <section class="pol-pics" id="cantwell">
+                  <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="picture of Maria Cantwell">
+                  <p>Senator Maria Cantwell</p></a>
+                </section>
+                <section class="pol-pics" id="murray">
+                  <a href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="picture of Patty Murray">
+                  <p>Senator Patty Murray</p></a>
+                </section>
+                <section class="pol-pics" id="mcdermott">
+                  <a href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="picture of ">
+                  <p>Congressman Jim McDermott</p></a>
+                </section>
+                <section class="pol-pics" id="jewell">
+                  <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel"></a>
+                  <p>Sally Jewell, Secretary of the Interior</p>
+                </section>
+              </div>
+              <textarea id="sample-letter" cols="50">Sample letter text to send</textarea>
+              <button class="button button-passive" id="copy-button">copy</button>
+            </div>
+            <div class="action step4">
+              <h3>4. Change your profile pic</h3>
+              <img id="twibomb-pic" src="photos/trish.jpg" alt="picture of "/>
+              <button type="button">Make A Change</button>
+            </div>
+          </section>
+        </article>
       <script type="text/javascript" src="js/app.js"></script>
     </body>
   </html>

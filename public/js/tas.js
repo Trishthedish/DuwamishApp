@@ -23,16 +23,15 @@ $(function(){
 
   // progress bar, will register 10% for visual sake until the signature total is higher
   function showProgress(signatures){
-    $(".meter > span").each(function() {
-      var percent = (signatures * 100)/100000;
-      var adjPercent = percent > 10 ? percent : 10; // 10% minimum showing
-      $(this)
-        .data("origWidth",  adjPercent + "%")
-        .width(0)
-        .animate({
-          width: $(this).data('origWidth') // or + "%" if fluid
-        }, 1200);
-    });
+    var percent = (signatures * 100)/100000;
+    var adjPercent = percent > 10 ? percent : 10; // 10% minimum showing
+    var $meterBar = $("#meter-bar");
+    $meterBar
+      .data("origWidth",  adjPercent + "%")
+      .width(0)
+      .animate({
+        width: $meterBar.data('origWidth') // or + "%" if fluid
+      }, 1200);
   }
 
   // taken from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
