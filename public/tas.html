@@ -24,13 +24,14 @@
             </section>
         </article>
       </header>
-      <section class="take-a-stand">
+      <section class="banner">
+        <h2><em>5 ways you can get involved</em></h2>
         <div id="goal-desc">
-          <h2>We need 100,000 signatures so President Obama will see our cause.</h2>
+          <h5>We need 100,000 signatures so President Obama will see our cause.</h2>
         </div>
         <div class="standings">
-           We have <strong><span id="signatures"></span></strong> signatures!
-           We need <strong><span id="sigs-needed"></span></strong> more.
+           <div class="signatures">We have <br><strong><span id="sigs-count"></span></strong><br> signatures!</div>
+           <div class="needed-signatures">We need <br><strong><span id="sigs-needed"></span></strong><br> more.</div>
           <div class="meter">
             <span></span>
           </div>
@@ -38,13 +39,13 @@
           <hr>
         </div>
         <div class="thanx-message">
-          <div class="box">
+          <div>
             <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
             <h4>Check out some of the other ways you can help:</h4>
           </div>
         </div>
       </section>
-      <section class="row-container">
+      <section class="container">
           <div class="action step1">
             <h3>1.  Take a Stand with us:</h3>
             <div id="error"></div>
@@ -69,8 +70,7 @@
               <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
             </div>
           </div>
-        </section>
-        <section class="row-container">
+          <div id="placeholder"></div>
           <div class= "action step3">
             <h3>3.  Contact these Representatives</h3>
             <div class="pics-container">
@@ -100,11 +100,12 @@
               </section>
             </div>
           </div>
-        </section>
-          <div class="row-container">
-            <div class="action step4">
-            </div>
+          <div class="action step4">
+            <h3>4. Change your profile pic</h3>
+            <img id="twibomb-pic" src="photos/trish.jpg" alt="twibomb example" title="trish twibomb" class="twibomb pic"/>
+            <button type="button">Make A Change</button>
           </div>
+        </section>
       <script type="text/javascript" src="js/app.js"></script>
     </body>
   </html>
