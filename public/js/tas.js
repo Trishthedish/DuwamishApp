@@ -1,22 +1,18 @@
 $(function(){
-  // listens for screen size inserts an <hr> tag
-  if ($(window).width() > 600) {
-    $('#placeholder').html('<hr>');
-  }
   // read and dynamically insert total signatures from Firebase, currently reading total
   //   number of backers
   var backerCount = new Firebase('https://standwithduwamish.firebaseio.com/backerCount');
   backerCount.on("value", function(snapshot){
     var signatureCount = snapshot.val();
-    $('#sigs-count').html(signatureCount); // set initial value of users/signatures
+    $('#sigs-count').text(signatureCount); // set initial value of users/signatures
     localStorage.backerCount = signatureCount;
-    $('#sigs-needed').html(100000 - signatureCount);
+    $('#sigs-needed').text(100000 - signatureCount);
   });
 
   // will count users in database and update backerCount....to be done after every user
   // submits to signing petition....they are now 'backers'
+  var backers = new Firebase('https://standwithduwamish.firebaseio.com/backers');
   function updateBackers(backerCount){
-    var backers = new Firebase('https://standwithduwamish.firebaseio.com/backers');
     backers.on("value", function(snapshot) {
       var backerTotal = snapshot.numChildren();
       backerCount.set(backerTotal); // updates firebase backerCount (a smaller query than always counting the thousands of backers for an intial load/ note lines 4 - 10)
@@ -53,10 +49,10 @@ $(function(){
     var firstName = $('#firstName').val();
     var email = $('#email').val();
     var zip = $('#zip').val();
-    if (zip.length == 5 && validateEmail(email)){
+    if (zip.length === 5 && validateEmail(email)){
       // $('.action-call').hide(); // hide call-to-action form
       $('.thanx-message div').show(); // show hidden html
-      $('#insert-name').html(firstName);
+      $('#insert-name').text(firstName);
       $('.step1').hide();
       var backer = new Firebase('https://standwithduwamish.firebaseio.com/backers/');
       backer.push({
@@ -67,10 +63,17 @@ $(function(){
       });
       updateBackers(backerCount);
     } else {
-      $('#error').show().html("Check your email address and/or your zipcode for errors");
+      $('#error').show().text("Check your email address and/or your zipcode for errors");
     }
   });
 
+  // copy the sample letter text to clipboard. Can be generisized if needed
+  $('#copy-button').on('click', function() {
+    $('#sample-letter').select();
+    document.execCommand('copy');
+  });
+
   updateBackers(backerCount);
+
 });
 
