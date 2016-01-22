@@ -68,9 +68,7 @@
     }
   }
 
-
   //*****************THANX MESSAGE ********************************
-
 
   .thanx-message {
     display: none;
@@ -96,6 +94,7 @@
     h2 {
       margin: 1em;
       padding: 1em;
+    }
 
     .meter {
       margin: auto;
@@ -131,133 +130,125 @@
     }
   }
 
+  .container {
+    .action {
+      margin-top: 2.5em;
+      vertical-align: top;
+      margin: 2.5em;
+      .text-left {
+        text-align: left;
+        margin: auto;
+        width: 100%;
+      }
+    // ************************* STEP 1 *************************
+      .step1 {
+        display: inline-block;
+        margin:auto;
+        text-align: center;
+        input {
+          margin: .1em;
+        }
+        button {
+          background-color: @orange;
+        }
+        form.signature-form {
+          text-align: right;
+          margin-right: 25%;
+          max-width: 100%;
+          min-width: 17em;
 
+          input {
+            background-color: #999;
+            color: #FFF;
+          }
+          label {
+            margin-bottom: 3rem;
+          }
+        }
+        #error {
+          display: none;
+          border: 2px solid #FB7373;
+          background-color: #EB7373;
+          text-align: center;
+        }
+      }
 
-.container {
-  .action {
-    margin: 2.5em;
+    // ************************* STEP 2 *************************
+
+      .step2 {
+        display: inline-block;
+        vertical-align: top;
+        // position: relative;
+        text-align: center;
+        width: 45%;
+        margin: auto;
+        // border: 10px solid green;
+
+        textarea {
+          width: 90%;
+          height: 6em;
+          margin: auto;
+        }
+      }
+
+    // ************************* STEP 3 *************************
+
+      .step3 {
+        display: inline-block;
+        // border: 3px green solid;
+        #sample-letter {
+
+        }
+        .pics-container {
+          margin: auto;
+        }
+      }
+
+      .pol-pics {
+        display: inline-block;
+        text-align: center;
+        border: 2px red solid;
+        margin: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          -webkit-transform: translateY(20px);
+          -moz-transform: translateY(20px);
+          transform: translateY(20px);
+        }
+        img {
+          border-radius: 100%;
+          transition: all .1s linear;
+          border: 2px outset buttonface;
+        }
+      }
+
+      // ************************* STEP 4 *************************
+      .step4 {
+        display: inline-block;
+        text-align: center;
+        margin-top: 4em;
+        width: 45%;
+        border: 2px green solid;
+        img {
+          display: block;
+          margin: auto;
+          // background-color: red;
+          width: 50%;
+          margin-bottom: 1em;
+        }
+        button {
+          margin-top: 1em;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
   }
-  .text-left {
-    text-align: left;
-    margin: auto;
-    width: 100%;
-  }
-  .step1 {
-    display: inline-block;
-    margin:auto;
-    text-align: center;
-    input {
-      margin: .1em;
-    }
-    button {
-      background-color: @orange;
-    }
-  }
-  form.signature-form {
-    text-align: right;
-    margin-right: 25%;
-    max-width: 100%;
-    min-width: 17em;
-
-    input {
-      background-color: #999;
-      color: #FFF;
-    }
-    label {
-      margin-bottom: 3rem;
-    }
-  }
-
-
-  #error {
-    display: none;
-    border: 2px solid #FB7373;
-    background-color: #EB7373;
-    text-align: center;
-  }
-
-  // ************************* STEP 2 *************************
-
-  .step2 {
-    display: inline-block;
-    vertical-align: top;
-    // position: relative;
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    // border: 10px solid green;
-
-    textarea {
-      width: 90%;
-      height: 6em;
-      margin: auto;
-    }
-  }
-
-  // ************************* STEP 3 *************************
-
-  .step3 {
-    display: inline-block;
-    // border: 3px green solid;
-    #sample-letter {
-
-    }
-    .pics-container {
-      margin: auto;
-    }
-  }
-
-  .pol-pics {
-    display: inline-block;
-    text-align: center;
-    border: 2px red solid;
-    margin: auto;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:active {
-      -webkit-transform: translateY(20px);
-      -moz-transform: translateY(20px);
-      transform: translateY(20px);
-    }
-    img {
-      border-radius: 100%;
-      transition: all .1s linear;
-      border: 2px outset buttonface;
-    }
-  }
-
-  .step4 {
-    display: inline-block;
-    text-align: center;
-    margin-top: 4em;
-    width: 40%;
-    border: 2px green solid;
-    img {
-      display: block;
-      margin: auto;
-      // background-color: red;
-      width: 50%;
-      margin-bottom: 1em;
-    }
-    button {
-      margin-top: 1em;
-      display: block;
-      margin: auto;
-    }
-  }
-
-
-  // ************************* STEP 4 *************************
-
-  .step4 {
-    display: inline-block;
-    width: 40%;
-    border: 2px green solid;
-  }
-
+}
 
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
@@ -304,7 +295,7 @@
   }
 
     /// ******************* TABLET *******************
-  @media (min-width: 451px) and (max-width: 750px){
+  @media (min-width: 450px) and (max-width: 750px){
     .pol-pics{
       position: relative;
       margin: auto;
@@ -319,9 +310,10 @@
     }
 
     .action {
-      width: 95%;
+      // width: 95%;
       margin: auto;
     }
+
     .step1 {
       display: block;
       width: 100%;
@@ -333,7 +325,6 @@
       width: 95%;
     }
   }
-}
 
 
   /// ******************* DESKTOP *******************
@@ -373,8 +364,6 @@
     }
 
     .action {
-      margin-right: 0%;
       width: 45%;
     }
   }
-
