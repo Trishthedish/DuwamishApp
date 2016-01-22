@@ -19,10 +19,10 @@ duwamish.Politician = function(name, email) {
 duwamish.sessions=[duwamish.appUsers];
 duwamish.contacts=[duwamish.appContacts];
 
-duwamish.User.prototype.showMe = function(){
-  $('.inputName').append(duwamish.newUser.name);
-  $('.inputLocation').append(duwamish.newUser.location);
-  $('.inputCause').append('I stand with the Duwamish because ' + duwamish.newUser.cause + '.');
+var showMe = function(user){
+  $('.inputName').append(user.name);
+  $('.inputLocation').append(user.location);
+  $('.inputCause').append('I stand with the Duwamish because ' + user.cause + '.');
 };
 
 duwamish.Politician.prototype.reload = function(){
@@ -38,27 +38,27 @@ $(window).load(function(){
     $('.polpick').removeAttr('id');
     var userSession = JSON.parse(window.sessionStorage.getItem('currentUser'));
 
-    duwamish.newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
-    duwamish.newUser.showMe();
+    var newUser = new duwamish.User(userSession.name, userSession.localStorage, userSession.cause);
+    showMe(newUser);
   }
 });
 
 $('.user-button').on('click', function(e) {
-    e.preventDefault();
+  e.preventDefault();
   var userName= $('.name').val();
   var userLocation= $('.place').val();
   var userCause= $('.cause').val();
 
-  duwamish.newUser = new duwamish.User(userName, userLocation, userCause);
+  var newUser = new duwamish.User(userName, userLocation, userCause);
 
   if (!(sessionStorage.getItem('currentUser'))){
-    sessionStorage.setItem('currentUser', JSON.stringify(duwamish.newUser));
+    sessionStorage.setItem('currentUser', JSON.stringify(newUser));
   }
   var userData = JSON.parse(localStorage.getItem('currentUser'));
 
-  duwamish.sessions.push(duwamish.newUser);
-  duwamish.appUsers.push(duwamish.newUser);
-  duwamish.newUser.showMe();
+  duwamish.sessions.push(newUser);
+  duwamish.appUsers.push(newUser);
+  showMe(newUser);
 
   $('.polpick').removeAttr('id');
   $('form').attr('id', 'hidden-pol');
@@ -82,7 +82,8 @@ $('.polbutton').on('click', function(e){
   $('.polpick').attr('id', 'hidden-pol');
 });
 
-//replaceText function
+
+//replaceText function TODO: replace this with something better
 // jshint ignore:start
 (function($){$.fn.replaceText=function(b,a,c){return this.each(function(){var f=this.firstChild,g,e,d=[];if(f){do{if(f.nodeType===3){g=f.nodeValue;e=g.replace(b,a);if(e!==g){if(!c&&/</.test(e)){$(f).before(e);d.push(f)}else{f.nodeValue=e}}}}while(f=f.nextSibling)}d.length&&$(d).remove()})}})(jQuery);
 // jshint ignore:end
