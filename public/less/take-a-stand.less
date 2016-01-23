@@ -1,10 +1,20 @@
+@orange: #F6B316;
+@action-red: #f90000;
+
+
+
 #tas-wrapper {
   .banner {
     background-color: @orange;
     text-align: center;
 
     .standings{
-      width: 50%;
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+      @media (min-width: 501px) {
+        width: 50%;
+      }
       margin: auto;
       text-align: center;
 
@@ -65,13 +75,17 @@
     }
   }
 
-
   //*****************THANX MESSAGE ********************************
 
   .thanx-message {
     display: none;
     width: 100%;
     display: inline-block;
+
+    span {
+      color: @action-red;
+      font-size: 2em;
+    }
 
     h4 {
       margin-top: 2px;
@@ -88,155 +102,293 @@
       margin: 1em;
       padding: 1em;
     }
-    // h2 {
-  //   text-align: center;
-  //   padding: none;
-  //   margin-bottom: 200px;
-  //   border: 2px solid black;
-  // }
-  }
 
-
-
-
-  .goodbye {
-    opacity: .4;
-    border-radius: 100px;
-    transition: all .1s linear;
-    border: 2px outset buttonface;
-  }
-
-  .container div.text-left {
-    text-align: left;
-    margin: auto;
-    width: 100%;
-  }
-
-  /* FORM - Hides upon submition */
-  .step1 {
-    display: inline-block;
-    margin:auto;
-    text-align: center;
-  }
-
-
-  form.signature-form {
-    text-align: right;
-    margin-right: 25%;
-    max-width: 100%;
-    min-width: 17em;
-
-    input {
-      background-color: #999;
-      color: #FFF;
-    }
-    label {
-      margin-bottom: 3rem;
-    }
-  }
-
-
-  #error {
-    display: none;
-    border: 2px solid #FB7373;
-    background-color: #EB7373;
-    text-align: center;
-  }
-
-  // ************************* STEP 2 *************************
-
-  .step2 {
-    display: inline-block;
-    vertical-align: top;
-    // position: relative;
-    text-align: center;
-    width: 45%;
-    margin: auto;
-    // border: 10px solid green;
-
-    textarea {
+    .meter {
+      margin: auto;
       width: 90%;
-      height: 6em;
-      margin: auto;
-    }
-  }
+      height: 1em;  /* Can be anything */
+      position: relative;
+      background: #555;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      border-radius: 25px;
+      padding: 10px;
+      box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
 
-  // ************************* STEP 3 *************************
-
-  .step3 {
-    display: inline-block;
-    // border: 3px green solid;
-    #sample-letter {
-
-    }
-    .pics-container {
-      margin: auto;
-    }
-  }
-
-
-  .pol-pics {
-    display: inline-block;
-    text-align: center;
-    border: 2px red solid;
-    margin: auto;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &:active {
-      -webkit-transform: translateY(20px);
-      -moz-transform: translateY(20px);
-      transform: translateY(20px);
-    }
-    img {
-      border-radius: 100%;
-      transition: all .1s linear;
-      border: 2px outset buttonface;
-    }
-  }
-
-
-  // ************************* STEP 4 *************************
-
-  .step4 {
-    display: inline-block;
-    width: 40%;
-    border: 2px green solid;
-  }
-
-  // Applys to all action steps in container
-  .container {
-    // text-align: center;
-    vertical-align: top;
-    width:95%;
-    margin: auto;
-    // margin-top: 4em;
-    // border: 3px red dotted;
-    .action {
-      margin-top: 4em;
-      // width: 40%;
-      img {
-        display: inline-block;
-        background-color: red;
-        width: 50%;
+      span {
+        display: block;
+        height: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: @action-red;
+        background-image: linear-gradient(
+          center bottom,
+          rgb(43,194,83) 37%,
+          rgb(84,240,84) 69%
+        );
+        box-shadow:
+          inset 0 2px 9px  rgba(255,255,255,0.3),
+          inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
       }
     }
   }
 
+  .container {
+    .action {
+      margin-top: 2.5em;
+      vertical-align: top;
+      margin: 2.5em;
+      .text-left {
+        text-align: left;
+        margin: auto;
+        width: 100%;
+      }
+    // ************************* STEP 1 *************************
+      .step1 {
+        display: inline-block;
+        margin:auto;
+        text-align: center;
+        input {
+          margin: .1em;
+        }
+        button {
+          background-color: @orange;
+        }
 
+        form.signature-form {
+          text-align: right;
+          margin-right: 25%;
+          max-width: 100%;
+          min-width: 17em;
+
+          input {
+            background-color: #999;
+            color: #FFF;
+          }
+          label {
+            margin-bottom: 3rem;
+          }
+        }
+
+        #error {
+          display: none;
+          border: 2px solid #FB7373;
+          background-color: #EB7373;
+          text-align: center;
+        }
+      }
+
+    // ************************* STEP 2 *************************
+
+      .step2 {
+        display: inline-block;
+        vertical-align: top;
+        // position: relative;
+        text-align: center;
+        width: 45%;
+        margin: auto;
+        // border: 10px solid green;
+
+        textarea {
+          width: 90%;
+          height: 6em;
+          margin: auto;
+        }
+      }
+
+    // ************************* STEP 3 *************************
+
+      .step3 {
+        display: inline-block;
+        // border: 3px green solid;
+        #sample-letter {
+
+        }
+        .pics-container {
+          margin: auto;
+        }
+      }
+
+      .pol-pics {
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:active {
+          -webkit-transform: translateY(20px);
+          -moz-transform: translateY(20px);
+          transform: translateY(20px);
+        }
+        img {
+          border-radius: 100%;
+          transition: all .1s linear;
+          border: 2px outset buttonface;
+        }
+      }
+
+      // ************************* STEP 4 *************************
+      .step4 {
+        display: inline-block;
+        text-align: center;
+        margin-top: 4em;
+        width: 45%;
+        border: 2px green solid;
+        background-color: #F56;
+
+        button {
+          margin-top: 1em;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+
+.step4 {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  div.twibbot-overlay {
+    width: 20em;
+    height: 20em;
+    background-image: url("../photos/trish.jpg");
+    background-position: -2em 0;
+    background-repeat: none;
+    margin: auto;
+    margin-bottom: 1em;
+    img.twibbot-pic {
+      width: 20em;
+      display: block;
+      margin: auto;
+      // background-color: red;
+      margin-bottom: 1em;
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+    }
+  }
+}
+
+.dark-color{
+  width: 160%;
+  background-color: #3C3D37;
+  margin: 0% 0 0 -20%;
+  padding-bottom: 7em;
+  padding-top: 3em;
+  text-align: center;
+  .step5 {
+    text-align: left;
+    margin-left: 15%;
+    display: block;
+    width: 26em;
+    color: #FFF;
+    // border: 2px green solid;
+    a.button {
+      margin-top: 2em;
+      display: block;
+      width: 11em;
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    p {
+      width: 95%;
+    }
+  }
+}
+  // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
 
   /// ******************* MOBILE *******************
   @media (max-width: 450px) {
-    .banner div.standings{
-      width:95%;
+    .banner {
+      width: 100%;
+      // .standings {
+      //   width: 95%;
+      //   border: 2px solid green;
+      //   display: inline-block;
+      //   .meter {
+      //     width: 100%;
+      //   }
+      // }
+      .standings {
+        // border: 2px solid green;
+        display: inline-block;
+        width: 95%;
+        .signatures{
+          border-right: none;
+        }
+        .needed-signaturesP{
+          display: inline-block;
+        }
+        .meter {
+          width: 100%;
+        }
+      }
+    }
+
+
+    .action {
+      // clear: all;
+      width: 95%;
+      margin: auto;
+    }
+    .step1 {
+      display: block;
+      width: 95%;
+    }
+
+    .step2 {
+      margin: auto;
+      display: block;
+      width: 90%;
+      margin:auto;
+      .text-left{
+        width: 35em;
+        margin:auto;
+        // border:3px solid @orange;
+      }
+      textarea {
+        border: 1px #555 solid;
+        width: 95%;
+        margin-top: 2em;
+      }
+    }
+
+    .step3 {
+      textarea{
+        width: 95%;
+        border: 1px #555 solid;
+        margin-top: 2em;
+      }
+    }
+
+    .step4 {
+      .step2;
+      img {
+        width: 70%;
+      }
+    }
+
+    .step5{
+      .step4;
+      width: 95%;
     }
   }
 
-  /// ******************* TABLET *******************
-
-  @media (min-width: 451px) and (max-width: 750px){
+    /// ******************* TABLET *******************
+  @media (min-width: 450px) and (max-width: 750px){
     .pol-pics{
       position: relative;
       margin: auto;
@@ -250,16 +402,12 @@
       }
     }
 
-
-
     .action {
-      // clear: all;
-      border: 2px lime solid;
-      width: 95%;
+      // width: 95%;
       margin: auto;
     }
+
     .step1 {
-      background-color: #F56;
       display: block;
       width: 100%;
     }
@@ -269,47 +417,68 @@
       clear: left;
       width: 95%;
     }
+
+    .step3 {
+      .step1;
+      h3 {
+        text-align: left;
+      }
+      text-align: left;
+    }
+
+    .step4{
+      .step2;
+      h3 {
+        text-align: left;
+      }
+    }
   }
+
 
   /// ******************* DESKTOP *******************
 
   @media (min-width: 800px) {
-    div.step1 {
+    .step1 {
       margin-left: 5%;
       max-width: 40%;
       display: inline-block;
     }
 
-    div.step2 {
+    .step2 {
       margin-left: 5%;
       max-width: 40%;
       display: inline-block;
     }
 
-    div.step3 {
-      margin-left: 5%;
-      width: 40%;
-      display: inline-block;
-    }
-    .pol-pics{
-      vertical-align: top;
-      position: relative;
-      border: 2px @orange solid;
-      width: 25%;
-      margin: auto;
+    .step3 {
+      .step1; // inherit from step1
+      .pol-pics {
+        vertical-align: top;
+        position: relative;
+        width: 25%;
+        margin: auto;
+        p {
+          font-size: .7em;
+        }
+
+        img{
+          max-width: 90%;
+        }
+      }
     }
 
-    .pol-pics p {
-      font-size: .7em;
-    }
-
-    .pol-pics img {
-      max-width: 70%;
+    .step4{
+      .step2;
     }
 
     .action {
-      margin-right: 0%;
-      width: 45%;
+      width: 40%;
+      .dark-color{
+        text-align: center;
+        padding: 0 21%;
+        .step5 {
+          margin-left: -25%;
+        }
+      }
     }
   }
-}
