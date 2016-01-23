@@ -7,6 +7,8 @@
 @light-gray: #A6A6A6;
 @blue: #1b95e0;
 @call-out-color: #f90000;
+@evergreen: #137D05;
+@sephia-tone: rgba(74, 56, 2, 0.5);
 
 // define mixins
 .text-font() {
@@ -66,7 +68,8 @@ textarea {
   border-width: 0;
   color: black;
 
-  .text-font;wq   box-shadow: 0 5px 5px @light-gray;
+  .text-font;
+  box-shadow: 0 5px 5px @light-gray;
   cursor: pointer;
   outline: 0;
   transition: all .1s linear;
@@ -92,6 +95,14 @@ textarea {
   .hidden-below-600 {
     display: none;
   }
+}
+.float-left {
+  float: left;
+}
+.vertical-center {
+  position: relative;
+ top: 50%;
+  transform: translateY(-50%);
 }
 
 // importing the other les files
