@@ -16,7 +16,7 @@ $(function(){
 
   function maskForm(firstName){
     console.log('ran maskForm');
-    $('.step1').fadeOut(500).empty().html('<h3>Thank you ' + firstName + ' for supporting us</h3>').addClass('signed').fadeIn(1000);
+    $('.step1').fadeOut(500).empty().html('<h3>Thank you <span style="color: #F6B316">' + firstName + '</span> for supporting us</h3>').addClass('signed').fadeIn(1000);
   }
 
   // will count users in database and update backerCount....to be done after every user
