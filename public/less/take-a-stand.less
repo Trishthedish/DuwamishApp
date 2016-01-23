@@ -1,4 +1,5 @@
 @action-red: #f90000;
+@evergreen: #00F955;
 
 #tas-wrapper {
   .banner {
@@ -72,6 +73,14 @@
   }
 
   //*****************THANX MESSAGE ********************************
+  .signed {
+    background-image: url('../photos/logo.png');
+    height: 30em;
+    background-repeat: no-repeat;
+    width: 120%;
+    color: @evergreen;
+    text-align: center;
+  }
 
   .thanx-message {
     display: none;
@@ -169,13 +178,13 @@
             margin-bottom: 3rem;
           }
         }
+      }
 
-        #error {
-          display: none;
-          border: 2px solid #FB7373;
-          background-color: #EB7373;
-          text-align: center;
-        }
+      #error {
+        display: none;
+        border: 2px solid #FB7373;
+        background-color: #EB7373;
+        text-align: center;
       }
 
     // ************************* STEP 2 *************************
