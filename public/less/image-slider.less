@@ -1,6 +1,8 @@
 header {
   background-color: #464646;
   width: 100%;
+  position: fixed;
+  z-index: 5;
   #homepage-link-icon {
     height: 100%;
   }
@@ -16,60 +18,57 @@ header {
       vertical-align: top;
       margin: 0 2rem;
       &:hover {
-        color: #24A313;
+        color: @evergreen;
       }
     }
   }
 }
 #imgSlider{
   height: 550px;
+  padding-top: 5rem;
   overflow: hidden;
   position: relative;
   > img {
     width: 100%;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: 550px;
     z-index: -5;
     position: absolute;
-    min-height: 550px;
   }
   #topHeader{
-    background-color:rgba(0, 6, 8, 0.5);
+    background-color: @sephia-tone;
     height: 100%;
     width: 100%;
     text-align: center;
-    z-index: 0;
-    position: absolute;
-    .stand-with-header, a { //remove the a/h1 once we start using partials
+    .stand-with-header {
       .headline-font;
       text-decoration: none;
-    }
-    .stand-with-header, h1 {
-      padding-top: 10%;
-      font-size: 450%;
-      color: white;
-      z-index: 5;
+      font-size: 7rem;
       text-align: center;
+      color: @evergreen;
+      text-shadow: 1px 1px 1px black;
+    }
+    .nav-link {
+      .headline-font;
     }
   }
   #nav {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    .nav-link, a { // remove the a once we start using partials
+    .nav-link {
       margin: 0 2rem;
-      color: @orange;
+      border: 2px solid transparent;
+      padding: .5rem 1.5rem;
       text-decoration: none;
-      font-size: 175%;
-      z-index: 5;
+      font-size: 3rem;
+      color: white;
       &:hover {
-        padding: .4em;
-        border: 2px solid @orange;
+        background-color: @evergreen;
+        color: white;
       }
     }
+    .current {
+      border: 2px solid @evergreen;
+    }
   }
-  .current {
-    border: 1px solid;
-  }
+
 }
