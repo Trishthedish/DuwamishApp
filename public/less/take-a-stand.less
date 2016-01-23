@@ -1,13 +1,20 @@
 @orange: #F6B316;
 @action-red: #f90000;
 
+
+
 #tas-wrapper {
   .banner {
     background-color: @orange;
     text-align: center;
 
     .standings{
-      width: 50%;
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+      @media (min-width: 501px) {
+        width: 50%;
+      }
       margin: auto;
       text-align: center;
 
@@ -151,6 +158,7 @@
         button {
           background-color: @orange;
         }
+
         form.signature-form {
           text-align: right;
           margin-right: 25%;
@@ -165,6 +173,7 @@
             margin-bottom: 3rem;
           }
         }
+
         #error {
           display: none;
           border: 2px solid #FB7373;
@@ -207,7 +216,6 @@
       .pol-pics {
         display: inline-block;
         text-align: center;
-        border: 2px red solid;
         margin: auto;
 
         &:hover {
@@ -233,13 +241,8 @@
         margin-top: 4em;
         width: 45%;
         border: 2px green solid;
-        img {
-          display: block;
-          margin: auto;
-          // background-color: red;
-          width: 50%;
-          margin-bottom: 1em;
-        }
+        background-color: #F56;
+
         button {
           margin-top: 1em;
           display: block;
@@ -250,6 +253,59 @@
   }
 }
 
+
+.step4 {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+  div.twibbot-overlay {
+    width: 20em;
+    height: 20em;
+    background-image: url("../photos/trish.jpg");
+    background-position: -2em 0;
+    background-repeat: none;
+    margin: auto;
+    margin-bottom: 1em;
+    img.twibbot-pic {
+      width: 20em;
+      display: block;
+      margin: auto;
+      // background-color: red;
+      margin-bottom: 1em;
+      opacity: 0.4;
+      filter: alpha(opacity=40);
+    }
+  }
+}
+
+.dark-color{
+  width: 160%;
+  background-color: #3C3D37;
+  margin: 0% 0 0 -20%;
+  padding-bottom: 7em;
+  padding-top: 3em;
+  text-align: center;
+  .step5 {
+    text-align: left;
+    margin-left: 15%;
+    display: block;
+    width: 26em;
+    color: #FFF;
+    // border: 2px green solid;
+    a.button {
+      margin-top: 2em;
+      display: block;
+      width: 11em;
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+    p {
+      width: 95%;
+    }
+  }
+}
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
@@ -257,10 +313,32 @@
   /// ******************* MOBILE *******************
   @media (max-width: 450px) {
     .banner {
-      .standings{
-        width:95%;
+      width: 100%;
+      // .standings {
+      //   width: 95%;
+      //   border: 2px solid green;
+      //   display: inline-block;
+      //   .meter {
+      //     width: 100%;
+      //   }
+      // }
+      .standings {
+        // border: 2px solid green;
+        display: inline-block;
+        width: 95%;
+        .signatures{
+          border-right: none;
+        }
+        .needed-signaturesP{
+          display: inline-block;
+        }
+        .meter {
+          width: 100%;
+        }
       }
     }
+
+
     .action {
       // clear: all;
       width: 95%;
@@ -272,25 +350,40 @@
     }
 
     .step2 {
-      border: 2px dashed green;
       margin: auto;
       display: block;
-      width: 35em;
+      width: 90%;
       margin:auto;
       .text-left{
         width: 35em;
         margin:auto;
-        border:3px solid @orange;
+        // border:3px solid @orange;
       }
       textarea {
+        border: 1px #555 solid;
         width: 95%;
+        margin-top: 2em;
+      }
+    }
+
+    .step3 {
+      textarea{
+        width: 95%;
+        border: 1px #555 solid;
+        margin-top: 2em;
       }
     }
 
     .step4 {
-      display: block;
+      .step2;
+      img {
+        width: 70%;
+      }
+    }
+
+    .step5{
+      .step4;
       width: 95%;
-      min-width: 30em;
     }
   }
 
@@ -324,6 +417,21 @@
       clear: left;
       width: 95%;
     }
+
+    .step3 {
+      .step1;
+      h3 {
+        text-align: left;
+      }
+      text-align: left;
+    }
+
+    .step4{
+      .step2;
+      h3 {
+        text-align: left;
+      }
+    }
   }
 
 
@@ -343,27 +451,34 @@
     }
 
     .step3 {
-      margin-left: 5%;
-      width: 40%;
-      display: inline-block;
-    }
-    .pol-pics{
-      vertical-align: top;
-      position: relative;
-      border: 2px @orange solid;
-      width: 25%;
-      margin: auto;
+      .step1; // inherit from step1
+      .pol-pics {
+        vertical-align: top;
+        position: relative;
+        width: 25%;
+        margin: auto;
+        p {
+          font-size: .7em;
+        }
+
+        img{
+          max-width: 90%;
+        }
+      }
     }
 
-    .pol-pics p {
-      font-size: .7em;
-    }
-
-    .pol-pics img {
-      max-width: 70%;
+    .step4{
+      .step2;
     }
 
     .action {
-      width: 45%;
+      width: 40%;
+      .dark-color{
+        text-align: center;
+        padding: 0 21%;
+        .step5 {
+          margin-left: -25%;
+        }
+      }
     }
   }
