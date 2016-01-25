@@ -1,4 +1,5 @@
 @action-red: #f90000;
+@evergreen: #00F955;
 
 #tas-wrapper {
   .banner {
@@ -72,6 +73,13 @@
   }
 
   //*****************THANX MESSAGE ********************************
+  .signed {
+    background-image: url('../photos/logo.png');
+    height: 30em;
+    background-repeat: no-repeat;
+    color: @evergreen;
+    text-align: center;
+  }
 
   .thanx-message {
     display: none;
@@ -169,13 +177,13 @@
             margin-bottom: 3rem;
           }
         }
+      }
 
-        #error {
-          display: none;
-          border: 2px solid #FB7373;
-          background-color: #EB7373;
-          text-align: center;
-        }
+      #error {
+        display: none;
+        border: 2px solid #FB7373;
+        background-color: #EB7373;
+        text-align: center;
       }
 
     // ************************* STEP 2 *************************
@@ -183,11 +191,9 @@
       .step2 {
         display: inline-block;
         vertical-align: top;
-        // position: relative;
         text-align: center;
         width: 45%;
         margin: auto;
-        // border: 10px solid green;
 
         textarea {
           width: 90%;
@@ -200,7 +206,6 @@
 
       .step3 {
         display: inline-block;
-        // border: 3px green solid;
         #sample-letter {
 
         }
@@ -233,7 +238,7 @@
       // ************************* STEP 4 *************************
       .step4 {
         display: inline-block;
-        text-align: center;
+        text-align: left;
         margin-top: 4em;
         width: 45%;
         border: 2px green solid;
@@ -283,9 +288,8 @@
     .dark-color{
       width: 100%;
       padding-bottom: 7em;
-      padding-top: 3em;
       text-align: center;
-      .action.step5 {
+      .step5 {
         padding: 2em 0;
         margin-top: 2em;
         text-align: left;
@@ -302,9 +306,9 @@
         display: block;
         width: 12rem;
       }
-      }
     }
   }
+}
 
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
   // @@@@@@@@@@@@@@@@@@@@ MEDIA QUERIES @@@@@@@@@@@@@@@@@@@@@
@@ -330,15 +334,22 @@
       }
     }
 
-
-    .action {
-      // clear: all;
-      width: 95%;
-      margin: auto;
+    #tas-wrapper{
+      max-width: 100%;
+      margin: 0;
+    }
+    .container{
+      max-width: 100%
+      margin: 0;
+      &.action {
+        // clear: all;
+        width: 100%;
+        margin: 0;
+      }
     }
     .step1 {
       display: block;
-      width: 95%;
+      width: 100%;
     }
 
     .step2 {
@@ -367,6 +378,7 @@
     }
 
     .step4 {
+      text-align: left;
       .step2;
       img {
         width: 70%;
@@ -396,7 +408,7 @@
 
     .action {
       // width: 95%;
-      margin: auto;
+      margin: 2.5em;
     }
 
     .step1 {
@@ -415,6 +427,10 @@
       h3 {
         text-align: left;
       }
+
+      textarea {
+        width: 100%;
+      }
       text-align: left;
     }
 
@@ -424,16 +440,36 @@
         text-align: left;
       }
     }
+
+
+    .step1.signed {
+      h3 {
+        max-width: 300px;
+      }
+      text-align: left;
+      width: 60%;
+      display: block;
+    }
   }
 
 
   /// ******************* DESKTOP *******************
 
-  @media (min-width: 800px) {
-    .step1 {
-      margin-left: 5%;
-      max-width: 40%;
-      display: inline-block;
+  @media (min-width: 751px) {
+    .action {
+      margin: 2.5em;
+      &.step1 {
+        margin-left: 5%;
+        max-width: 40%;
+        display: inline-block;
+        &.signed {
+          margin: auto;
+          h3 {
+            text-align: left;
+            max-width: 30rem;
+          }
+        }
+      }
     }
 
     .step2 {
@@ -443,7 +479,7 @@
     }
 
     .step3 {
-      .step1; // inherit from step1
+      .action.step1; // inherit from step1
       .pol-pics {
         vertical-align: top;
         position: relative;
@@ -464,12 +500,13 @@
     }
 
     .action {
-      width: 40%;
+      // width: 40%;
       .dark-color{
         text-align: center;
+        // padding: 0 10%;
         padding: 0 21%;
         .step5 {
-          margin-left: -25%;
+          margin-left: 0;
         }
       }
     }
