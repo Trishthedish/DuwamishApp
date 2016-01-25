@@ -5,10 +5,11 @@
 // define variables
 @orange: #F6B316;
 @light-gray: #A6A6A6;
-@blue: #1b95e0;
+@blue:  #1C5DC5;
 @call-out-color: #f90000;
-@evergreen: #137D05;
+@evergreen: #0C920E;
 @sephia-tone: rgba(74, 56, 2, 0.5);
+@header-background: #464646;
 
 // define mixins
 .text-font() {
@@ -44,11 +45,12 @@ a, p {
 }
 a, button {
   transition: .2s linear;
+  text-decoration: none;
 }
 hr {
   margin: auto;
   width: 75%;
-  color: @orange;
+  color: @evergreen;
   display: block;
   height: 3px;
   padding: 0;
@@ -81,13 +83,24 @@ textarea {
     -moz-transform: translateY(5px);
     transform: translateY(5px);
   }
-
+  &:hover {
+    color: black;
+  }
+  &:focus {
+    color: black;
+  }
   &.button-active {
-    background-color: @orange;
+    background-color: @evergreen;
+    &:hover, &:focus {
+      background-color: #149803; // lighter green
+    }
   }
 
   &.button-passive {
     background-color: @blue;
+    &:hover, &:focus {
+      background-color: #1b95e0;
+    }
   }
 }
 

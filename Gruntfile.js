@@ -12,9 +12,11 @@ grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'), // read and parse package.json into pkg variable
 
   jshint: { // runs jshint on all js files
-    files: ['Gruntfile.js','public/js/*.js'],
-    options: {
-      jshintrc: true // we have a .jshintrc file which lays out the rules
+    all: {
+      src: ['Gruntfile.js','public/js/*.js'],
+      options: {
+        force: false
+      }
     }
   },
 
@@ -66,7 +68,7 @@ grunt.initConfig({
   watch: { // reruns tasks when certain files change
     js: {
       files: ['public/js/**/*.js'],
-      tasks: ['jshint', 'uglify']
+      tasks: ['uglify']
     },
     server: {
       files: ['server.js'],

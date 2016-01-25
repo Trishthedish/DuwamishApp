@@ -20,7 +20,6 @@ $(function(){
     });
     showProgress(localStorage.backerCount);
   }
-
   // progress bar, will register 10% for visual sake until the signature total is higher
   function showProgress(signatures){
     var percent = (signatures * 100)/100000;

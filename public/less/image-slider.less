@@ -1,8 +1,9 @@
 header {
-  background-color: #464646;
+  background-color: @header-background;
   width: 100%;
   position: fixed;
   z-index: 5;
+  border-bottom: .2rem solid @evergreen;
   #homepage-link-icon {
     height: 100%;
   }
@@ -52,8 +53,6 @@ header {
   }
   #nav {
     margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
     .nav-link {
       margin: 0 2rem;
       border: 2px solid transparent;
@@ -70,5 +69,4 @@ header {
       border: 2px solid @evergreen;
     }
   }
-
 }
