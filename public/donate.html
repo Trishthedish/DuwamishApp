@@ -12,18 +12,34 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   </head>
   <body>
-    <header id="imgSlider" class="twelve.columns">
+    <header>
+      <nav id="main-nav" class="container" role="navigation">
+        <a href="index.html" class="nav-link">
+          <img id="homepage-link-icon" src="photos/logo_bw.png" alt="Stand with Duwamish">
+        </a>
+        <button id="menu-icon" class="nav-button" aria-expanded="false" aria-label="menu"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></button>
+        <div class="nav-links-container">
+          <a href="learn.html" class="nav-link">Learn</a>
+          <a href="tas.html" class="nav-link">Take A Stand</a>
+          <a href="donate.html" class="nav-link">Donate</a>
+          <a href="credit.html" class="nav-link">About us</a>
+        </div>
+      </nav>
+    </header>
+    <div id="imgSlider">
       <img src="photos/duwamishcanoe.jpg">
       <article id="topHeader">
-        <a href="index.html"><h1>STAND WITH DUWAMISH</h1></a>
-        <hr />
-        <section id="nav">
-          <a href="learn.html" class="offset-by-three two columns">Learn</a>
-          <a href="tas.html" class="two columns">Take A Stand</a>
-          <a href="donate.html" class="current two columns">Donate</a>
-        </section>
+        <div class="vertical-center">
+          <h1 class="stand-with-header">STAND WITH DUWAMISH</h1>
+          <hr/>
+          <section id="nav">
+            <a href="learn.html" class="nav-link">Learn</a>
+            <a href="tas.html" class="nav-link">Take A Stand</a>
+            <a href="donate.html" class="nav-link">Donate</a>
+          </section>
+        </div>
       </article>
-    </header>
+    </div>
     <section id="donate-wrapper" class="donate container">
       <h2>Support The Duwamish</h2>
       <section class="row donate-info">
