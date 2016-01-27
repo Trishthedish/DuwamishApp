@@ -16,7 +16,7 @@ setInterval(function(){
     $currentImage.fadeOut(fadeInterval);
     i++;
   } else {
-    $('.image-0').fadeIn(fadeInterval, function(){$('.slide-image').show()});
+    $('.image-0').fadeIn(fadeInterval, function(){$('.slide-image').show();});
     i = 0;
   }
 }, transitionInterval);
