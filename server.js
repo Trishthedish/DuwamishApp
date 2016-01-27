@@ -14,10 +14,16 @@ var server = app.listen(process.env.PORT || 5000, function() {
 var secretKey = process.env.CHANGE_ORG_KEY || '';
 var hashing = sha256.update(secretKey, 'utf8');
 
+var postChange = function(data, hash, apiKey){
+
+
+}
+
 app.get('/ajax/change-petition', function(req, res){
 	var obj = {};
 	console.log('received this query');
 	console.log(req.query);
+  console.log(hashing);
 	res.send({
 		query: req.query,
 		hash: hashing.digest('hex')
