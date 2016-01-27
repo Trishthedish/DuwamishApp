@@ -7,14 +7,29 @@
   position: relative;
   > img {
     width: 100%;
-    z-index: -5;
     position: absolute;
+  }
+  #image-slider-container {
+    height: 100%;
+  }
+  .slide-image {
+    height: 550px;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 0;
+    z-index: -5;
+
   }
   #topHeader{
     background-color: @sephia-tone;
     height: 100%;
     width: 100%;
     text-align: center;
+    position: absolute;
+    top: 0;
     .stand-with-header {
       .headline-font;
       text-decoration: none;
@@ -22,14 +37,19 @@
       text-align: center;
       color: @evergreen;
       text-shadow: 1px 1px 1px black;
+      margin: 2rem 3rem;
+      @media (max-width: 540px) {
+        font-size: 5rem;
+      }
     }
-    .nav-link {
-      .headline-font;
+    .middle-bar {
+      width: 70%;
     }
   }
   #nav {
     margin-top: 2rem;
     .nav-link {
+      .headline-font;
       margin: 0 2rem;
       border: 2px solid transparent;
       padding: .5rem 1.5rem;
@@ -39,6 +59,11 @@
       &:hover {
         background-color: @evergreen;
         color: white;
+      }
+      @media (max-width: 540px) {
+        font-size: 2.5rem;
+        padding: .3rem 1rem;
+        margin: 0 .5rem;
       }
     }
     .current {
