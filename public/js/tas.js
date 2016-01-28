@@ -15,7 +15,6 @@ $(function(){
   });
 
   function maskForm(firstName){
-    console.log('ran maskForm');
     $('.step1').fadeOut(500).empty().html('<h3>Thank you <span style="color: #F6B316">' + firstName + '</span> for supporting us</h3>').addClass('signed').fadeIn(1000);
   }
 
@@ -54,6 +53,48 @@ $(function(){
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  //Change.org build
+  function buildParameters(formData, rsig){
+    return {
+      api_key: "015735396ea389bccd3846d1113ac7ef9395d0fb7cde8670cdd2baa4bf22d9aa",
+      timestamp: Date.now(),
+      endpoint: "/v1/petitions/5569894",
+      source: "http://localhost:3000",
+      email: formData.email,
+      first_name: formData.first,
+      last_name: formData.last,
+      state_province: 'WA',
+      postal_code: formData.zipcode,
+      country_code: 'US',
+    };
+  }
+
+
+  function getHash(data){
+    $.get('/ajax/change-petition', data)
+    .success(function(data){
+      postToChange(data.response);
+    });
+  }
+
+  function postToChange(formData){
+    console.info(formData);
+    $.ajax({
+      type: 'POST',
+      headers: {"Access-Control-Allow-Origin": "http://localhost:3000"},
+      url: 'https://www.change.org/v1/petitions/5569894',
+      contentType: 'application/json',
+      data: formData,
+      dataType: 'json',
+    }).success(function(data, status){
+      console.log(data);
+      console.log(success);
+    }).error(function(data, status){
+      console.error(status + '%%%% ERROR %%%%');
+    });
+  }
+
+
   //listen for submit to update backer in firebase
   // should also make api call to change.org *************(NOT YET)************
 
@@ -63,14 +104,11 @@ $(function(){
     var email = $('#email').val();
     var zip = $('#zip').val();
     var lastName = $('#lastName').val();
+    var formData = {first: firstName, last: lastName, email: email, zipcode: zip};
     if (zip.length === 5 && validateEmail(email)){
+      getHash(buildParameters(formData));
       var backer = new Firebase('https://standwithduwamish.firebaseio.com/backers/');
-      backer.push({
-        first: firstName,
-        last: lastName,
-        email: email,
-        zipcode: zip,
-      });
+      backer.push(formData);
       maskForm(firstName);
       updateBackers(backerCount);
     } else {
