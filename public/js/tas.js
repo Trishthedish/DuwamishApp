@@ -54,42 +54,44 @@ $(function(){
   }
 
   //Change.org build
-  function buildParameters(formData){
+  function buildParameters(formData, rsig){
     return {
       api_key: "015735396ea389bccd3846d1113ac7ef9395d0fb7cde8670cdd2baa4bf22d9aa",
       timestamp: Date.now(),
       endpoint: "/v1/petitions/5569894",
       source: "http://localhost:3000",
-      email: formData['email'],
-      first_name: formData['first'],
-      last_name: formData['last'],
+      email: formData.email,
+      first_name: formData.first,
+      last_name: formData.last,
       state_province: 'WA',
-      postal_code: formData['zipcode'],
-      country_code: 'US'
-    }
+      postal_code: formData.zipcode,
+      country_code: 'US',
+    };
   }
 
 
-  function getHash(){
-    $.get('/ajax/change-petition', function(data, status){
-      return data['hash']
+  function getHash(data, callback){
+    $.get('/ajax/change-petition', data)
+    .success(function(data){
+      postToChange(data.response);
     });
   }
 
-  function getRsig(formData){
-    var data = buildParameters(formData);
-    console.log(data);
+
+  function postToChange(formData){
+    console.info(formData);
     $.ajax({
       type: 'PUT',
       url: 'https://api.change.org/v1/petitions/5569894',
-      data: data,
-      dataType: 'json',
+      // contentType: 'application/json',
+      data: formData,
+      // dataType: 'json',
     }).success(function(data, status){
       console.log(data);
       console.log(success);
     }).error(function(data, status){
-      console.log(data + status + '%%%% ERROR %%%%');
-    })
+      console.error(status + '%%%% ERROR %%%%');
+    });
   }
 
 
@@ -103,8 +105,8 @@ $(function(){
     var zip = $('#zip').val();
     var lastName = $('#lastName').val();
     var formData = {first: firstName, last: lastName, email: email, zipcode: zip};
-    getRsig(formData);
     if (zip.length === 5 && validateEmail(email)){
+      getHash(buildParameters(formData));
       var backer = new Firebase('https://standwithduwamish.firebaseio.com/backers/');
       backer.push(formData);
       maskForm(firstName);

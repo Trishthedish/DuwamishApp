@@ -11,21 +11,15 @@ var server = app.listen(process.env.PORT || 5000, function() {
 })
 
 /*-- AJAX end points --*/
-var secretKey = process.env.CHANGE_ORG_KEY || '';
-var hashing = sha256.update(secretKey, 'utf8');
-
-var postChange = function(data, hash, apiKey){
-
-
-}
 
 app.get('/ajax/change-petition', function(req, res){
-	var obj = {};
-	console.log('received this query');
-	console.log(req.query);
-  console.log(hashing);
+  var secretKey = process.env.CHANGE_ORG_KEY || '';
+  console.log(secretKey);
+  var stringObj = JSON.stringify(req.query).replace('{', '').replace('}', '') + secretKey;
+  var hashing = sha256.update(stringObj, 'utf8');
+  console.log('received this query Here');
+  req.query.rsig = hashing.digest('hex');
 	res.send({
-		query: req.query,
-		hash: hashing.digest('hex')
+		response: req.query,
 	});
 });
