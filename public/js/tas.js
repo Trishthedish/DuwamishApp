@@ -70,22 +70,22 @@ $(function(){
   }
 
 
-  function getHash(data, callback){
+  function getHash(data){
     $.get('/ajax/change-petition', data)
     .success(function(data){
       postToChange(data.response);
     });
   }
 
-
   function postToChange(formData){
     console.info(formData);
     $.ajax({
-      type: 'PUT',
-      url: 'https://api.change.org/v1/petitions/5569894',
-      // contentType: 'application/json',
+      type: 'POST',
+      headers: {"Access-Control-Allow-Origin": "http://localhost:3000"},
+      url: 'https://www.change.org/v1/petitions/5569894',
+      contentType: 'application/json',
       data: formData,
-      // dataType: 'json',
+      dataType: 'json',
     }).success(function(data, status){
       console.log(data);
       console.log(success);
