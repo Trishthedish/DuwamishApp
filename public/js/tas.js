@@ -40,7 +40,7 @@ $(function(){
       .width(0)
       .animate({
         width: $meterBar.data('origWidth') // or + "%" if fluid
-      }, 1200);
+      }, 2000);
   }
 
   // taken from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
@@ -84,8 +84,10 @@ $(function(){
     $('#sample-letter').select();
     document.execCommand('copy');
   });
-
-  updateBackers(backerCount);
+  setTimeout(function(){
+    //  show two seconds after page loads
+    updateBackers(backerCount);
+  },2000)
 
 });
 
