@@ -9,7 +9,8 @@
   "dependencies": {
     "express": "^4.12.4",
     "hexo-server": "^0.1.3",
-    "npm-save": "^1.0.2"
+    "npm-save": "^1.0.2",
+    "sha.js": "^2.4.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

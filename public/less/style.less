@@ -6,8 +6,12 @@
 @orange: #F6B316;
 @light-gray: #A6A6A6;
 @blue:  #1C5DC5;
-@call-out-color: #f90000;
-@evergreen: #0C920E;
+@call-out-color: rgba(6,234, 249,1);
+
+@evergreen: #149803;
+@light-green: #00C226;
+@action-red: #f90000;
+
 @sephia-tone: rgba(74, 56, 2, 0.5);
 @header-background: #464646;
 
@@ -49,16 +53,27 @@ a, button {
 }
 hr {
   margin: auto;
-  width: 75%;
+  max-width: 960px;
   color: @evergreen;
   display: block;
   height: 3px;
-  padding: 0;
 }
 textarea {
   resize: vertical; // you'd be surprised how many websites forget this
 }
-
+// overwrite skeleton
+@media (min-width: 550px) {
+  .container {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
 // define global classes
 .button {
   height: auto;
@@ -92,7 +107,7 @@ textarea {
   &.button-active {
     background-color: @evergreen;
     &:hover, &:focus {
-      background-color: #149803; // lighter green
+      background-color: @light-green;
     }
   }
 
@@ -103,7 +118,15 @@ textarea {
     }
   }
 }
-
+.nav-link {
+  .headline-font;
+  text-decoration: none;
+  color: white;
+  margin: 0 2rem;
+  &:hover {
+    color: @evergreen;
+  }
+}
 @media (max-width: 600px) {
   .hidden-below-600 {
     display: none;
@@ -114,11 +137,12 @@ textarea {
 }
 .vertical-center {
   position: relative;
- top: 50%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
-// importing the other les files
+// importing the other less files
+@import "header.less";
 @import "learn.less";
 @import "take-a-stand.less";
 @import "landing-page.less";
