@@ -1,0 +1,14 @@
+<div id="imgSlider">
+  <div id="image-slider-container"></div>
+  <article id="topHeader">
+    <div class="vertical-center">
+      <h1 class="stand-with-header">STAND WITH DUWAMISH</h1>
+      <hr class="middle-bar"/>
+      <section id="nav">
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="tas.html" class="nav-link">Take A Stand</a>
+        <a href="donate.html" class="nav-link">Donate</a>
+      </section>
+    </div>
+  </article>
+</div>
