@@ -13,7 +13,7 @@
     {% include "_header.nunjucks" %}
     {% include "_imgslider.nunjucks" %}
 
-    {% body %}
+    {{ body }}
 
     {% include "_footer.nunjucks" %}
   </body>
