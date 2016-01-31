@@ -1,0 +1,20 @@
+<!doctype html>
+  <html>
+  <head>
+    <meta charset='utf-8'>
+    <meta description="Tell all of you about the current recognition struggle of the Duwamish">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon" />
+    <title>Stand With Duwamish</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='//fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    {% include "_header.nunjucks" %}
+    {% include "_imgslider.nunjucks" %}
+
+    {% body %}
+
+    {% include "_footer.nunjucks" %}
+  </body>
+</html>

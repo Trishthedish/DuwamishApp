@@ -1,9 +1,7 @@
 var grunt = require('grunt');
 
 // load plugins just in time to speed up grunt
-require('jit-grunt')(grunt, {
- express: 'grunt-express-server'
-});
+require('jit-grunt')(grunt);
 
 // report on time taken for each task
 require('time-grunt')(grunt);
@@ -11,37 +9,52 @@ require('time-grunt')(grunt);
 grunt.initConfig({
   pkg: grunt.file.readJSON('package.json'), // read and parse package.json into pkg variable
 
+  hexo: {
+    clean: {
+      options: {
+        root: '/',
+        cliCmd: 'clean'
+      }
+    },
+    generate: {
+      options: {
+        root: '/',
+        cliCmd: 'generate'
+      }
+    },
+  },
+
   jshint: { // runs jshint on all js files
     all: {
-      src: ['Gruntfile.js','public/js/*.js'],
+      src: ['Gruntfile.js','source/js/*.js'],
       options: {
         force: false
       }
     }
   },
 
-  clean: ['dist'], // deletes everything in this folder
+  // clean: ['dist'], // deletes everything in this folder
 
-  copy: {
-    html: { // copies html into dist folder
-      src: ['public/**/*.html'],
-      dest: 'dist/',
-      expand: true,
-      flatten: true
-    },
-    photos: { // copies photos into dist/photos
-      src: ['public/photos/**'],
-      dest: 'dist/photos/',
-      flatten: true,
-      expand: true,
-      filter: 'isFile'
-    }
-  },
+  // copy: {
+    // html: { // copies html into dist folder
+    //   src: ['public/**/*.html'],
+    //   dest: 'dist/',
+    //   expand: true,
+    //   flatten: true
+    // },
+    // photos: { // copies photos into dist/photos
+    //   src: ['public/photos/**'],
+    //   dest: 'dist/photos/',
+    //   flatten: true,
+    //   expand: true,
+    //   filter: 'isFile'
+    // }
+  // },
 
   less: { // interprets less imports, compiles less > css, concats css into one big file
     all: {
       files: {
-        'dist/css/style.css':'public/less/style.less'
+        'source/css/style.css':'source/_less/style.less'
       }
     },
     options: {
@@ -53,9 +66,9 @@ grunt.initConfig({
   uglify: { // combines and ugilifies (minifies) js
     all: {
       files: {
-        'dist/js/app.js': ['public/js/*.js'],
-        'dist/js/tas.js': ['public/js/takeAStand/*.js'],
-        'dist/js/vendor.js':['public/js/vendor/*.js']
+        'dist/js/app.js': ['source/js/*.js'],
+        'dist/js/tas.js': ['source/js/takeAStand/*.js'],
+        'dist/js/vendor.js':['source/js/vendor/*.js']
       },
     },
     options: { // switch these flags to turn on minification
@@ -67,42 +80,23 @@ grunt.initConfig({
 
   watch: { // reruns tasks when certain files change
     js: {
-      files: ['public/js/**/*.js'],
+      files: ['source/js/**/*.js'],
       tasks: ['uglify']
     },
-    server: {
-      files: ['server.js'],
-      tasks: ['default']
-    },
     css: {
-      files: ['public/less/**/*.less'],
+      files: ['source/_less/**/*.less'],
       tasks: ['less']
-    },
-    html: {
-      files: ['public/**/*.html'],
-      tasks: ['copy']
     },
     grunt: {
       files: 'Gruntfile.js',
       tasks: ['default']
     },
-    options: {
-      spawn: false // prevents annoying "EADDRINUSE" exception from express/watch combination
-    }
-  },
-
-  express: { // starts the server
-    dev:{
-      options: {
-        script: 'server.js',
-        node_env: 'development'
-      }
-    }
   }
+
 });
 
 // runs the following tasks when you just type "grunt"
 grunt.registerTask('default', ['jshint', 'build']);
 // runs the following tasks when you type "grunt build", also referenced in above task
-grunt.registerTask('build', ['clean','copy','less', 'uglify', 'express:dev','watch']);
-grunt.registerTask('build:only', ['clean', 'copy', 'less', 'uglify']);
+grunt.registerTask('build', ['hexo:clean', 'less', 'uglify', 'hexo:generate', 'watch']);
+grunt.registerTask('build:only', ['hexo:clean', 'less', 'uglify', 'hexo:generate']);
