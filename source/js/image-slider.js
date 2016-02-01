@@ -1,4 +1,14 @@
-var images = ['photos/chiefSealth.jpg','photos/tempCamp.jpg','photos/chiefneedle.jpg','photos/group.jpg','photos/porch.jpg','photos/totem.jpg','photos/woman.jpg','photos/duwamishcanoe.jpg'];
+var images = [
+  '/photos/chiefSealth.jpg',
+  '/photos/tempCamp.jpg',
+  '/photos/chiefneedle.jpg',
+  '/photos/group.jpg',
+  '/photos/porch.jpg',
+  '/photos/totem.jpg',
+  '/photos/woman.jpg',
+  '/photos/duwamishcanoe.jpg'
+];
+
 var $imageLoc = $('#imgSlider').children('img');
 
 var imageNodes = $.map(images, function(el, i){
