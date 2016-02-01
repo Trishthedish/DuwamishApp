@@ -11,6 +11,7 @@
 @evergreen: #149803;
 @light-green: #00C226;
 @action-red: #f90000;
+@green: rgb(29, 123, 49, 1);
 
 @sephia-tone: rgba(74, 56, 2, 0.5);
 @header-background: #464646;
@@ -61,6 +62,7 @@ hr {
 }
 textarea {
   resize: vertical; // you'd be surprised how many websites forget this
+  max-width: 100%;
 }
 // overwrite skeleton
 @media (min-width: 550px) {
@@ -118,7 +120,19 @@ textarea {
       background-color: #1b95e0;
     }
   }
+
+  &.button-energetic {
+    background-color: @orange;
+    &:hover {
+      background-color: @orange+#222;
+    }
+  }
 }
+.full-width {
+  margin: 0;
+  width: 100%;
+}
+
 .nav-link {
   .headline-font;
   text-decoration: none;

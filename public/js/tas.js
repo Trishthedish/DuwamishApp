@@ -18,6 +18,7 @@ $(function(){
     console.log('ran maskForm');
     $('.step1').fadeOut(500).empty().html('<h3>Thank you <span style="color: #F6B316">' + firstName + '</span> for supporting us</h3>').addClass('signed').fadeIn(1000);
   }
+  window.maskForm = maskForm; // set on window for testing
 
   // will count users in database and update backerCount....to be done after every user
   // submits to signing petition....they are now 'backers'
@@ -87,7 +88,7 @@ $(function(){
   setTimeout(function(){
     //  show two seconds after page loads
     updateBackers(backerCount);
-  },2000)
+  },2000);
 
 });
 
