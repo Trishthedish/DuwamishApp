@@ -13,14 +13,13 @@ var server = app.listen(process.env.PORT || 5000, function() {
 /*-- AJAX end points --*/
 
 
-app.get('/ajax/change-petition', function(req, res){
-  var secretKey = process.env.CHANGE_ORG_KEY || '';
-  var petition_auth_key = '53905a4b6ba96711400a1f72f308fa86';
-  var stringObj = JSON.stringify(req.query).replace('{', '').replace('}','') + secretKey + petition_auth_key;
-  var hashing = sha256.update(stringObj, 'utf8');
+app.get('/ajax/wtp-petition', function(req, res){
+  var apiKey = process.env.WTP_ORG_KEY || 'not in config vars or ENV';
+  var petition_id = process.env.PETITION_ID || 'not in config vars or ENV'
   console.log('received this query');
-  req.query.rsig = hashing.digest('hex');
+  req.query.petition_id = petition_id;
 	res.send({
+    key: apiKey,
 		response: req.query,
 	});
 });

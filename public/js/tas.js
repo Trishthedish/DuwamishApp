@@ -54,37 +54,32 @@ $(function(){
   }
 
   //Change.org build
-  function buildParameters(formData, rsig){
+  function buildParameters(formData){
     return {
-      api_key: "015735396ea389bccd3846d1113ac7ef9395d0fb7cde8670cdd2baa4bf22d9aa",
-      timestamp: Date.now(),
-      endpoint: "/v1/petitions/5569894",
-      source: "http://localhost:3000",
       email: formData.email,
       first_name: formData.first,
       last_name: formData.last,
-      state_province: 'WA',
       postal_code: formData.zipcode,
-      country_code: 'US',
     };
   }
 
 
-  function getHash(data){
-    $.get('/ajax/change-petition', data)
+  function getHash(formData){
+    $.get('/ajax/wtp-petition', formData)
     .success(function(data){
-      postToChange(data.response);
+      console.log(data);
+      postToWTP(data);
     });
   }
 
-  function postToChange(formData){
-    console.info(formData);
+  function postToWTP(serverData){
+    console.info(serverData);
+    var key = serverData.key;
     $.ajax({
       type: 'POST',
-      headers: {"Access-Control-Allow-Origin": "http://localhost:3000"},
-      url: 'https://www.change.org/v1/petitions/5569894',
+      url: 'https://api.whitehouse.gov/v1/signatures.json?api_key=' + key,
       contentType: 'application/json',
-      data: formData,
+      data: serverData.dataArray,
       dataType: 'json',
     }).success(function(data, status){
       console.log(data);

@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
     <title>Stand With Duwamish</title>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <link href='//fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
   </head>
     <body>
@@ -22,25 +20,11 @@
             <a href="learn.html" class="nav-link">Learn</a>
             <a href="tas.html" class="nav-link">Take A Stand</a>
             <a href="donate.html" class="nav-link">Donate</a>
-            <a href="credit.html" class="nav-link">About us</a>
+            <a href="about-us.html" class="nav-link">About us</a>
           </div>
         </nav>
       </header>
-      <!-- Taking the image slider out here. -->
-      <!-- <div id="imgSlider">
-        <img src="photos/duwamishcanoe.jpg">
-        <article id="topHeader">
-          <div class="vertical-center">
-            <h1 class="stand-with-header">STAND WITH DUWAMISH</h1>
-            <hr/>
-            <section id="nav">
-              <a href="learn.html" class="nav-link">Learn</a>
-              <a href="tas.html" class="nav-link">Take A Stand</a>
-              <a href="donate.html" class="nav-link">Donate</a>
-            </section>
-          </div>
-        </article>
-      </div> -->
+      <!-- Taking the image slider out here/tg -->
       <article id="tas-wrapper">
         <section class="banner">
           <h2><em>5 ways you can get involved</em></h2>
@@ -70,7 +54,8 @@
           </div>
         </section>
         <section class="container">
-            <div class="action step1">
+          <div class="row">
+            <div class="action six columns step1">
               <h3>1.  Take a Stand with us</h3>
               <div id="error"></div>
               <form class="signature-form">
@@ -89,7 +74,7 @@
                 <button type="submit" id="pledge" class="button button-active">Submit!</button>
               </form>
             </div>
-            <div class="action step2">
+            <div class="action six columns step2">
               <div class="text-left">
                 <h3>2. Tweet for Unity </h3>
                   Your Tweet does wonders for us, your voice is so very influential to our success!  Its just so easy to click, go ahead, try!
@@ -98,8 +83,10 @@
                 <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
               </div>
             </div>
+          </div>
             <hr class="hidden-below-600">
-            <div class= "action step3">
+          <div class="row">
+            <div class= "action six columns step3">
               <h3>3.  Contact these Representatives</h3>
               <div class="pics-container">
                 <section class="pol-pics" id="obama">
@@ -130,28 +117,49 @@
               <textarea id="sample-letter" cols="50">Sample letter text to send</textarea>
               <button class="button button-passive" id="copy-button">copy</button>
             </div>
-            <div class="action step4">
+            <div class="action six columns step4">
               <h3>4. Change your profile pic</h3>
-              <div class="twibbot-overlay">
+              <div class="twibbon-overlay">
                 <!-- //background of Trish, overlay with twibbot.jpg -->
-                <img class="twibbot-pic" src="photos/twibbot.png" alt="example picture of twibbot transformation"/>
+
+                <img class="twibbon-pic" src="photos/twibbon-overlay.png"></img>
+                <!-- <img class="twibbot-pic" src="photos/twibbot.png" alt="example picture of twibbot transformation"/> -->
               </div>
-              <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" ><button type="button" class="button button-active">Make A Change</button></a>
+              <button type="button" class="button button-active">Make A Change</button></a>
+              <!-- <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" > -->
             </div>
-            <hr>
-          </section>
+          </div>
+          <hr>
+        </section>
           <section class="full-width">
             <div class="container">
-              <div class="dark-color">
-                <div class="action step5">
+              <div class="dark-color row">
+                <div class="action six columns step5">
                   <h3>5. Donate </h3>
                   Do you have services and/or in-kind contributions to offer such as, office equipment, hardware, software and business expertise, or<strong><em>grant writing</em></strong> experience?<br><br>
                   The Duwamish Tribe could use your support!
                   <a href="//www.duwamishtribe.org/give.html"><img class="donate-button-img" src="photos/donate_button.png"></a>
                 </div>
+                <div class="action six columns step6"></div>
               </div>
           </section>
         </article>
-      <script type="text/javascript" src="js/app.js"></script>
+      <footer>
+        <a href="index.html"  class="nav-link">Home</a>
+        <a href="learn.html"  class="nav-link">Learn</a>
+        <a href="tas.html"    class="nav-link">Take A Stand</a>
+        <a href="donate.html" class="nav-link">Donate</a>
+        <a href="about-us.html" class="nav-link">About us</a>
+        <div class="tweet-link-container">
+          <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button btn-twitter" data-size="large">Tweet #StandWithDuwamish</a>
+        </div>
+        <div class="copy-write">
+          Copyright 2016 &copy;
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
     </body>
   </html>
