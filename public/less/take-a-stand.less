@@ -102,12 +102,18 @@
     display: inline-block;
     margin-top: 0;
     width: 100%;
-
-    form.signature-form {
+    .form-wrapper {
+      text-align: left;
+    }
+    .signature-form {
+      @space-between: 3rem;
       text-align: right;
       width: 100%;
       label {
-        margin-bottom: 3rem;
+        margin-bottom: @space-between;
+      }
+      .label-text {
+        padding-bottom: @space-between;
       }
       input {
         background-color: #999;
@@ -116,23 +122,28 @@
         margin-bottom: 0;
       }
       @media (min-width: 400px) {
-        #signature-form {
-          display: table;
-        }
-        label {
-          display: table-row;
-        }
-        .label-text {
-          line-height: 38px; // to match input height
-          display: table-cell;
-          vertical-align: middle;
-          padding-right: 1rem;
-        }
+        max-width: 28rem;
         input {
-          width: 20rem;
-          display: table-cell;
+          max-width: 25rem;
+          width: 100%;
         }
-
+      //   .signature-form {
+      //     display: table;
+      //   }
+      //   label {
+      //     display: table-row;
+      //     margin-bottom: 0;
+      //   }
+      //   .label-text {
+      //     line-height: 38px; // to match input height
+      //     display: table-cell;
+      //     vertical-align: middle;
+      //     padding-right: 1rem;
+      //   }
+      //   input {
+      //     width: 20rem;
+      //     display: table-cell;
+      //   }
       }
 
 
