@@ -4,35 +4,26 @@
   #intro {
     text-align: left;
     .text-font;
-    font-size: 110%;
-    max-width: 960px;
   }
+
+  #logo{
+    text-align: center;
+    float: left;
+    margin: 0 2rem 2rem 0;
+    width: 27rem;
+    @media screen and (max-width: @small-bp) {
+      float: none;
+      display: block;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+  }
+
   .call-to-action {
     font-size: 2.5rem;
     margin: auto;
     display: block;
     max-width: 50rem;
   }
-
-  #logo{
-    text-align: center;
-    float: left;
-    padding: 0 1em 1em 0;
-    width: 27rem;
-
-  }
-  @media screen and (max-width: 700px) {
-    #logo{
-      float: none;
-      display: block;
-    }
-  }
-
-
-  #enter {
-    margin-left: 40px;
-    background-color: white;
-  }
-
 }
 
