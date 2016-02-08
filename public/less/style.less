@@ -1,6 +1,12 @@
+// breakpoints
+@small-bp: 480px;
+@medium-bp: 720px;
+@large-bp: 960px;
+
 // vendor css imports
 @import "vendor/normalize.less";
 @import "vendor/grid.less";
+@import "vendor/bootstrap.less";
 
 // define variables
 @orange: #F6B316;
@@ -32,6 +38,7 @@
 body {
   .headline-font;
   font-size: 1.8rem;
+  color: black;
 }
 h1 {
   font-size: 450%;
@@ -128,11 +135,6 @@ textarea {
     }
   }
 }
-.full-width {
-  margin: 0;
-  width: 100%;
-}
-
 .nav-link {
   .headline-font;
   text-decoration: none;

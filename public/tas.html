@@ -33,13 +33,13 @@
     </nav>
   </header>
   <!-- Taking the image slider out here/tg -->
-  <article id="tas-wrapper">
-    <section class="banner">
-      <h2><em>5 ways you can get involved</em></h2>
-      <div id="goal-desc">
+  <article id="tas-wrapper" class="container">
+    <section class="banner row">
+      <h2 class="col-xs-12"><em>5 ways you can get involved</em></h2>
+      <div id="goal-desc" class="col-xs-12">
         <h5>We need 100,000 signatures so President Obama will see our cause.</h5>
       </div>
-      <div class="standings">
+      <div class="standings col-xs-12">
         <div class="signatures">
           <div>We have</div>
           <div class="count-number" id="sigs-count"></div>
@@ -54,105 +54,107 @@
           <div id="meter-bar"></div>
         </div>
       </div>
-      <div class="thanx-message">
+      <div class="thanx-message col-xs-12">
         <div class="thanx-line">You are amazing !</div>
         <div class="thanx-line">Thank you <span class="thanx-line" id='insert-name'></span></div>
         <div class="thanx-line">for standing with us.</div>
         <div class="thanx-line">Check out some of the other ways you can help:</div>
       </div>
     </section>
-    <section class="container">
-      <div class="action step1">
-        <h3>1.  Take a Stand with us</h3>
-        <div class="form-wrapper">
-          <div id="error"></div>
-          <form class="signature-form">
-            <label>
-              <span class="label-text">First Name:</span>
-              <input autocomplete="given-name" type="text" id="firstName" />
-            </label>
-            <label>
-              <span class="label-text">Last Name:</span>
-              <input autocomplete="family-name" type="text" id="lastName" />
-            </label>
-            <label>
-              <span class="label-text">Email:</span>
-              <input autocomplete="email" type="email" id="email" />
-            </label>
-            <label>
-              <span class="label-text">Zipcode:</span>
-              <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5" type="text" />
-            </label>
-            <button type="submit" id="pledge" class="button button-energetic">Submit!</button>
-          </form>
-        </div>
-      </div>
-      <div class="action step2">
-        <div class="text-left">
-          <h3>2. Tweet for Unity </h3>
-          <div class="text">
-            Your Tweet does wonders for us, your voice is so very influential to our success! Its just so easy to click, go ahead, try!
+    <section>
+      <div class="row">
+        <div class="action step1 col-xs-12 col-md-6">
+          <h3>1.  Take a Stand with us</h3>
+          <div class="form-wrapper">
+            <form class="signature-form row">
+              <div id="error"></div>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">First Name:</span>
+                <input autocomplete="given-name" type="text" id="firstName" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Last Name:</span>
+                <input autocomplete="family-name" type="text" id="lastName" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Email:</span>
+                <input autocomplete="email" type="email" id="email" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Zipcode:</span>
+                <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5" type="text" />
+              </label>
+              <button type="submit" id="pledge" class="button button-energetic">Submit!</button>
+            </form>
           </div>
-          <textarea>This is where we put our template tweet</textarea>
-          <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
+        </div>
+        <div class="action step2 col-md-6">
+          <div class="text-left">
+            <h3>2. Tweet for Unity </h3>
+            <div class="text">
+              Your Tweet does wonders for us, your voice is so very influential to our success! Its just so easy to click, go ahead, try!
+            </div>
+            <textarea>This is where we put our template tweet</textarea>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
+          </div>
         </div>
       </div>
-      <div class="action step3">
-        <h3>3.  Contact these Representatives</h3>
-        <div class="pics-container">
-          <section class="pol-pics" id="obama">
+      <div class="row">
+        <div class="action step3 col-md-6">
+          <h3>3.  Contact these Representatives</h3>
+          <section class="pol-pics col-sm-6" id="obama">
             <a class="pol-pic-link" href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="picture of Barrack Obama">
-              <div>President Barack Obama</div>
+              <div class="pol-name">President Barack Obama</div>
             </a>
           </section>
-          <section class="pol-pics" id="inslee">
+          <section class="pol-pics col-sm-6" id="inslee">
             <a class="pol-pic-link" href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="picture of Jay Inslee">
-              <div>Govenor Jay Inslee</div>
+              <div class="pol-name">Govenor Jay Inslee</div>
             </a>
           </section>
-          <section class="pol-pics" id="cantwell">
+          <section class="pol-pics col-sm-6" id="cantwell">
             <a class="pol-pic-link" href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="picture of Maria Cantwell">
-              <div>Senator Maria Cantwell</div>
+              <div class="pol-name">Senator Maria Cantwell</div>
             </a>
           </section>
-          <section class="pol-pics" id="murray">
+          <section class="pol-pics col-sm-6" id="murray">
             <a class="pol-pic-link" href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="picture of Patty Murray">
-              <div>Senator Patty Murray</div>
+              <div class="pol-name">Senator Patty Murray</div>
             </a>
           </section>
-          <section class="pol-pics" id="mcdermott">
+          <section class="pol-pics col-sm-6" id="mcdermott">
             <a class="pol-pic-link" href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="picture of Jim McDermott">
-              <div>Congressman Jim McDermott</div>
+              <div class="pol-name">Congressman Jim McDermott</div>
             </a>
           </section>
-          <section class="pol-pics" id="jewell">
-            <a class="pol-pic-link" href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel"></a>
-            <div>Sally Jewell, Secretary of the Interior</div>
+          <section class="pol-pics col-sm-6" id="jewell">
+            <a class="pol-pic-link" href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel">
+              <div class="pol-name">Sally Jewell, Secretary of the Interior</div>
+            </a>
           </section>
+          <textarea id="sample-letter">Sample letter text to send</textarea>
+          <button class="button button-passive" id="copy-button">copy</button>
         </div>
-        <textarea id="sample-letter">Sample letter text to send</textarea>
-        <button class="button button-passive" id="copy-button">copy</button>
-      </div>
-      <div class="action step4">
-        <h3>4. Change your profile pic</h3>
-        <div class="twibbot-overlay">
-          <!-- //background of Trish, overlay with twibbot.jpg -->
-          <script src="http://twibbon.com/embed/stand-with-duwamish" type="text/javascript"></script>
-          <!-- <img class="twibbot-pic" src="photos/twibbot.png" alt="example picture of twibbot transformation"/> -->
+        <div class="action step4 col-md-6">
+          <h3>4. Change your profile pic</h3>
+          <div class="twibbot-overlay">
+            <!-- //background of Trish, overlay with twibbot.jpg -->
+            <script src="http://twibbon.com/embed/stand-with-duwamish" type="text/javascript"></script>
+            <img class="twibbot-pic" src="photos/trish.jpg" alt="example picture of twibbot transformation"/>
+          </div>
+          <button type="button" class="button button-active">Make A Change</button>
+          <!-- <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" > -->
         </div>
-        <button type="button" class="button button-active">Make A Change</button>
-        </a>
-        <!-- <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" > -->
       </div>
-    </section>
-    <section class="full-width dark-color">
-      <div class="container">
-        <div class="action step5">
-          <h3>5. Donate</h3> Do you have services and/or in-kind contributions to offer such as, office equipment, hardware, software and business expertise, or <em>grant writing</em> experience?
-          <br>
+      <div class="dark-color row">
+        <div class="action step5 col-xs-12">
+          <h3>5. Donate</h3>
+          <div>Do you have services and/or in-kind contributions to offer such as, office equipment, hardware, software and business expertise, or <em>grant writing</em> experience?
+          </div>
           <br> The Duwamish Tribe could use your support!
           <a href="//www.duwamishtribe.org/give.html"><img class="donate-button-img" src="photos/donate_button.png"></a>
         </div>
+      </div>
     </section>
   </article>
   <footer>
