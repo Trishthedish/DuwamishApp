@@ -1,6 +1,12 @@
+// breakpoints
+@small-bp: 480px;
+@medium-bp: 720px;
+@large-bp: 960px;
+
 // vendor css imports
 @import "vendor/normalize.less";
 @import "vendor/grid.less";
+@import "vendor/bootstrap.less";
 
 // define variables
 @orange: #F6B316;
@@ -11,6 +17,7 @@
 @evergreen: #149803;
 @light-green: #00C226;
 @action-red: #f90000;
+@green: rgb(29, 123, 49, 1);
 
 @sephia-tone: rgba(74, 56, 2, 0.5);
 @header-background: #464646;
@@ -30,6 +37,8 @@
 // define global overrides
 body {
   .headline-font;
+  font-size: 1.8rem;
+  color: black;
 }
 h1 {
   font-size: 450%;
@@ -60,6 +69,7 @@ hr {
 }
 textarea {
   resize: vertical; // you'd be surprised how many websites forget this
+  max-width: 100%;
 }
 // overwrite skeleton
 @media (min-width: 550px) {
@@ -115,6 +125,13 @@ textarea {
     background-color: @blue;
     &:hover, &:focus {
       background-color: #1b95e0;
+    }
+  }
+
+  &.button-energetic {
+    background-color: @orange;
+    &:hover {
+      background-color: @orange+#222;
     }
   }
 }

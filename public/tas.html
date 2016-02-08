@@ -1,160 +1,177 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta description="Tell all of you about the current recognition struggle of the Duwamish">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Stand With Duwamish</title>
-    <link href='//fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
-  </head>
-    <body>
-      <header>
-        <nav id="main-nav" class="container" role="navigation">
-          <a href="index.html" class="nav-link">
-            <img id="homepage-link-icon" src="photos/logo_bw.png" alt="Stand with Duwamish">
-          </a>
-          <button id="menu-icon" class="nav-button" aria-expanded="false" aria-label="menu"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></button>
-          <div class="nav-links-container">
-            <a href="learn.html" class="nav-link">Learn</a>
-            <a href="tas.html" class="nav-link">Take A Stand</a>
-            <a href="donate.html" class="nav-link">Donate</a>
-            <a href="about-us.html" class="nav-link">About us</a>
-          </div>
-        </nav>
-      </header>
-      <!-- Taking the image slider out here/tg -->
-      <article id="tas-wrapper">
-        <section class="banner">
-          <h2><em>5 ways you can get involved</em></h2>
-          <div id="goal-desc">
-            <h5>We need 100,000 signatures so President Obama will see our cause.</h5>
-          </div>
-          <div class="standings">
-             <div class="signatures">
-              <div>We have</div>
-              <div class="count-number" id="sigs-count"></div>
-              <div>signatures!</div>
-            </div>
-            <div class="needed-signatures">
-              <div>We need </div>
-              <div class="count-number" id="sigs-needed"></div>
-              <div>more.</div>
-            </div>
-            <div class="meter">
-              <span id="meter-bar"></span>
-            </div>
-          </div>
-          <div class="thanx-message">
-            <div>
-              <h2>You are amazing! Thank you <span id='insert-name'></span> for standing with us.</h2>
-              <h4>Check out some of the other ways you can help:</h4>
-            </div>
-          </div>
-        </section>
-        <section class="container">
-            <div class="action step1">
-              <h3>1.  Take a Stand with us</h3>
-              <div id="error"></div>
-              <form class="signature-form">
-                <label>First Name:
-                  <input autocomplete="given-name" type="text" id="firstName"/>
-                </label>
-                <label>Last Name:
-                  <input autocomplete="family-name" type="text" id="lastName"/>
-                </label>
-                <label>Email:
-                  <input autocomplete="email" type="email" id="email"/>
-                </label>
-                <label>Zipcode:
-                  <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5"type="text" />
-                </label>
-                <button type="submit" id="pledge" class="button button-active">Submit!</button>
-              </form>
-            </div>
-            <div class="action step2">
-              <div class="text-left">
-                <h3>2. Tweet for Unity </h3>
-                  Your Tweet does wonders for us, your voice is so very influential to our success!  Its just so easy to click, go ahead, try!
-                  <br>
-                <textarea cols="50">This is where we put our template tweet</textarea>
-                <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
-              </div>
-            </div>
-            <hr class="hidden-below-600">
-            <div class= "action step3">
-              <h3>3.  Contact these Representatives</h3>
-              <div class="pics-container">
-                <section class="pol-pics" id="obama">
-                  <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="picture of Barrack Obama">
-                  <p>President Barack Obama</p></a>
-                </section>
-                <section class="pol-pics" id="inslee">
-                  <a href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="picture of Jay Inslee">
-                  <p>Govenor Jay Inslee</p></a>
-                </section>
-                <section class="pol-pics" id="cantwell">
-                  <a href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="picture of Maria Cantwell">
-                  <p>Senator Maria Cantwell</p></a>
-                </section>
-                <section class="pol-pics" id="murray">
-                  <a href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="picture of Patty Murray">
-                  <p>Senator Patty Murray</p></a>
-                </section>
-                <section class="pol-pics" id="mcdermott">
-                  <a href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="picture of Jim McDermott">
-                  <p>Congressman Jim McDermott</p></a>
-                </section>
-                <section class="pol-pics" id="jewell">
-                  <a href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel"></a>
-                  <p>Sally Jewell, Secretary of the Interior</p>
-                </section>
-              </div>
-              <textarea id="sample-letter" cols="50">Sample letter text to send</textarea>
-              <button class="button button-passive" id="copy-button">copy</button>
-            </div>
-            <div class="action step4">
-              <h3>4. Change your profile pic</h3>
-              <div class="twibbot-overlay">
-                <!-- //background of Trish, overlay with twibbot.jpg -->
+<html>
 
-                <script src="http://twibbon.com/embed/stand-with-duwamish" type="text/javascript"></script>
-                <!-- <img class="twibbot-pic" src="photos/twibbot.png" alt="example picture of twibbot transformation"/> -->
-              </div>
-              <button type="button" class="button button-active">Make A Change</button></a>
-              <!-- <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" > -->
-            </div>
-            <hr>
-          </section>
-          <section class="full-width">
-            <div class="container">
-              <div class="dark-color">
-                <div class="action step5">
-                  <h3>5. Donate </h3>
-                  Do you have services and/or in-kind contributions to offer such as, office equipment, hardware, software and business expertise, or<strong><em>grant writing</em></strong> experience?<br><br>
-                  The Duwamish Tribe could use your support!
-                  <a href="//www.duwamishtribe.org/give.html"><img class="donate-button-img" src="photos/donate_button.png"></a>
-                </div>
-              </div>
-          </section>
-        </article>
-      <footer>
-        <a href="index.html"  class="nav-link">Home</a>
-        <a href="learn.html"  class="nav-link">Learn</a>
-        <a href="tas.html"    class="nav-link">Take A Stand</a>
+<head>
+  <meta charset='utf-8'>
+  <meta description="Tell all of you about the current recognition struggle of the Duwamish">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="photos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Stand With Duwamish</title>
+  <link href='//fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <nav id="main-nav" class="container" role="navigation">
+      <a href="index.html" class="nav-link">
+        <img id="homepage-link-icon" src="photos/logo_bw.png" alt="Stand with Duwamish">
+      </a>
+      <button id="menu-icon" class="nav-button" aria-expanded="false" aria-label="menu">
+        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+          </svg>
+      </button>
+      <div class="nav-links-container">
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="tas.html" class="nav-link">Take A Stand</a>
         <a href="donate.html" class="nav-link">Donate</a>
         <a href="about-us.html" class="nav-link">About us</a>
-        <div class="tweet-link-container">
-          <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button btn-twitter" data-size="large">Tweet #StandWithDuwamish</a>
+      </div>
+    </nav>
+  </header>
+  <!-- Taking the image slider out here/tg -->
+  <article id="tas-wrapper" class="container">
+    <section class="banner row">
+      <h2 class="col-xs-12"><em>5 ways you can get involved</em></h2>
+      <div id="goal-desc" class="col-xs-12">
+        <h5>We need 100,000 signatures so President Obama will see our cause.</h5>
+      </div>
+      <div class="standings col-xs-12">
+        <div class="signatures">
+          <div>We have</div>
+          <div class="count-number" id="sigs-count"></div>
+          <div>signatures!</div>
         </div>
-        <div class="copy-write">
-          Copyright 2016 &copy;
+        <div class="needed-signatures">
+          <div>We need </div>
+          <div class="count-number" id="sigs-needed"></div>
+          <div>more.</div>
         </div>
-    </footer>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <script src="/js/vendor.js"></script>
-    <script src="/js/app.js"></script>
-    </body>
-  </html>
+        <div class="meter">
+          <div id="meter-bar"></div>
+        </div>
+      </div>
+      <div class="thanx-message col-xs-12">
+        <div class="thanx-line">You are amazing !</div>
+        <div class="thanx-line">Thank you <span class="thanx-line" id='insert-name'></span></div>
+        <div class="thanx-line">for standing with us.</div>
+        <div class="thanx-line">Check out some of the other ways you can help:</div>
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div class="action step1 col-xs-12 col-md-6">
+          <h3>1.  Take a Stand with us</h3>
+          <div class="form-wrapper">
+            <form class="signature-form row">
+              <div id="error"></div>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">First Name:</span>
+                <input autocomplete="given-name" type="text" id="firstName" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Last Name:</span>
+                <input autocomplete="family-name" type="text" id="lastName" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Email:</span>
+                <input autocomplete="email" type="email" id="email" />
+              </label>
+              <label class="col-xs-12 col-sm-6 col-md-12">
+                <span class="label-text">Zipcode:</span>
+                <input autocomplete="postal-code" id="zip" inputmode="numeric" min="5" max="5" type="text" />
+              </label>
+              <button type="submit" id="pledge" class="button button-energetic">Submit!</button>
+            </form>
+          </div>
+        </div>
+        <div class="action step2 col-md-6">
+          <div class="text-left">
+            <h3>2. Tweet for Unity </h3>
+            <div class="text">
+              Your Tweet does wonders for us, your voice is so very influential to our success! Its just so easy to click, go ahead, try!
+            </div>
+            <textarea>This is where we put our template tweet</textarea>
+            <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button" data-size="large">Tweet #StandWithDuwamish</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="action step3 col-md-6">
+          <h3>3.  Contact these Representatives</h3>
+          <section class="pol-pics col-sm-6" id="obama">
+            <a class="pol-pic-link" href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/obama.jpg" alt="picture of Barrack Obama">
+              <div class="pol-name">President Barack Obama</div>
+            </a>
+          </section>
+          <section class="pol-pics col-sm-6" id="inslee">
+            <a class="pol-pic-link" href="https://fortress.wa.gov/es/governor/" target="_blank"><img src="photos/Jay_Inslee.jpg" alt="picture of Jay Inslee">
+              <div class="pol-name">Govenor Jay Inslee</div>
+            </a>
+          </section>
+          <section class="pol-pics col-sm-6" id="cantwell">
+            <a class="pol-pic-link" href="http://www.cantwell.senate.gov/public/index.cfm/email-maria" target="_blank"><img src="photos/Maria_Cantwell.jpg" alt="picture of Maria Cantwell">
+              <div class="pol-name">Senator Maria Cantwell</div>
+            </a>
+          </section>
+          <section class="pol-pics col-sm-6" id="murray">
+            <a class="pol-pic-link" href="http://www.murray.senate.gov/public/index.cfm/contactme" target="_blank"><img src="photos/Patty_Murray.jpg" alt="picture of Patty Murray">
+              <div class="pol-name">Senator Patty Murray</div>
+            </a>
+          </section>
+          <section class="pol-pics col-sm-6" id="mcdermott">
+            <a class="pol-pic-link" href="https://forms.house.gov/mcdermott/webforms/new/contact.shtml" target="_blank"><img src="photos/Jim_McDermott.jpg" alt="picture of Jim McDermott">
+              <div class="pol-name">Congressman Jim McDermott</div>
+            </a>
+          </section>
+          <section class="pol-pics col-sm-6" id="jewell">
+            <a class="pol-pic-link" href="https://www.whitehouse.gov/contact" target="_blank"><img src="photos/Sally_Jewell.jpg" alt="picture of Sally Jewel">
+              <div class="pol-name">Sally Jewell, Secretary of the Interior</div>
+            </a>
+          </section>
+          <textarea id="sample-letter">Sample letter text to send</textarea>
+          <button class="button button-passive" id="copy-button">copy</button>
+        </div>
+        <div class="action step4 col-md-6">
+          <h3>4. Change your profile pic</h3>
+          <div class="twibbot-overlay">
+            <!-- //background of Trish, overlay with twibbot.jpg -->
+            <script src="http://twibbon.com/embed/stand-with-duwamish" type="text/javascript"></script>
+            <img class="twibbot-pic" src="photos/trish.jpg" alt="example picture of twibbot transformation"/>
+          </div>
+          <button type="button" class="button button-active">Make A Change</button>
+          <!-- <a href="http://twibbon.com/Support/stand-with-duwamish" target="_blank" > -->
+        </div>
+      </div>
+      <div class="dark-color row">
+        <div class="action step5 col-xs-12">
+          <h3>5. Donate</h3>
+          <div>Do you have services and/or in-kind contributions to offer such as, office equipment, hardware, software and business expertise, or <em>grant writing</em> experience?
+          </div>
+          <br> The Duwamish Tribe could use your support!
+          <a href="//www.duwamishtribe.org/give.html"><img class="donate-button-img" src="photos/donate_button.png"></a>
+        </div>
+      </div>
+    </section>
+  </article>
+  <footer>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="learn.html" class="nav-link">Learn</a>
+    <a href="tas.html" class="nav-link">Take A Stand</a>
+    <a href="donate.html" class="nav-link">Donate</a>
+    <a href="about-us.html" class="nav-link">About us</a>
+    <div class="tweet-link-container">
+      <a href="https://twitter.com/intent/tweet?button_hashtag=StandWithDuwamish" class="twitter-hashtag-button btn-twitter" data-size="large">Tweet #StandWithDuwamish</a>
+    </div>
+    <div class="copy-write">
+      Copyright 2016 &copy;
+    </div>
+  </footer>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="/js/vendor.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

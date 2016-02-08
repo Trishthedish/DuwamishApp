@@ -18,6 +18,7 @@ $(function(){
     console.log('ran maskForm');
     $('.step1').fadeOut(500).empty().html('<h3>Thank you <span style="color: #F6B316">' + firstName + '</span> for supporting us</h3>').addClass('signed').fadeIn(1000);
   }
+  window.maskForm = maskForm; // set on window for testing
 
   // will count users in database and update backerCount....to be done after every user
   // submits to signing petition....they are now 'backers'
@@ -40,7 +41,7 @@ $(function(){
       .width(0)
       .animate({
         width: $meterBar.data('origWidth') // or + "%" if fluid
-      }, 1200);
+      }, 2000);
   }
 
   // taken from http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
@@ -84,8 +85,10 @@ $(function(){
     $('#sample-letter').select();
     document.execCommand('copy');
   });
-
-  updateBackers(backerCount);
+  setTimeout(function(){
+    //  show two seconds after page loads
+    updateBackers(backerCount);
+  },2000);
 
 });
 
