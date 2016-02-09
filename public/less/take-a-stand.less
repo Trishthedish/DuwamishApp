@@ -3,12 +3,15 @@
   .banner {
     background-color: @green;
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    h2 {
+      margin: 0;
+    }
+    // max-height: 30rem;
     .standings {
       margin: auto;
       text-align: center;
-
       .count-number {
         color: @call-out-color;
         font-size: 3.5rem;
@@ -37,7 +40,17 @@
         border-radius: 2.5rem;
         padding: 1rem;
         box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
-        max-width: 80%;
+        // max-width: 80%;
+        @media (min-width: @small-bp){
+          max-width: 75%;
+        }
+        @media (min-width: @small-bp) and (max-width: @medium-bp) {
+          max-width: 67%;
+        }
+        @media (min-width: @medium-bp) {
+          max-width: 60%;
+        }
+
 
         #meter-bar {
           width: 0%;
@@ -58,6 +71,7 @@
       }
     }
   }
+
 
   //*****************THANX MESSAGE ********************************
   .signed {
@@ -98,26 +112,42 @@
 // ************************* STEP 1 *************************
   .step1 {
     .form-wrapper {
-      text-align: left;
+      text-align: center;
     }
     .signature-form {
+      // max-width: 70%;
+      margin-right: 20%;
       text-align: right;
       label {
-        margin-bottom: 2rem;
+        margin-bottom: 1.7rem;
       }
       input {
-        background-color: #999;
+        background-color: #CCC;
         color: #FFF;
-        width: 100%;
         max-width: 20rem;
       }
+      @media (max-width: @small-bp) {
+        width: 100%;
+        text-align: left;
+      }
       @media (min-width: @small-bp) and (max-width: @medium-bp) {
+        width: 90%;
+        text-align: left;
         .label-text {
           display: block;
         }
         input {
-          max-width: none;
+          width: 20rem;
         }
+      }
+      @media (min-width: 850px) and (max-width: 1000px) {
+        width: 70%;
+        input {
+          width: 20rem;
+        }
+      }
+      @media (min-width: 1000px) {
+        width: 70%;
       }
     }
   }
@@ -152,7 +182,6 @@
 
     .pol-pics {
       text-align: center;
-      margin: 1rem auto;
       border-radius: 2rem;
       transition: all .2s linear;
       cursor: pointer;
@@ -163,75 +192,104 @@
       }
     }
     .pol-pic-link {
-      font-size: 2rem;
+      // font-size: 2rem;
       font-weight: bold;
+      text-align: center;
       .text-font();
       > img {
         border-radius: 50%;
         border: 2px solid @blue;
         height: 18rem;
-        @media (min-width: @medium-bp) and (max-width: @large-bp) {
-          height: 15rem;
+        @media (max-width: @small-bp) {
+          width: 20rem;
+        }
+        @media (min-width: @small-bp) and (max-width: @medium-bp) {
+          height: 17rem;
+        }
+        @media (min-width: @medium-bp) {
+          height: 14rem;
         }
       }
     }
     .pol-name {
+      margin: auto;
+      text-align: center;
       margin-top: 1rem;
       min-height: 6rem; // uneven heights create irregular floating
       font-family: Oswald;
+      @media (max-width: @small-bp) {
+        font-size: 2rem;
+      }
+      @media (min-width: @small-bp) and (max-width: @medium-bp) {
+        font-size: 2rem;
+      }
+      @media (min-width: @medium-bp) {
+        font-size: 1.5rem;
+      }
     }
   }
 
   // ************************* STEP 4 *************************
   .step4 {
-    .twibbot-overlay-container {
-      // margin: auto;
-    }
-    .twibbot-overlay {
-      margin-bottom: 1em;
-      position: relative;
+    text-align: center;
+    .twibbon-overlay {
       margin: auto;
-      &, &:after, > img {
-        height: 100%;
-        width: 100%;
-        max-width: 40rem;
+      margin-bottom: 1em;
+      background: url('../photos/andy.jpg') no-repeat;
+      background-size: contain;
+      width: 14rem;
+      // border: 2px solid green;
+      .twibbon-pic {
+        opacity: .7;
+        max-width: 14rem;
       }
-      &:after {
-        content: '';
-        background: url('/photos/twibbot.png');
-        z-index: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    }
-    #frameContainer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 5;
     }
   }
-  // ************************* STEP 5 *************************
-  .dark-color{
+      // &:after {
+      //   content: '';
+      //   background: url('../photos/twibbot_2.png');
+      //   z-index: 0;
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   opacity: .6;
+      // }
+
+    // #frameContainer {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 5;
+    // }
+    // ************************* STEP 5 *************************
+  .dark-color {
     color: #FFF;
     background-color: #3C3D37;
+    text-align: left;
     .step5 {
+      max-width: 960px;
+      margin: auto;
       padding-top: 2rem;
       padding-bottom: 2rem;
       margin-top: 2rem;
-      text-align: left;
+      // text-align: left;
       display: block;
       color: #FFF;
-    }
-    .donate-button-img {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 2rem;
-      display: block;
-      max-width: 12rem;
+      .donate-button-img {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        display: block;
+        max-width:20rem;
+      }
     }
   }
+}
+
+.margins {
+  max-width: 960px;
+  margin: auto;
 }
