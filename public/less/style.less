@@ -189,11 +189,17 @@ textarea {
   .content {
     margin: .5em;
     text-align: left;
-    max-width: 60%;
     color: #444;
     /*border: 1px solid red;*/
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
+    max-width: 90%;
+    @media (min-width: @small-bp) and (max-width: @medium-bp){
+      max-width: 70%;
+    }
+    @media (min-width: @medium-bp){
+      max-width: 60%;
+    }
   }
 
   .content.head {
@@ -239,12 +245,21 @@ textarea {
   /************ Spacers *****************/
   .spacer1{
     height: 1000px;
+    @media (max-width: @small-bp){
+      height:1500px;
+    }
   }
   .spacer2{
     height: 500px;
+    @media (max-width: @small-bp){
+      height:750px;
+    }
   }
   .spacer3{
     height: 250px;
+    @media (max-width: @small-bp){
+      height:375px;
+    }
   }
 
   /*************  bouncing chevron ****************/

@@ -29,7 +29,6 @@ $(function() {
   //Positions the Denied id tag in the middle according to screen width
   function posDenied(){
     var $width = $(window).width();
-    console.warn($width);
     var percentWidth = (((1 - (480/$width))/2) * 100).toString() + '%';
     $('#denied').css('left', percentWidth);
 
@@ -128,7 +127,6 @@ $(function() {
 
   //Stand WITH DUWAMISH LETTERS
   var $headerArr = $('.letter');
-  console.log($headerArr);
 
   var scene6 = TweenMax.staggerFrom($headerArr, 1, {ease:Elastic.easeOut, scale:0.1, cycle:{y:[-100,100]}, opacity:0}, 0.2);
                 // TweenMax.from('#tas-btn', 3, {opacity:0, delay: 4})];
