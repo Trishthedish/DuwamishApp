@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "express": "^4.12.4",
+    "grunt": "^0.4.5",
     "npm-save": "^1.0.2",
     "sha.js": "^2.4.4"
   },
@@ -23,7 +24,9 @@
     "time-grunt": "^1.3.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "bash ./post_install.sh"
   },
   "author": "",
   "license": "ISC",
