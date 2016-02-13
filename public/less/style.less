@@ -158,6 +158,225 @@ textarea {
   transform: translateY(-50%);
 }
 
+//START SCENES SCROLLMAGIC
+//START SCENES SCROLLMAGIC
+//START SCENES
+//START SCENES SCROLLMAGIC
+//START SCENES
+//START SCENES SCROLLMAGIC
+//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC
+
+.index {
+  .container{
+    margin:auto;
+    max-width: 960px;
+    text-align: center;
+  }
+
+  .box-left {
+    text-align: left;
+  /*  border: 3px dotted green;
+  */  padding-bottom: 1em;
+  }
+
+  /*.box-right {
+    float:right;
+    text-align: right;
+    margin-right: 40%;
+    border: 3px dotted green;
+  }*/
+
+  .content {
+    margin: .5em;
+    text-align: left;
+    max-width: 60%;
+    color: #444;
+    /*border: 1px solid red;*/
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .content.head {
+    margin: 1em auto;
+    padding: 1em 0;
+    color:#000;
+    font-size: 1.8em;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .content.body {
+    margin:auto;
+    margin-bottom: .7em;
+  }
+
+  .text-font p div{
+    font-family: 'Roboto', sans-serif;
+  }
+  // h1, h2, h3, h4, h5 {
+  //   font-family: 'Oswald', sans-serif;
+  // }
+
+  /****** Stand with duwamish swarm ********/
+  .letter-header {
+    font-family: 'Oswald';
+    padding-top: 3em;
+    display: inline-block;
+    text-align: center;
+  }
+  .letter {
+    color: #000;
+    margin-top: 3em;
+    font-size: 3em;
+    display: inline-block;
+    margin: 0;
+    /*border: solid red 1px;*/
+  }
+
+  .letter.space {
+    border: none;
+  }
+
+  /************ Spacers *****************/
+  .spacer1{
+    height: 1000px;
+  }
+  .spacer2{
+    height: 500px;
+  }
+  .spacer3{
+    height: 250px;
+  }
+
+  /*************  bouncing chevron ****************/
+  #chevron {
+    margin:auto;
+    z-index: 1000;
+  }
+
+  /************* Scene 1 ****************/
+  .slide1 {
+
+  }
+
+  #content1-1{
+    color:#666;
+  }
+  #content2-2 {
+    max-width:60%;
+  }
+
+  /************* Scene 2 ****************/
+  #scene2{
+    &.content {
+      display:none;
+      margin-bottom: .5em;
+    }
+  }
+  .header-container {
+    margin:auto;
+    max-width: 60%;
+    text-align: left;
+    #content-head-2-1 {
+      text-align: left;
+      display: inline-block;
+      margin-right: .3em;
+      margin-left: 0;
+    }
+
+    #content-head-2-2 {
+      margin-left: 0;
+      display:inline-block;
+    }
+  }
+  /******************** Scene 4 ***************/
+
+  #scene4{
+    position:relative;
+  }
+
+  #content-head-4-1,
+  #content-head-4-2 {
+    display: inline-block;
+    font-size: 2em;
+  }
+
+  #content-head-4-1 {
+    margin-right: .5em;
+  }
+
+  #content4-2 {
+    color:#000
+  }
+
+  img#denied {
+    opacity: 0;
+    /*border: 2px solid green;*/
+    position: absolute;
+    left:center;
+    top:center;
+    z-index: 2
+  }
+  /******************** Scene 5 ***************/
+
+  #you, #we {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: .4em;
+  }
+
+  #we.begin {
+     -webkit-text-fill-color: #FF0; /* Will override color (regardless of order) */
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #990;
+  }
+
+  #unite {
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 4em;
+    padding-bottom: 0.2em;
+  }
+
+  #unite-sent {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0.6em;
+  }
+
+  .slideText {
+    text-align: center;
+    margin:auto;
+  }
+
+/**************  Scene 6 StandWithDuwamish letters ****************/
+  #tas-btn {
+    margin:auto;
+    color: #000;
+    background-color:@evergreen;
+    z-index: 200;
+    margin-top: 1em;
+    font-style: none;
+    a {
+      color:#fff;
+    }
+  }
+
+  /*************** parallax pics ****************/
+
+  .parallaxParent {
+    height: 100vh;
+    overflow: hidden;
+
+    > section {
+      height: 200%;
+      position: relative;
+      top: -100%;
+    }
+  }
+}
 // importing the other less files
 @import "header.less";
 @import "learn.less";

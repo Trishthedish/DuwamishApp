@@ -8,8 +8,11 @@
     <title>Stand With Duwamish</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='//fonts.googleapis.com/css?family=Oswald|Roboto:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   </head>
-  <body>
+  <body class="index">
     <header>
       <nav id="main-nav" class="container" role="navigation">
         <a href="index.html" class="nav-link">
@@ -38,19 +41,103 @@
         </div>
       </article>
     </div>
-    <article id="intro-wrap" class="container">
-      <div class="row">
-        <section id="intro" class="u-cf col-xs-12">
-          <img id="logo" src="photos/logo.png" alt="Stand With Duwamish logo">
-          <p>Most Seattleites know that Seattle was named after Chief Sealth, leader of the Duwamish Tribe, who signed the Treaty of Point Elliot which gave land to white settlers to establish their new city. We immortalize his image throughout the city, yet we do not recognize his people, the Duwamish.</p>
-          <p>Chief Sealth was the first to place his mark on the Treaty of 1855. The Tribe signed over 54,000 acres of land “in exchange for a reservation, healthcare, education, acknowledgement, and protection of their rights to continue to fish and hunt.The Treaty has never been fully honored. In 2001, the tribe was finally given Federal Recognition at the end of the Clinton Administration –only to have the positive determination overturned days later by the incoming Bush Administration.</p>
-          <p>The injustice of a tribe potentially going extinct due to the lack of federal acknowledgement is untenable. We must join them in their fight for recognition. We must not let them stand alone.</p>
-
-          <a href="tas.html" class="call-to-action button button-active">Take Action</a>
-        </section>
+    <section class="spacer1">
+      <div class="container">
+      <div class="col-12-xs" id="chevron">&raquo</div>
+        <div id="scene1">
+          <h2 class="content head" id="content-head-1">Let's suppose:</h2>
+          <h5 class="content body" id="content1-1"> Your great great great grandfather was a man of great peace and power.  He was so respected that your people elected him as their leader.</h5>
+          <h5 class="content body" id="content1-2">These foreigners respected him so much they named their city after him.</h5>
+          <h5 class="content body" id="content1-3">He negotiated peace in exchange for promises.</h5>
+        </div>
       </div>
-    </article>
-
+    </section>
+    <div class="spacer3"></div>
+    <div id="parallax1" class="parallaxParent">
+      <section style="background: url(photos/feather-whiteonblack.jpg)  no-repeat center center;">
+      </section>
+    </div>
+    <section class="spacer1 s0">
+      <div class="container">
+        <div id="scene2">
+          <div class="header-container">
+            <h2 class="content head" id="content-head-2-1">Broken </h2>
+            <h2 class="content head" id="content-head-2-2">Promises</h2>
+          </div>
+            <h5 class="content body" id="content2-1">After his death, the foreigners have been skirting their promises under the guise that you don't meet their <strong>criteria</strong> as a recognized people.</h5>
+        </div>
+      </div>
+    </section>
+    <div id="parallax2" class="parallaxParent">
+      <section style="background: url(photos/broken.jpg) no-repeat center center;">
+      </section>
+    </div>
+    <div class="spacer1 s1 container">
+      <div class="container">
+        <div id="scene3">
+          <h2 class="content head" id="content-head-3">The Struggle</h2>
+          <h5 class="content body" id="content3-1">For your entire life, you, your parents, and every ancestor of yours for the last 150 years, have been struggling to prove that you belong to a tribe called the DUWAMISH.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="spacer3"></div>
+    <div id="parallax3" class="parallaxParent">
+      <section style="background: url(photos/fist-fight.jpeg) no-repeat center center;"></section>
+    </div>
+    <section>
+      <div class="container">
+        <div id="scene4">
+          <h1 class="content head" id="content-head-4-1">FINALLY</h1>
+          <h1 class="content head" id="content-head-4-2">VICTORY!</h1>
+          <h5 class="content body" id="content4-1">After years of campaigning, President Clinton finally heard your plight.  He stamped your approval for federal recognition.</h5>
+          <p class="content body" id="content4-2">Only to have the <span id="bush">BUSH</span> administration strip your recognition 4 days later.</p>
+          <img class="denied" id="denied" src="photos/denied.png"/>
+        </div>
+      </div>
+    </section>
+    <div class="spacer3 s0"></div>
+    <div id="parallax4" class="parallaxParent">
+      <section style="background: url(photos/together_2.jpg) no-repeat center center;"></section>
+    </div>
+  <!--   <div class="spacer1 s2"></div> -->
+    <section class="container">
+      <div class="slideText" id="scene5">
+        <div class="content head" id="you">You are us.</div>
+        <div class="content head begin" id="we">We are you.</div>
+        <div class="content head" id="unite">Unite</div>
+        <h3 class="content body" id="unite-sent">to have our case overturned for the LAST TIME!</h3>
+      </div>
+    </section>
+    <section class="container">
+      <div id="scene6">
+        <div class="letter-header">
+          <h1 class="letter">S</h1>
+          <h1 class="letter">T</h1>
+          <h1 class="letter">A</h1>
+          <h1 class="letter">N</h1>
+          <h1 class="letter">D</h1>
+          <h1 class="letter space">&nbsp</h1>
+          <h1 class="letter">W</h1>
+          <h1 class="letter">I</h1>
+          <h1 class="letter">T</h1>
+          <h1 class="letter">H</h1>
+          <h1 class="letter space">&nbsp</h1>
+          <h1 class="letter">D</h1>
+          <h1 class="letter">U</h1>
+          <h1 class="letter">W</h1>
+          <h1 class="letter">A</h1>
+          <h1 class="letter">M</h1>
+          <h1 class="letter">I</h1>
+          <h1 class="letter">S</h1>
+          <h1 class="letter">H</h1>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <button class="content body btn" id="tas-btn"><a href="tas.html">Take A Stand</a></button>
+    </section>
+    <div class="spacer3"></div>
     <footer>
         <a href="index.html"  class="nav-link">Home</a>
         <a href="learn.html"  class="nav-link">Learn</a>
@@ -64,8 +151,8 @@
           Copyright 2016 &copy;
         </div>
     </footer>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/vendor.js"></script>
     <script src="/js/app.js"></script>
   </body>
