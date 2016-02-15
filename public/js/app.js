@@ -27,22 +27,23 @@ $(function() {
   }
 
   //Positions the Denied id tag in the middle according to screen width
-  function posDenied(){
-    var $width = $(window).width();
-    var percentWidth = (((1 - (480/$width))/2) * 100).toString() + '%';
-    $('#denied').css('left', percentWidth);
+  // function posDenied(){
+  //   var $width = $(window).width();
+  //   var percentWidth = (((1 - (480/$width))/2) * 100).toString() + '%';
+  //   $('#denied').css('left', percentWidth);
 
-    var $height = $(window).height();
-    var percentHeight = (((1 - (320/$height))/2) * 100).toString() + '%';
-    $('#denied').css('top', percentHeight );
-  }
+  //   var $height = $(window).height();
+  //   var percentHeight = (((1 - (320/$height))/2) * 100).toString() + '%';
+  //   $('#denied').css('top', percentHeight );
+  // }
+
+  // posDenied();
 
   function removeClassBegin(){
     $('#we').removeClass('begin');
   }
 
   //Activate position of Denied tag
-  posDenied();
 
   //Initiate ScrollMagic Controller
   var controller = new ScrollMagic.Controller();
@@ -54,6 +55,10 @@ $(function() {
   //initiate arrays of content for Tweening
   var $contentS1 = $('#scene1 .content'),
       $contentS2 = $('#scene2 .content');
+      $contentS3 = $('#scene3 .content');
+      $contentS4 = $('#scene4 .content');
+      $contentS5 = $('#scene5 .content');
+      $contentS6 = $('#scene6 .content');
 
 
   //SCENE 1
@@ -63,16 +68,17 @@ $(function() {
           .setPin("#scene1")
           .setTween(scene1)
           .addTo(controller);
+  //Scene2
+  var scene2 = TweenMax.staggerFrom($contentS2, 1, {opacity:0, cycle:{x:[-100,100]}, ease:Elastic.easeinOut}, 0.2);
 
-  //SCENE 2
-  var scene2 = [TweenMax.staggerFrom($contentS2, 5, {opacity:1, rotationX:90, transformOrigin:"50% top", ease:Power4.easeOut}, 3),
-                 TweenMax.to('#content-head-2-2', 3, {rotation:-120, transformOrigin:"right", delay: 6}),
-                 TweenMax.to('#content-head-2-2', 1, {rotation:-70, transformOrigin:"right", delay:9}),
-                 TweenMax.to('#content-head-2-2', 1, {rotation:-110, transformOrigin:"right", delay:10}),
-                 TweenMax.to('#content-head-2-2', 1, {rotation:-80, transformOrigin:"right", delay:11}),
-                 TweenMax.to('#content-head-2-2', 1, {rotation:-95, transformOrigin:"right", delay:12}),
-                 TweenMax.to('#content-head-2-2', 1, {rotation:-90, transformOrigin:"right", delay:13})];
-                 // TweenMax.to('#content-head-2-2', 0.2, {rotation:90, transformOrigin:"left", delay:2.4})];
+  //SCENE 2 (swinging/broken iteration)
+  // var scene2 = [TweenMax.staggerFrom($contentS2, 5, {opacity:1, rotationX:90, transformOrigin:"50% top", ease:Power4.easeOut}, 3),
+  //                TweenMax.to('#content-head-2-2', 3, {rotation:-120, transformOrigin:"right", delay: 6}),
+  //                TweenMax.to('#content-head-2-2', 1, {rotation:-70, transformOrigin:"right", delay:9}),
+  //                TweenMax.to('#content-head-2-2', 1, {rotation:-110, transformOrigin:"right", delay:10}),
+  //                TweenMax.to('#content-head-2-2', 1, {rotation:-80, transformOrigin:"right", delay:11}),
+  //                TweenMax.to('#content-head-2-2', 1, {rotation:-95, transformOrigin:"right", delay:12}),
+  //                TweenMax.to('#content-head-2-2', 1, {rotation:-90, transformOrigin:"right", delay:13})];
 
   new ScrollMagic.Scene({triggerElement:"#scene2", triggerHook:0.3, duration:650})
         .setPin("#scene2")
@@ -83,27 +89,38 @@ $(function() {
   //       .setTween(scene2B)
   //       .addTo(controller);
 
+  //Scene3
+  var scene3 = TweenMax.staggerFrom($contentS3, 1, {opacity:0, cycle:{x:[-100,100]}, ease:Elastic.easeinOut}, 0.2);
+
   //SCENE 3 VIBRATE
-  var scene32 = new TimelineMax({repeat:-1});
-      scene32.fromTo('#content-head-3', 0.2, {x:0}, {x:2, repeat:5})
-             .fromTo('#content-head-3', 0.3, {x:0}, {x:6});
+  // var scene32 = new TimelineMax({repeat:-1});
+  //     scene32.fromTo('#content-head-3', 0.2, {x:0}, {x:2, repeat:5})
+  //            .fromTo('#content-head-3', 0.3, {x:0}, {x:6});
 
 
-  new ScrollMagic.Scene({triggerElement:"#scene3", triggerHook:0.3, duration:850})
+  new ScrollMagic.Scene({triggerElement:"#scene3", triggerHook:0.3, duration:1000})
         .setPin("#scene3")
-        .setTween(scene32)
+        .setTween(scene3)
         .addTo(controller);
 
 
   //Scene 4 FALSE VICTORY
-  var scene4 = new TimelineMax();
-      scene4.from('#content-head-4-1', 2, {ease:Bounce.easeOut, scale:1.5, x:-100})
-            .from('#content-head-4-2', 2, {ease:Bounce.easeOut, scale:1.5, x:100})
-            .from('#content4-1', 2, {ease:Linear.none, opacity:0, scale:0.1})
-            .from('#content4-2', 2, {ease:Power1.easeOut, opacity:0, scale:0.1,}, "+=1")
-            .to('#denied', 0.1, {opacity:1, delay:2}, "+=10")
-            .from('#denied', 3, {ease:Bounce.easeOut, rotation: 720, scale:3, onStart:changeTag})
-            .to('#content4-2', 3, {color: '#FA0000'});
+  var $content4 = $.merge($.merge($('#content-head-4-1'), $('#content-head-4-2')), $('#scene4 .content.body'));
+
+  var scene4 = [TweenMax.staggerFrom($content4, 5, {opacity:0, cycle:{x:[-100,100]}, ease:Elastic.easeinOut}, 0.2),
+                TweenMax.to('#denied', 0.1, {opacity:1, delay:10}),
+                TweenMax.from('#denied', 3, {ease:Bounce.easeOut, rotation: 720, scale:3, onStart:changeTag, delay:11}),
+                TweenMax.to('#content4-2', 3, {color: '#FA0000', delay:11})];
+
+  //SCENE 4 Swinging broken word Promise (different animation)
+  // var scene4 = new TimelineMax();
+  //     scene4.from('#content-head-4-1', 2, {ease:Bounce.easeOut, scale:1.5, x:-100})
+  //           .from('#content-head-4-2', 2, {ease:Bounce.easeOut, scale:1.5, x:100})
+  //           .from('#content4-1', 2, {ease:Linear.none, opacity:0, scale:0.1})
+  //           .from('#content4-2', 2, {ease:Power1.easeOut, opacity:0, scale:0.1,}, "+=1")
+  //           .to('#denied', 0.1, {opacity:1, delay:2}, "+=10")
+  //           .from('#denied', 3, {ease:Bounce.easeOut, rotation: 720, scale:3, onStart:changeTag})
+  //           .to('#content4-2', 3, {color: '#FA0000'});
 
   new ScrollMagic.Scene({triggerElement:"#scene4", triggerHook:0.2, duration:1100})
         .setPin("#scene4")
@@ -120,7 +137,7 @@ $(function() {
                 TweenMax.from('#unite-sent', 6, {opacity:0, delay:12.5}),
                 TweenMax.to('#unite', 3, {color:"#0A0", delay:12.5})];
 
-  new ScrollMagic.Scene({triggerElement:"#scene5", triggerHook:0.3, duration:2500})
+  new ScrollMagic.Scene({triggerElement:"#scene5", triggerHook:0.2, duration:2500})
           .setPin("#scene5")
           .setTween(scene5)
           .addTo(controller);
