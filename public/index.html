@@ -12,21 +12,26 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   </head>
-  <body class="index">
-    <header>
-      <nav id="main-nav" class="container" role="navigation">
-        <a href="index.html" class="nav-link">
-          <img id="homepage-link-icon" src="photos/logo_bw.png" alt="Stand with Duwamish">
-        </a>
-        <button id="menu-icon" class="nav-button" aria-expanded="false" aria-label="menu"><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></button>
-        <div class="nav-links-container">
-          <a href="learn.html" class="nav-link">Learn</a>
-          <a href="tas.html" class="nav-link">Take A Stand</a>
-          <a href="donate.html" class="nav-link">Donate</a>
-          <a href="about-us.html" class="nav-link">About us</a>
-        </div>
-      </nav>
-    </header>
+  <body>
+  <header>
+    <nav id="main-nav" class="container" role="navigation">
+      <a href="index.html" class="nav-link">
+        <img id="homepage-link-icon" src="photos/logo_bw.png" alt="Stand with Duwamish">
+      </a>
+      <button id="menu-icon" class="nav-button" aria-expanded="false" aria-label="menu">
+        <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+          </svg>
+      </button>
+      <div class="nav-links-container">
+        <a href="learn.html" class="nav-link">Learn</a>
+        <a href="tas.html" class="nav-link">Take A Stand</a>
+        <a href="donate.html" class="nav-link">Donate</a>
+        <a href="about-us.html" class="nav-link">About us</a>
+      </div>
+    </nav>
+  </header>
+  <article class="index">
     <div id="imgSlider">
       <div id="image-slider-container"></div>
       <article id="topHeader">
@@ -103,7 +108,10 @@
     </section>
     <div class="spacer3 s0"></div>
     <div id="parallax4" class="parallaxParent">
-      <section style="background: url(photos/together_2.jpg) no-repeat center center;"></section>
+      <section style="background: url(photos/together_2.jpg) no-repeat center center;">
+        <p>This is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything isprinting</p>
+        <div>This is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything is printingThis is sample text to see if anything isprinting</div>
+      </section>
     </div>
   <!--   <div class="spacer1 s2"></div> -->
     <section class="container">
@@ -164,6 +172,8 @@
     <script src='//cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="/js/vendor.js"></script>
+    <script src="/js/splash.js"></script>
     <script src="/js/app.js"></script>
+  </article>
   </body>
 </html>

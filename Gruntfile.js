@@ -54,6 +54,7 @@ grunt.initConfig({
     all: {
       files: {
         'dist/js/app.js': ['public/js/*.js'],
+        'dist/js/splash.js': ['public/js/splash/*.js'],
         'dist/js/tas.js': ['public/js/takeAStand/*.js'],
         'dist/js/vendor.js':['public/js/vendor/*.js']
       },
@@ -104,5 +105,5 @@ grunt.initConfig({
 // runs the following tasks when you just type "grunt"
 grunt.registerTask('default', ['jshint', 'build']);
 // runs the following tasks when you type "grunt build", also referenced in above task
-grunt.registerTask('build', ['clean','copy','less', 'uglify', 'express:dev','watch']);
+grunt.registerTask('build', ['clean','copy','less', 'uglify', 'express','watch']);
 grunt.registerTask('build:only', ['clean', 'copy', 'less', 'uglify']);
