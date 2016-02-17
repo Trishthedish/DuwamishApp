@@ -208,6 +208,10 @@ textarea {
     color:#000;
     font-size: 1.8em;
     font-family: 'Oswald', sans-serif;
+    @media (max-width: @small-bp){
+      padding-top: 0;
+      margin-top: 0;
+    }
   }
 
   .content.body {
@@ -346,7 +350,7 @@ textarea {
   }
   /******************** Scene 5 ***************/
 
-  #you, #we {
+  #you {
     font-family: 'Oswald', sans-serif;
     font-size: 2.4em;
     display: inline-block;
@@ -354,10 +358,12 @@ textarea {
     padding-bottom: .4em;
   }
 
-  #we.begin {
-     -webkit-text-fill-color: #FF0; /* Will override color (regardless of order) */
-     -webkit-text-stroke-width: 1px;
-     -webkit-text-stroke-color: #990;
+  #we {
+    #you;
+    @media (max-width: 440px){
+      margin-top: 0;
+      padding-top: 0
+    }
   }
 
   #unite {
@@ -380,6 +386,18 @@ textarea {
   }
 
 /**************  Scene 6 StandWithDuwamish letters ****************/
+  #set1,
+  #set2 {
+    display:block;
+    @media (min-width: @small-bp) {
+      display:inline-block;
+    }
+  }
+
+  #set2 {
+    margin-top: 0;
+  }
+
   #tas-btn {
     margin:auto;
     color: #000;
