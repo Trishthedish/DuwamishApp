@@ -3,6 +3,16 @@
 @medium-bp: 720px;
 @large-bp: 960px;
 
+@bp-small : 24em;
+@bp-small-2 : 29.75em;
+@bp-small-3 : 39.8em;
+@bp-med : 46.8em;
+@bp-med-2 : 48em;
+@bp-large : 50em;
+@bp-large-2 : 54.5em;
+@bp-xl : 60em;
+@bp-xl-2 : 67em;
+
 // vendor css imports
 @import "vendor/normalize.less";
 @import "vendor/grid.less";
@@ -144,7 +154,7 @@ textarea {
     color: @evergreen;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: @bp-large) {
   .hidden-below-600 {
     display: none;
   }
@@ -158,13 +168,9 @@ textarea {
   transform: translateY(-50%);
 }
 
+
 //START SCENES SCROLLMAGIC
 //START SCENES SCROLLMAGIC
-//START SCENES
-//START SCENES SCROLLMAGIC
-//START SCENES
-//START SCENES SCROLLMAGIC
-//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC//START SCENES SCROLLMAGIC
 
 .index {
   .container{
@@ -194,10 +200,10 @@ textarea {
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
     max-width: 90%;
-    @media (min-width: @small-bp) and (max-width: @medium-bp){
+    @media (min-width: @bp-small-3) and (max-width: @bp-med){
       max-width: 70%;
     }
-    @media (min-width: @medium-bp){
+    @media (min-width: @bp-med){
       max-width: 60%;
     }
   }
@@ -208,10 +214,10 @@ textarea {
     color:#000;
     font-size: 1.8em;
     font-family: 'Oswald', sans-serif;
-    @media (max-width: @small-bp){
-      padding-top: 0;
-      margin-top: 0;
-    }
+    // @media (max-width: @bp-small-3){
+    //   padding-top: 0;
+    //   margin-top: 0;
+    // }
   }
 
   .content.body {
@@ -248,29 +254,29 @@ textarea {
 
   /************ Spacers *****************/
   .spacer1{
-    height: 1000px;
-    @media (max-width: @small-bp){
-      height:1500px;
+    height: 1300px;
+    @media (min-width: @bp-med){
+      height:1000px;
     }
   }
   .spacer2{
     height: 500px;
-    @media (max-width: @small-bp){
-      height:750px;
-    }
+    // @media (max-width: @bp-small-3){
+    //   height:750px;
+    // }
   }
   .spacer3{
     height: 250px;
-    @media (max-width: @small-bp){
-      height:375px;
-    }
+    // @media (max-width: @bp-small-3){
+    //   height:375px;
+    // }
   }
 
   .spacer4{
     height: 125px;
-    @media (max-width: @small-bp){
-      height: 440px;
-    }
+    // @media (max-width: @bp-small-3){
+    //   height: 440px;
+    // }
   }
 
   /*************  bouncing chevron ****************/
@@ -306,8 +312,14 @@ textarea {
   }
   .header-container {
     margin:auto;
-    max-width: 60%;
+    max-width: 90%;
     text-align: left;
+    @media (min-width: @bp-small-3) and (max-width: @bp-med){
+      max-width: 70%;
+    }
+    @media (min-width: @bp-med){
+      max-width: 60%;
+    }
     #content-head-2-1 {
       text-align: left;
       display: inline-block;
